@@ -1,0 +1,25 @@
+@import url('reset.css');
+
+a {
+  color: rgb(0, 0, 255);
+}
+
+.sub-menu .nav-link {
+  color: rgb(228, 96, 96);
+}
+
+[class*="bloc"] {
+  color: rgb(5, 71, 30);
+}
+
+h2 {
+  color: rgb(39, 45, 104);
+}
+
+h3 {
+  color: rgb(151, 150, 49);
+}
+
+#biodiversity span {
+  color: rgb(255, 0, 0);
+}
