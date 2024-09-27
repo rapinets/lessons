@@ -58,6 +58,14 @@ body {
   padding-block: 15px;
 }
 
+.test h1 {
+  font-weight: 700;
+  font-style: oblique;
+  font-size: 60px;
+  line-height: 2;
+  text-align: center;
+}
+
 .test__block {
   background: #020024;
   background: linear-gradient(41deg, #020024 0%, #090979 9%, #00d4ff 100%);
