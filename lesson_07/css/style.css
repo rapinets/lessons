@@ -193,6 +193,14 @@ body {
   padding-block: 60px;
 }
 
+.pricing h2 {
+  color: #1E1B39;
+  font-size: 88px;
+  font-weight: 700;
+  line-height: 1.08;
+  margin-block-end: 74px;
+}
+
 .pricing__card {
   max-width: 543px;
   background: #F0F0F6;
@@ -371,6 +379,15 @@ body {
 .game {
   background-color: #141414;
   padding-block: 100px;
+}
+
+.game h3 {
+  font-size: 34px;
+  font-weight: 700;
+  line-height: 1.08;
+  text-transform: uppercase;
+  margin-block-end: 44px;
+  color: #ff0000;
 }
 
 .game__field {
