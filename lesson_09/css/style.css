@@ -1,0 +1,121 @@
+/* linking local font files */
+@import url('fonts.css');
+
+/* linking reset style file */
+@import url('reset.css');
+
+body {
+  font-family: "Gilroy", sans-serif;
+  color: #fff;
+}
+
+.wrapper {
+  min-height: 100%;
+  overflow: hidden;
+  color: #391400;
+  background: #FDF0E9;
+}
+
+[class*="__container"] {
+  max-width: 1170px;
+  margin: 0 auto;
+  padding-inline: 15px;
+}
+
+.header {
+  padding-block: 40px;
+  background-color: #28293E;
+}
+
+/* menu */
+
+.navbar__items--reset {
+  margin-left: -5px;
+  margin-right: -5px;
+  font-size: 0;
+}
+
+.navbar__link {
+  padding-block: 3px;
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 1.5;
+  text-align: center;
+  width: 100%;
+  background: #ff0000;
+}
+
+.navbar__items:not(:last-child) {
+  margin-inline-end: 15px;
+}
+
+.navbar__item {
+  display: inline-block;
+  width: 16.333%;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+  border-radius: 4px 4px 0 0;
+  margin-block-end: 20px;
+}
+
+.navbar__item::after {
+  content: "";
+  width: 100%;
+  height: 2px;
+  background: #ff0000;
+  margin-block-start: 5px;
+}
+
+.navbar__link:hover {
+  background: #630303;
+  color: #d6cdcd;
+}
+
+.navbar__item:hover::after {
+  background: #630303;
+}
+
+.active,
+.visited {
+  background: #600363;
+  color: #c4aeae;
+}
+
+.navbar__item:active::after {
+  background: #600363;
+}
+
+.navbar__link:focus-visible {
+  outline: 2px dashed #052400;
+}
+
+/* end menu */
+
+/* main */
+.main {
+  font-size: 24px;
+}
+
+.main h1 {
+  text-align: center;
+  font-size: 58px;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding-block: 10px;
+  margin-block-end: 20px;
+}
+
+/* footer */
+.footer {
+  background: #28293E;
+  color: #fff;
+}
+
+.footer__inner {
+  padding-block: 40px;
+  text-align: center;
+  font-size: 32px;
+  letter-spacing: 4px;
+}
