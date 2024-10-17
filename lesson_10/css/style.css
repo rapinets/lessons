@@ -1,0 +1,292 @@
+/* linking local font files */
+@import url('fonts.css');
+
+/* linking reset style file */
+@import url('reset.css');
+
+body {
+  font-family: "Gilroy", sans-serif;
+  color: #fff;
+}
+
+.wrapper {
+  min-height: 100%;
+  overflow: hidden;
+  color: #fff;
+  background: #28293E;
+}
+
+[class*="__container"] {
+  max-width: 1170px;
+  margin: 0 auto;
+  padding-inline: 15px;
+}
+
+.header {
+  padding-block: 40px;
+  background-color: #28293E;
+}
+
+/* menu */
+
+.navbar__items--reset {
+  margin-left: -5px;
+  margin-right: -5px;
+  font-size: 0;
+}
+
+.navbar__link {
+  padding-block: 3px;
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 1.5;
+  text-align: center;
+  width: 100%;
+  background: #ff0000;
+}
+
+.navbar__items:not(:last-child) {
+  margin-inline-end: 15px;
+}
+
+.navbar__item {
+  display: inline-block;
+  width: 16.333%;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+  border-radius: 4px 4px 0 0;
+  margin-block-end: 20px;
+}
+
+.navbar__item::after {
+  content: "";
+  width: 100%;
+  height: 2px;
+  background: #ff0000;
+  margin-block-start: 5px;
+}
+
+.navbar__link:hover {
+  background: #630303;
+  color: #d6cdcd;
+}
+
+.navbar__item:hover::after {
+  background: #630303;
+}
+
+.navbar__link--active,
+.navbar__link--visited {
+  background: #600363;
+  color: #c4aeae;
+}
+
+.navbar__item:active::after {
+  background: #600363;
+}
+
+.navbar__link:focus-visible {
+  outline: 2px dashed #052400;
+}
+
+/* end menu */
+
+/* main */
+.main {
+  font-size: 24px;
+}
+
+.main__header h1 {
+  text-align: center;
+  font-size: 58px;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding-block: 10px;
+  margin-block-end: 20px;
+}
+
+.main__header::after,
+.main__hr::after {
+  content: "";
+  height: 1px;
+  width: 100%;
+  background: #ff0000;
+}
+
+/* section agency */
+
+.agency {
+  min-height: 880px;
+}
+
+.agency__hero-section {
+  position: relative;
+}
+
+.picture {
+  width: 570px;
+  height: 602px;
+  position: absolute;
+  top: 178px;
+  right: 0;
+}
+
+.picture__circle {
+  width: 370px;
+  height: 370px;
+  border-radius: 50%;
+  background: #32334C;
+  position: absolute;
+  top: 13%;
+  left: 13%;
+}
+
+.picture__line-1 {
+  position: absolute;
+  top: 80px;
+  right: 0;
+  z-index: 10;
+}
+
+.picture__line-2 {
+  position: absolute;
+  top: 341px;
+  left: 0;
+  z-index: 10;
+}
+
+.picture__laptop-figure {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  background: #B550F8;
+  border-radius: 50% 50% 0 0;
+  width: 246px;
+  height: 305px;
+}
+
+.picture__arrow {
+  position: absolute;
+  top: 509px;
+  left: 314px;
+}
+
+.picture__laptop-img {
+  position: absolute;
+  top: 24px;
+  left: 21px;
+  max-width: 255px;
+  max-height: 265px;
+}
+
+.picture__photo-figure {
+  position: absolute;
+  top: 225px;
+  right: 0;
+}
+
+.picture__photo-img {
+  max-width: 246px;
+  max-height: 269px;
+}
+
+.picture__card {
+  position: absolute;
+  top: 431px;
+  left: 56px;
+}
+
+.picture__star-figure {
+  width: 112px;
+  height: 112px;
+  border-radius: 50%;
+  background: #EF6D58;
+  position: absolute;
+  top: 40px;
+  left: 304px;
+  z-index: 10;
+}
+
+.picture__star-img {
+  max-width: 42px;
+  max-height: 56px;
+  position: absolute;
+  top: 25%;
+  left: 25%;
+}
+
+/* section portfolio */
+
+.portfolio {
+  height: 976px;
+  position: relative;
+  font-family: "Epilogue", sans-serif;
+}
+
+.portfolio__cards {
+  position: absolute;
+  top: 304px;
+  left: 0;
+}
+
+.cards__item {
+  border: 1px solid #3A3C56;
+  padding: 16px;
+}
+
+.card {
+  position: relative;
+}
+
+.card__figure {
+  width: 448px;
+  height: 576px;
+  opacity: 0.3181;
+  background: #5C2000;
+}
+
+.card__image {
+  width: 100%;
+  object-fit: cover;
+}
+
+.card__body {
+  position: absolute;
+  top: 421px;
+  left: 64px;
+}
+
+.card__prepend-title {
+  border-radius: 19px;
+  background: #FFF;
+  padding-inline: 16px;
+  text-align: center;
+  margin-block-end: 24px;
+}
+
+.card__link-category {
+  line-height: 2;
+  color: #391400;
+}
+
+.card__link-post {
+  font-size: 40px;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+/* footer */
+.footer {
+  background: #28293E;
+  color: #fff;
+}
+
+.footer__inner {
+  padding-block: 40px;
+  text-align: center;
+  font-size: 32px;
+  letter-spacing: 4px;
+}
