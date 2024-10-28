@@ -252,6 +252,57 @@ body {
   transform: rotateX(40deg);
 }
 
+/* coin */
+
+.coin {
+  display: inline-block;
+}
+
+.coin--mb {
+  margin-block-end: 50px;
+}
+
+.coin__body {
+  position: relative;
+  perspective: 800px;
+}
+
+.coin__back,
+.coin__front {
+  height: 500px;
+  width: 500px;
+  transition: all 0.5s;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.coin__back img,
+.coin__front img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.coin__back {
+  transform: rotateY(180deg);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.coin__front {
+  backface-visibility: hidden;
+  transform: rotateY(0deg);
+}
+
+.coin__body:hover .coin__back {
+  transform: rotateY(0deg);
+}
+
+.coin__body:hover .coin__front {
+  transform: rotateY(-180deg);
+}
+
 /* car */
 
 .car-section {
