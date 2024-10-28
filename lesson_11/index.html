@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 11</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <div class="wrapper">
+    <header class="header">
+      <div class="header__container">
+        <!-- start menu -->
+        <nav class="header__menu navbar">
+          <ul class="navbar__items navbar__items--reset">
+            <li class="navbar__item">
+              <a class="navbar__link" href="#transform2d">transform 2d</a>
+            </li>
+            <li class="navbar__item">
+              <a class="navbar__link" href="transform3d">transform3d</a>
+            </li>
+            <li class="navbar__item">
+              <a class="navbar__link" href="#car">car</a>
+            </li>
+          </ul>
+        </nav>
+        <!-- end menu -->
+      </div>
+    </header>
+
+    <main class="main">
+      <div class="main__container">
+        <div class="main__header">
+          <h1>Homework 11</h1>
+        </div>
+        <div id="transform2d" class="transform2d">
+          <h2>Transform 2d</h2>
+          <div class="transform2d__column">
+            <!--  -->
+            <div class="transform2d__block block">
+              <div class="block__inner">
+                <div class="block__header">
+                  <span>translate (30px, 30px)</span>
+                </div>
+                <div class="block__body">
+                  <div class="block__item block__item--translate"></div>
+                </div>
+              </div>
+            </div>
+            <!--  -->
+            <div class="transform2d__block block">
+              <div class="block__inner">
+                <div class="block__header">
+                  <span>Scale (0.5, 0.7)</span>
+                </div>
+                <div class="block__body">
+                  <div class="block__item block__item--scale"></div>
+                </div>
+              </div>
+            </div>
+            <!--  -->
+            <div class="transform2d__block block">
+              <div class="block__inner">
+                <div class="block__header">
+                  <span>rotate(50deg)</span>
+                </div>
+                <div class="block__body">
+                  <div class="block__item block__item--rotate"></div>
+                </div>
+              </div>
+            </div>
+            <!--  -->
+          </div>
+          <div class="transform2d__column">
+            <!--  -->
+            <div class="transform2d__block block">
+              <div class="block__inner">
+                <div class="block__header">
+                  <span>skew(20deg, 20deg)</span>
+                </div>
+                <div class="block__body">
+                  <div class="block__item block__item--skew"></div>
+                </div>
+              </div>
+            </div>
+            <!--  -->
+            <div class="transform2d__block block">
+              <div class="block__inner">
+                <div class="block__header">
+                  <span>matrix(0.5, 0.1, 0.1, 0.5, 10, 15)</span>
+                </div>
+                <div class="block__body">
+                  <div class="block__item block__item--matrix"></div>
+                </div>
+              </div>
+            </div>
+            <!--  -->
+            <div class="transform2d__block block">
+              <div class="block__inner">
+                <div class="block__header">
+                  <span>multiple 2d transform</span>
+                </div>
+                <div class="block__body">
+                  <div class="block__item block__item--multiple2d"></div>
+                </div>
+              </div>
+            </div>
+            <!--  -->
+          </div>
+          <div class="transform2d__column">
+            <!--  -->
+            <div class="transform2d__block block">
+              <div class="block__inner">
+                <div class="block__header">
+                  <span>transform origin top right (0, 0)</span>
+                </div>
+                <div class="block__body">
+                  <div class="block__item block__item--transform-origin"></div>
+                </div>
+              </div>
+            </div>
+            <!--  -->
+            <div class="transform2d__block block">
+              <div class="block__inner">
+                <div class="block__header">
+                  <span>perspective: 400</span>
+                </div>
+                <div class="block__body">
+                  <div class="block__item block__item--perspective"></div>
+                </div>
+              </div>
+            </div>
+            <!--  -->
+            <div class="transform2d__block block">
+              <div class="block__inner">
+                <div class="block__header">
+                  <span>perspective-origin: 0 0</span>
+                </div>
+                <div class="block__body">
+                  <div class="block__item block__item--perspective-origin"></div>
+                </div>
+              </div>
+            </div>
+            <!--  -->
+          </div>
+        </div>
+        <div id="transform3d" class="transform3d">
+          <h2>transform 3d</h2>
+          <div class="transform3d__column">
+            <!--  -->
+            <div class="transform3d__block block">
+              <div class="block__inner">
+                <div class="block__header">
+                  <span>translate3d(30px, 40px, 30px)</span>
+                </div>
+                <div class="block__body">
+                  <div class="block__item block__item--translate3d"></div>
+                </div>
+              </div>
+            </div>
+            <!--  -->
+            <div class="transform3d__block block">
+              <div class="block__inner">
+                <div class="block__header">
+                  <span>scale3d(0.5, 0.5, 0.5)</span>
+                </div>
+                <div class="block__body">
+                  <div class="block__item block__item--scale3d"></div>
+                </div>
+              </div>
+            </div>
+            <!--  -->
+            <div class="transform3d__block block">
+              <div class="block__inner">
+                <div class="block__header">
+                  <span>rotate3d(1, 1, 1, 45deg)</span>
+                </div>
+                <div class="block__body">
+                  <div class="block__item block__item--rotate3d"></div>
+                </div>
+              </div>
+            </div>
+            <!--  -->
+          </div>
+          <div class="transform3d__column">
+            <!--  -->
+            <div class="transform3d__block block">
+              <div class="block__inner">
+                <div class="block__header">
+                  <span>translate3d(30px, 30px,30px)<br>rotate3d(1,1,1,30deg)</span>
+                </div>
+                <div class="block__body">
+                  <div class="block__item block__item--multiple3d"></div>
+                </div>
+              </div>
+            </div>
+            <!--  -->
+            <div class="transform3d__block block">
+              <div class="block__inner">
+                <div class="block__header">
+                  <span>transform-style:<br>preserve-3d</span>
+                </div>
+                <div class="block__body">
+                  <div class="block__item block__item--preserve3d"></div>
+                </div>
+              </div>
+            </div>
+            <!--  -->
+          </div>
+        </div>
+        <div class="main__hr"></div>
+      </div>
+      <!-- car -->
+      <section id="car" class="car-section">
+        <div class="car">
+          <div class="car__antenna"></div>
+          <div class="car__roof">
+            <div class="car__glass"></div>
+            <div class="car__glass"></div>
+            <div class="car__glass"></div>
+            <div class="car__exthous"></div>
+            <div class="car__exthous"></div>
+            <div class="car__exthous"></div>
+          </div>
+          <div class="car__body">
+            <div class="car__door">
+              <div class="car__door-handle"></div>
+            </div>
+            <div class="car__door">
+              <div class="car__door-handle"></div>
+            </div>
+            <div class="car__door"></div>
+            <div class="car__light car__light--b"></div>
+            <div class="car__light car__light--f"></div>
+            <div class="car__border car__border--f"></div>
+            <div class="car__border car__border--b"></div>
+            <div class="car__wheel-arch-border car__wheel-arch-border--f">
+              <div class="car__wheel-arch">
+                <div class="car__stabilize-bar"></div>
+                <div class="car__wheel"></div>
+                <div class="car__wheel-disk wheel-disk">
+                  <div class="wheel-disk__item"></div>
+                  <div class="wheel-disk__item"></div>
+                  <div class="wheel-disk__item"></div>
+                </div>
+              </div>
+            </div>
+            <div class="car__wheel-arch-border car__wheel-arch-border--b">
+              <div class="car__wheel-arch">
+                <div class="car__stabilize-bar"></div>
+                <div class="car__wheel"></div>
+                <div class="car__wheel-disk wheel-disk">
+                  <div class="wheel-disk__item"></div>
+                  <div class="wheel-disk__item"></div>
+                  <div class="wheel-disk__item"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- end car -->
+    </main>
+
+    <footer class="footer">
+      <div class="footer__container">
+        <div class="footer__inner">
+          <span>Copyright</span>&copy; <span> Рапинець Василь Васильович </span> 2024
+        </div>
+      </div>
+    </footer>
+  </div>
+
+
+</body>
+
+</html>

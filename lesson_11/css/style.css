@@ -1,0 +1,535 @@
+/* linking local font files */
+@import url('fonts.css');
+
+/* linking reset style file */
+@import url('reset.css');
+
+body {
+  font-family: "Gilroy", sans-serif;
+  color: #fff;
+}
+
+.wrapper {
+  min-height: 100%;
+  overflow: hidden;
+  color: #fff;
+  background: #28293E;
+}
+
+[class*="__container"] {
+  max-width: 1170px;
+  margin: 0 auto;
+  padding-inline: 15px;
+}
+
+.header {
+  padding-block: 40px;
+  background-color: #28293E;
+}
+
+/* menu */
+
+.navbar__items--reset {
+  margin-left: -5px;
+  margin-right: -5px;
+  font-size: 0;
+}
+
+.navbar__link {
+  padding-block: 3px;
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 1.5;
+  text-align: center;
+  width: 100%;
+  background: #ff0000;
+}
+
+.navbar__items:not(:last-child) {
+  margin-inline-end: 15px;
+}
+
+.navbar__item {
+  display: inline-block;
+  width: 16.333%;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+  border-radius: 4px 4px 0 0;
+  margin-block-end: 20px;
+}
+
+.navbar__item::after {
+  content: "";
+  width: 100%;
+  height: 2px;
+  background: #ff0000;
+  margin-block-start: 5px;
+}
+
+.navbar__link:hover {
+  background: #630303;
+  color: #d6cdcd;
+}
+
+.navbar__item:hover::after {
+  background: #630303;
+}
+
+.navbar__link:active,
+.navbar__link:visited {
+  background: #600363;
+  color: #c4aeae;
+}
+
+.navbar__item:active::after {
+  background: #600363;
+}
+
+.navbar__link:focus-visible {
+  outline: 2px dashed #052400;
+}
+
+/* end menu */
+
+/* main */
+.main {
+  font-size: 24px;
+}
+
+.main__header h1 {
+  text-align: center;
+  font-size: 58px;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding-block: 10px;
+  margin-block-end: 20px;
+}
+
+.main__hr {
+  height: 1px;
+  width: 100%;
+  background: #ff0000;
+  margin-block-end: 50px;
+}
+
+.main__header::after {
+  content: "";
+  height: 1px;
+  width: 100%;
+  background: #ff0000;
+}
+
+.transform2d,
+.transform3d {
+  font-size: 0;
+}
+
+.transform2d h2,
+.transform3d h2 {
+  text-align: center;
+  font-size: 29px;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding-block: 10px;
+  margin-block-end: 20px;
+}
+
+.transform2d__column,
+.transform3d__column {
+  margin-block-end: 50px;
+}
+
+.transform2d__block,
+.transform3d__block {
+  width: 33.333%;
+  display: inline-block;
+}
+
+.block__inner {
+  border: 2px solid #fff;
+  border-radius: 5px;
+  padding: 5px;
+  width: 340px;
+  height: 400px;
+  padding: 10px;
+}
+
+.block__header {
+  text-align: center;
+  margin-block-end: 30px;
+}
+
+.block__header span {
+  font-size: 20px;
+  text-transform: capitalize;
+}
+
+.block__body {
+  width: 150px;
+  height: 150px;
+  background-color: rgba(24, 181, 165, 0.4);
+}
+
+.block__item {
+  background-color: #18b5a4;
+  width: 100%;
+  height: 100%;
+}
+
+.block__body:hover .block__item--translate {
+  transform: translate(30px, 30px);
+}
+
+.block__body:hover .block__item--scale {
+  transform: scale(0.5, 0.7);
+}
+
+.block__body:hover .block__item--rotate {
+  transform: rotate(50deg);
+}
+
+.block__body:hover .block__item--skew {
+  transform: skew(20deg, 20deg);
+}
+
+.block__body:hover .block__item--matrix {
+  transform: matrix(0.5, 0.1, 0.1, 0.5, 10, 15);
+}
+
+.block__body:hover .block__item--multiple2d {
+  transform: translate(30px, 30px) rotate(-45deg) scale(0.5);
+}
+
+.block__body:hover .block__item--transform-origin {
+  transform-origin: top right;
+  transform: rotate(-25deg);
+}
+
+.block__body:has(.block__item--perspective) {
+  perspective: 400px;
+}
+
+.block__body:hover .block__item--perspective {
+  transform: rotateX(45deg);
+}
+
+.block__body:has(.block__item--perspective-origin) {
+  perspective: 400px;
+  perspective-origin: 0 0;
+}
+
+.block__body:hover .block__item--perspective-origin {
+  transform: rotateX(40deg);
+}
+
+.transform3d__block [class *="__body"] {
+  perspective: 400px;
+}
+
+.block__body:hover .block__item--translate3d {
+  transform: translate3d(30px, 40px, 30px);
+}
+
+.block__body:hover .block__item--scale3d {
+  transform: scale3d(0.5, 0.5, 0.5);
+}
+
+.block__body:hover .block__item--rotate3d {
+  transform: rotate3d(1, 2, 1, 45deg);
+}
+
+.block__body:hover .block__item--multiple3d {
+  transform: translate3d(30px, 30px, 30px) rotate3d(1, 1, 1, 30deg);
+}
+
+.block__body:has(.block__item--preserve3d) {
+  transform-style: preserve-3d;
+}
+
+.block__body:hover .block__item--preserve3d {
+  transform: rotateX(40deg);
+}
+
+/* car */
+
+.car-section {
+  background: url("../img/doroga-vid-sboku.webp") center / cover no-repeat,
+    linear-gradient(180deg, rgba(40, 41, 62, 1) 0%, rgba(123, 123, 209, 0.9948354341736695) 59%, rgba(255, 255, 255, 1) 100%);
+  height: 1000px;
+}
+
+.car {
+  font-size: 0;
+  position: relative;
+  top: 400px;
+  left: 200px;
+}
+
+.car__antenna {
+  width: 2px;
+  height: 200px;
+  background: rgb(0, 0, 0);
+  position: absolute;
+  top: -180px;
+  left: 900px;
+  z-index: 10;
+  transform: rotate(35deg);
+}
+
+.car__antenna::before {
+  content: "";
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  background: #ff0000;
+  position: absolute;
+  top: -5px;
+  left: -4.5px;
+}
+
+.car__roof {
+  position: relative;
+  font-size: 0;
+  top: 0;
+  left: 300px;
+  width: 730px;
+  height: 200px;
+  border-top: 20px solid rgb(18, 73, 21);
+  border-left: 20px solid rgb(18, 73, 21);
+  border-right: 20px solid rgb(18, 73, 21);
+  border-radius: 28px 100px 0 0 / 28px 80px 0 0;
+}
+
+.car__glass {
+  display: inline-block;
+  width: 300px;
+  height: 180px;
+  border-right: 20px solid rgb(18, 73, 21);
+  border-left: 20px solid rgb(18, 73, 21);
+  border-top: 20px solid rgb(18, 73, 21);
+  background: rgba(58, 58, 59, 0.9);
+}
+
+.car__glass:first-child {
+  border-radius: 10px 0 0 0 / 10px 0 0 0;
+}
+
+.car__glass:nth-child(3) {
+  width: 90px;
+  border-radius: 0 60px 0 0 / 0 60px 0 0;
+}
+
+.car__exthous {
+  background: rgb(0, 0, 0);
+  border-radius: 6px;
+  position: absolute;
+}
+
+.car__exthous:nth-child(4) {
+  width: 100px;
+  height: 20px;
+  left: -120px;
+  bottom: -30px;
+  z-index: 10;
+}
+
+.car__exthous:nth-child(5) {
+  width: 20px;
+  height: 200px;
+  left: -40px;
+  bottom: -30px;
+  z-index: 10;
+}
+
+.car__exthous:nth-child(6) {
+  width: 34px;
+  height: 30px;
+  left: -70px;
+  top: 10px;
+  z-index: 10;
+}
+
+.car__body {
+  position: relative;
+  width: 1030px;
+  height: 200px;
+  border-radius: 150px 0 14px 14px / 42px 0 28px 28px;
+  background: rgb(18, 73, 21);
+  background: linear-gradient(0deg, rgba(18, 73, 21, 1) 0%, rgba(7, 101, 13, 1) 50%, rgba(6, 70, 9, 1) 100%);
+}
+
+.car__door {
+  width: 300px;
+  height: 330px;
+  position: absolute;
+  top: -184px;
+}
+
+.car__door:nth-child(1) {
+  left: 318px;
+  border: 2px solid rgb(0, 0, 0);
+  border-radius: 20px 100px 0 20px / 20px 0 0 20px;
+}
+
+.car__door:nth-child(2) {
+  left: 618px;
+  border: 2px solid rgb(0, 0, 0);
+  border-radius: 0 0 20px 0;
+}
+
+.car__door:nth-child(3) {
+  width: 90px;
+  height: 280px;
+  right: 20px;
+  z-index: 10;
+  border-top: 2px solid rgb(0, 0, 0);
+  border-right: 2px solid rgb(0, 0, 0);
+  border-radius: 0 80px 0 0;
+}
+
+.car__door-handle {
+  height: 10px;
+  width: 40px;
+  background: rgb(0, 0, 0);
+  position: absolute;
+  top: 200px;
+  right: 20px;
+  border-radius: 4px;
+}
+
+.car__light {
+  width: 40px;
+  height: 70px;
+  border-top: 2px solid rgb(0, 0, 0);
+  border-bottom: 2px solid rgb(0, 0, 0);
+  background: rgb(238, 64, 20);
+}
+
+.car__light--b {
+  border-left: 2px solid rgb(0, 0, 0);
+  border-bottom-left-radius: 10px;
+  border-top-left-radius: 10px;
+  position: absolute;
+  right: 0;
+  top: 26px;
+}
+
+.car__light--f {
+  border-right: 2px solid rgb(0, 0, 0);
+  border-bottom-right-radius: 10px;
+  border-top-right-radius: 10px;
+  position: absolute;
+  left: 0;
+  top: 36px;
+}
+
+.car__border {
+  height: 40px;
+  background: rgb(0, 0, 0);
+  position: absolute;
+  bottom: 16px;
+  border-radius: 6px;
+}
+
+.car__border--f {
+  width: 60px;
+  left: -6px;
+}
+
+.car__border--b {
+  width: 20px;
+  right: -6px;
+}
+
+.car__wheel-arch-border {
+  height: 240px;
+  width: 240px;
+  border-radius: 50%;
+  border-top: 120px solid rgb(134, 18, 18);
+  position: absolute;
+  top: 80px;
+}
+
+.car__wheel-arch-border--f {
+  left: 60px;
+}
+
+.car__wheel-arch-border--b {
+  right: 20px;
+}
+
+.car__wheel-arch {
+  height: 200px;
+  width: 200px;
+  border-top: 100px solid rgb(0, 0, 0);
+  border-radius: 50%;
+  position: absolute;
+  left: 20px;
+  top: -100px;
+}
+
+.car__stabilize-bar {
+  width: 30px;
+  height: 100px;
+  background: rgb(0, 0, 0);
+  background: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(191, 175, 175, 1) 50%, rgba(0, 0, 0, 1) 100%);
+  position: relative;
+  top: -100px;
+  left: 90px;
+}
+
+.car__wheel {
+  height: 180px;
+  width: 180px;
+  border: 6px dashed rgb(0, 0, 0);
+  border-radius: 50%;
+  position: relative;
+  top: -170px;
+  left: 10px;
+}
+
+.car__wheel::after {
+  content: "";
+  height: 168px;
+  width: 168px;
+  border: 40px solid rgb(0, 0, 0);
+  border-radius: 50%;
+}
+
+.wheel-disk {
+  width: 128px;
+  height: 128px;
+  border-radius: 50%;
+}
+
+.wheel-disk__item {
+  width: 30px;
+  height: 100%;
+  position: absolute;
+  left: 86px;
+  top: -34px;
+  background: rgb(0, 0, 0);
+}
+
+.wheel-disk__item:nth-child(2n) {
+  transform: rotate(60deg);
+}
+
+.wheel-disk__item:nth-child(3n) {
+  transform: rotate(-60deg);
+}
+
+/* footer */
+.footer {
+  background: #28293E;
+  color: #fff;
+}
+
+.footer__inner {
+  padding-block: 40px;
+  text-align: center;
+  font-size: 32px;
+  letter-spacing: 4px;
+}
