@@ -70,6 +70,11 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  gap: 24px;
+}
+
+.form-cta__input {
+  padding-block-end: 14px;
 }
 
 .form-cta__input,
@@ -79,10 +84,12 @@ body {
   flex: 1 1 100%;
   border-bottom: 1.5px solid #E6E8EB;
   outline: none;
+  transition: all 0.7s ease-out;
 }
 
 .form-cta__textarea {
   resize: vertical;
+  padding-block-end: 24px;
 }
 
 .form-cta__input:nth-child(4) {
@@ -92,15 +99,19 @@ body {
 
 .form-cta__input:nth-child(5) {
   flex-grow: 0;
-  flex-basis: 64%;
+  flex-basis: 62%;
 }
 
-.form-cta__input:focus,
-.form-cta__textarea:focus {
+.form-cta__input:focus-visible,
+.form-cta__input:hover,
+.form-cta__textarea:hover,
+.form-cta__textarea:focus-visible {
   border-bottom: 1.5px solid #A53DFF;
 }
 
 .form-cta__input:focus::placeholder,
+.form-cta__input:hover::placeholder,
+.form-cta__textarea:hover::placeholder,
 .form-cta__textarea:focus::placeholder {
   color: #A53DFF;
 }
@@ -118,6 +129,8 @@ body {
   width: fit-content;
   justify-content: center;
   align-items: center;
+  outline: none;
+  transition: all 0.3s linear;
 }
 
 .form-cta__btn::after {
@@ -125,6 +138,14 @@ body {
   height: 24px;
   width: 24px;
   background: url("../img/paper-plane.svg") 0 0 / cover no-repeat;
+}
+
+.form-cta__btn:focus-visible {
+  border: 1.5px solid #000000;
+}
+
+.form-cta__btn:hover {
+  transform: scale(1.1);
 }
 
 /* support form */
@@ -180,6 +201,10 @@ body {
   padding: 20px;
 }
 
+.form-supp__textarea {
+  min-height: 163px;
+}
+
 .form-supp__input::placeholder,
 .checkbox__label {
   color: #999;
@@ -192,7 +217,8 @@ body {
 
 .form-supp__input:focus-visible,
 .form-supp__textarea:focus-visible,
-.checkbox__input:focus-visible+.checkbox__label {
+.checkbox__input:focus-visible+.checkbox__label,
+.form-supp__btn:focus-visible {
   outline: 1px dotted #fff;
 }
 
@@ -224,6 +250,12 @@ body {
   padding-block: 18px;
   padding-inline: 24px;
   width: fit-content;
+  outline: none;
+  transition: all 0.3s linear;
+}
+
+.form-supp__btn:hover {
+  transform: scale(1.1);
 }
 
 .form-supp__line:last-child {

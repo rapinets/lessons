@@ -26,12 +26,12 @@
               </p>
             </div>
             <div class="form-cta__group">
-              <input name="form[]" type="text" class="form-cta__input" placeholder="Name*">
-              <input name="form[]" type="email" class="form-cta__input" placeholder="Email*">
+              <input name="form[]" type="text" class="form-cta__input" placeholder="Name*" required>
+              <input name="form[]" type="email" class="form-cta__input" placeholder="Email*" required>
               <input name="form[]" type="text" class="form-cta__input" placeholder="Location">
-              <input name="form[]" type="text" class="form-cta__input" placeholder="Budget*">
-              <input name="form[]" type="text" class="form-cta__input" placeholder="Subject*">
-              <textarea name="form[]" class="form-cta__textarea" placeholder="Message*" rows="1"></textarea>
+              <input name="form[]" type="text" class="form-cta__input" placeholder="Budget*" required>
+              <input name="form[]" type="text" class="form-cta__input" placeholder="Subject*" required>
+              <textarea name="form[]" class="form-cta__textarea" placeholder="Message*" rows="1" required></textarea>
             </div>
             <button class="form-cta__btn" type="button">Submit</button>
           </form>
@@ -42,19 +42,23 @@
           <form action="#" method="post" class="support__form form-supp" enctype="multipart/form-data">
             <div class="form-supp__line">
               <label for="firstname" class="form-supp__label">First Name</label>
-              <input type="text" class="form-supp__input" id="firstname" name="form[]" placeholder="Enter First Name">
+              <input type="text" class="form-supp__input" id="firstname" name="form[]" placeholder="Enter First Name"
+                required>
             </div>
             <div class="form-supp__line">
               <label for="lastname" class="form-supp__label">Last Name</label>
-              <input type="text" class="form-supp__input" id="lastname" name="form[]" placeholder="Enter Last Name">
+              <input type="text" class="form-supp__input" id="lastname" name="form[]" placeholder="Enter Last Name"
+                required>
             </div>
             <div class="form-supp__line">
               <label for="email" class="form-supp__label">Email</label>
-              <input type="email" class="form-supp__input" id="email" name="form[]" placeholder="Enter your Email">
+              <input type="email" class="form-supp__input" id="email" name="form[]" placeholder="Enter your Email"
+                required>
             </div>
             <div class="form-supp__line">
               <label for="tel" class="form-supp__label">Phone Number</label>
-              <input type="tel" class="form-supp__input" id="tel" name="form[]" placeholder="Enter Phone Number">
+              <input type="tel" class="form-supp__input" id="tel" name="form[]" placeholder="Enter Phone Number"
+                required>
             </div>
             <div class="form-supp__line">
               <label for="message" class="form-supp__label">Message</label>
@@ -63,7 +67,7 @@
             </div>
             <div class="form-supp__line">
               <div class="form-supp__checkbox checkbox">
-                <input class="checkbox__input" checked id="check" name="form[]" type="checkbox">
+                <input class="checkbox__input" checked id="check" name="form[]" type="checkbox" value="i-agree">
                 <label class="checkbox__label" for="check">I agree with Terms of Use and Privacy Policy</label>
               </div>
             </div>
