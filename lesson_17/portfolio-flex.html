@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 17</title>
+  <link rel="stylesheet" href="css/style-flex.css">
+</head>
+
+<body>
+  <div class="wrapper">
+    <header class="header">
+      <div class="header__container">
+        <img class="header__logo" src="img/icon/logo.svg" alt="Image logo">
+        <div class="header__menu menu">
+          <div class="menu__body">
+            <ul class="menu__list">
+              <li class="menu__item">
+                <a href="index.html" class="menu__link">Home</a>
+              </li>
+              <li class="menu__item">
+                <a href="portfolio-light.html" class="menu__link">Portfolio light</a>
+              </li>
+              <li class="menu__item menu__item--activ">
+                <a href="#" class="menu__link">Portfolio flex</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="header__actions actions-header">
+          <button class="actions-header__icon icon-menu" type="button"><span></span></button>
+        </div>
+      </div>
+    </header>
+    <main class="main">
+      <div class="portfolio">
+        <div class="portfolio__container">
+          <div class="portfolio__header">
+            <div class="portfolio__prev-title prev-title">portfolio</div>
+            <h2 class="portfolio__title title">Latest Work</h2>
+            <div class="portfolio__nav">
+              <div id="toggle" class="portfolio__triangle"></div>
+              <ul class="tabs">
+                <li class="tabs__item">
+                  <a class="tabs__link tabs__link--active" href="#">Show All</a><sup>14</sup>
+                </li>
+                <li class="tabs__item tabs__item--hide">
+                  <a class="tabs__link" href="#">Design</a><sup>6</sup>
+                </li>
+                <li class="tabs__item tabs__item--hide">
+                  <a class="tabs__link" href="#">Branding</a><sup>4</sup>
+                </li>
+                <li class="tabs__item tabs__item--hide">
+                  <a class="tabs__link" href="#">Illustration</a><sup>3</sup>
+                </li>
+                <li class="tabs__item tabs__item--hide">
+                  <a class="tabs__link" href="#">Motion</a><sup>1</sup>
+                </li>
+              </ul>
+            </div>
+
+          </div>
+          <div class="portfolio__cards">
+            <!-- card -->
+            <a class="portfolio__card card-portfolio" href="#">
+              <img src="img/portfilio/bitmap-design.webp" alt="Thumbnail for post design">
+              <div class="card-portfolio__body">
+                <div class="card-portfolio__category">Design</div>
+                <h3 class="card-portfolio__title">SOFA</h3>
+              </div>
+            </a>
+            <!-- end card -->
+            <!-- card -->
+            <a class="portfolio__card card-portfolio" href="#">
+              <img src="img/portfilio/bitmap-branding.webp" alt="Thumbnail for post branding">
+              <div class="card-portfolio__body">
+                <div class="card-portfolio__category">Branding</div>
+                <h3 class="card-portfolio__title">KeyBoard</h3>
+              </div>
+            </a>
+            <!-- end card -->
+            <!-- card -->
+            <a class="portfolio__card card-portfolio" href="#">
+              <img src="img/portfilio/bitmap-illustration.webp" alt="Thumbnail for post illustration">
+              <div class="card-portfolio__body">
+                <div class="card-portfolio__category">Illustration</div>
+                <div class="card-portfolio__title">Work Media</div>
+              </div>
+            </a>
+            <!-- end card -->
+            <!-- card -->
+            <a class="portfolio__card card-portfolio" href="#">
+              <img src="img/portfilio/bitmap-motion.webp" alt="Thumbnail for post motion">
+              <div class="card-portfolio__body">
+                <div class="card-portfolio__category">Motion</div>
+                <div class="card-portfolio__title">DDDone</div>
+              </div>
+            </a>
+            <!-- end card -->
+          </div>
+          <button class="portfolio__btn button dark-btn" type="button">Explore More</button>
+        </div>
+      </div>
+
+    </main>
+    <footer class="footer">
+      <div class="footer__container">
+        <div class="footer__inner">
+          <span>Copyright</span>&copy; <span> Рапинець Василь Васильович </span> 2024
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- script portfolio toggle -->
+  <script src="js/toggle.js"></script>
+
+  <script src="js/script.js"></script>
+</body>
+
+</html>
