@@ -323,7 +323,7 @@
   font-weight: 500;
   line-height: 1.32;
   /* 132% */
-  letter-spacing: 1;
+  letter-spacing: 1px;
 }
 
 .pricing__val-title {
