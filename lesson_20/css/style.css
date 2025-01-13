@@ -724,7 +724,7 @@
 
 .testimonial__author {
   margin-block-end: 0.5rem;
-  font-family: var(--fontFamilyPoppins);
+  font-family: "Poppins", sans-serif;
   font-weight: 500;
   line-height: 1.44;
   color: #000000;
@@ -732,7 +732,7 @@
 
 .testimonial__position {
   color: #000;
-  font-family: var(--fontFamilyPoppins);
+  font-family: "Poppins", sans-serif;
   font-weight: 300;
   font-size: 1rem;
   line-height: 1.5;
