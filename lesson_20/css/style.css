@@ -168,6 +168,7 @@
 .hero__image {
   flex-shrink: 0;
   aspect-ratio: 536 / 636;
+  max-height: 39.75rem;
   background-color: #fff;
   border-radius: 1.5625rem;
   overflow: hidden;
@@ -225,9 +226,14 @@
 
 .about__img {
   aspect-ratio: 424 / 468;
+  overflow: hidden;
   border-radius: 0.625rem;
   border: 0.0625rem solid var(--gray-50);
   background-color: lightgray;
+}
+
+.about__img img {
+  border-radius: 0.625rem;
 }
 
 .about__social {
@@ -405,6 +411,11 @@
   overflow: hidden;
 }
 
+.card-portfolio__figure img {
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+}
+
 .card-portfolio__body {
   padding: 2rem;
   display: flex;
@@ -550,6 +561,7 @@
 .card-blog__figure {
   overflow: hidden;
   aspect-ratio: 312 / 226;
+  max-height: 14.125rem;
 }
 
 .card-blog__figure img {
