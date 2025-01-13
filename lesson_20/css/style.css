@@ -415,7 +415,7 @@
   flex-grow: 1;
 }
 
-.card-porfolio__label {
+.card-portfolio__label {
   color: var(--gray-400);
   font-size: 0.75rem;
   font-weight: 500;
@@ -702,16 +702,13 @@
   max-width: 54.5rem;
   margin-inline: auto;
   margin-block-end: 1.5rem;
-}
-
-.quote {
   font-size: 1.125rem;
   color: var(--gray-800);
   font-weight: 500;
   line-height: 1.33;
 }
 
-.quote__author {
+.testimonial__author {
   margin-block-end: 0.5rem;
   font-family: var(--fontFamilyPoppins);
   font-weight: 500;
@@ -719,7 +716,7 @@
   color: #000000;
 }
 
-.quote__position {
+.testimonial__position {
   color: #000;
   font-family: var(--fontFamilyPoppins);
   font-weight: 300;
@@ -877,6 +874,7 @@
   padding-block-end: 5.12rem;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   column-gap: clamp(1rem, -15.624rem + 26.814vw, 7rem);
 }
 
