@@ -167,8 +167,8 @@
 
 .hero__image {
   flex-shrink: 0;
+  flex-basis: 39.7037%;
   aspect-ratio: 536 / 636;
-  max-height: 39.75rem;
   background-color: #fff;
   border-radius: 1.5625rem;
   overflow: hidden;
@@ -208,7 +208,7 @@
 
 .about__inner {
   display: flex;
-  column-gap: 1rem;
+  column-gap: clamp(1.25rem, 32.402vw - 18.839rem, 8.5rem);
   justify-content: space-between;
   align-items: center;
   padding-inline: clamp(1rem, -1.988rem + 12.749vw, 7rem);
@@ -220,7 +220,7 @@
 }
 
 .about__figure {
-  flex-basis: 26.5rem;
+  flex-basis: 38.686131%;
   text-align: center;
 }
 
@@ -267,7 +267,7 @@
 }
 
 .about__text {
-  flex-basis: 33.5rem;
+  flex: 48.905109%;
 }
 
 .about__title.title {
@@ -536,6 +536,8 @@
   column-gap: 1.5rem;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
+  scrollbar-width: thin;
+  scrollbar-color: var(--gray-200) var(--gray-50);
   margin-block-end: 1.5rem;
 }
 
@@ -546,6 +548,7 @@
 
 .card-blog {
   flex-shrink: 0;
+  flex-basis: 18.125rem;
   padding-block-end: 1.5rem;
   border-radius: 0.5rem;
   border: 0.0625rem solid var(--gray-50);
@@ -561,7 +564,6 @@
 .card-blog__figure {
   overflow: hidden;
   aspect-ratio: 312 / 226;
-  max-height: 14.125rem;
 }
 
 .card-blog__figure img {
