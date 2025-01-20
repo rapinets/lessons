@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 21</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <div class="wrapper">
+    <header class="header">
+      <div class="header__container">
+        <div class="header__logo logo">
+          <a href="#">
+            <div class="logo__img">
+              <img src="img/icon/logo.svg" alt="Vector logo image">
+            </div>
+            <div class="logo__name">
+              <img src="img/icon/streamVibe.svg" alt="Vector logo-name">
+            </div>
+          </a>
+        </div>
+        <nav class="header__menu menu">
+          <div class="menu__body">
+            <ul class="menu__list">
+              <li class="menu__item">
+                <a href="#" class="menu__link">Home</a>
+              </li>
+              <li class="menu__item">
+                <a href="#" class="menu__link menu__link--active">Movies & Shows</a>
+              </li>
+              <li class="menu__item">
+                <a href="#" class="menu__link">Support</a>
+              </li>
+              <li class="menu__item">
+                <a href="#" class="menu__link">Subscriptions</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+        <div class="header__actions actions-header">
+          <a href="#" class="actions-header__item">
+            <img class="icon" src="img/icon/header-search.svg" alt="Search icon">
+          </a>
+          <a href="#" class="actions-header__item">
+            <img class="icon" src="img/icon/header-bell.svg" alt="Bell icon">
+          </a>
+          <button class="actions-header__icon icon-menu" type="button"><span></span></button>
+        </div>
+      </div>
+    </header>
+
+    <main class="main">
+      <section class="hero hero--mb">
+        <div class="hero__container">
+          <div class="hero__slider">
+            <div class="hero__video">
+              <video src="#" poster="img/hero-bg.webp"></video>
+            </div>
+            <div class="hero__desc">
+              <h1 class="hero__title title">Avengers : Endgame</h1>
+              <div class="hero__content content">
+                <p>
+                  With the help of remaining allies, the Avengers must assemble once more in order to undo Thanos's
+                  actions and undo the chaos to the universe, no matter what consequences may be in store, and no matter
+                  who they face... Avenge the fallen.
+                </p>
+              </div>
+              <div class="hero__buttons">
+                <button class="hero__play button" type="button">
+                  <img class="icon" src="img/icon/play.svg" alt="Play icon">
+                  <span>Play Now</span>
+                </button>
+                <ul class="hero__controls controls">
+                  <li class="controls__item">
+                    <button class="controls__btn" type="button">
+                      <img class="icon" src="img/icon/plus.svg" alt="Add icon">
+                    </button>
+                  </li>
+                  <li class="controls__item">
+                    <button class="controls__btn" type="button">
+                      <img class="icon" src="img/icon/like.svg" alt="Like icon">
+                    </button>
+                  </li>
+                  <li class="controls__item">
+                    <button class="controls__btn" type="button">
+                      <img class="icon" src="img/icon/volume.svg" alt="Volume icon">
+                    </button>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="hero__pagination pagination">
+              <button class="pagination__prev" type="button" aria-label="Privious slide">
+                <img class="icon" src="img/icon/arrow.svg" alt="Arrow image previous slide">
+              </button>
+              <ul class="pagination__items">
+                <li class="pagination__item pagination__item--active">
+                </li>
+                <li class="pagination__item">
+                </li>
+                <li class="pagination__item">
+                </li>
+                <li class="pagination__item">
+                </li>
+              </ul>
+              <button class="pagination__next" type="button" aria-label="Next slide">
+                <img class="icon" src="img/icon/arrow.svg" alt="Arrow image next slide">
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="movies">
+        <div class="movies__container">
+          <div class="movies__inner">
+            <ul class="movies__nav nav-movies">
+              <li class="nav-movies__item"><button type="button" class="nav-movies__link">Movies</button></li>
+              <li class="nav-movies__item"><button type="button" class="nav-movies__link">Shows</button></li>
+            </ul>
+
+            <!-- genres -->
+            <section class="movies__genres genres">
+              <div class="genres__header">
+                <h2 class="genres__title title">Our Genres</h2>
+                <div class="genres__pagination pagination">
+                  <button class="pagination__prev" type="button" aria-label="Privious slide">
+                    <img class="icon" src="img/icon/arrow.svg" alt="Arrow image previous slide">
+                  </button>
+                  <ul class="pagination__items">
+                    <li class="pagination__item pagination__item--active">
+
+                    </li>
+                    <li class="pagination__item">
+
+                    </li>
+                    <li class="pagination__item">
+
+                    </li>
+                    <li class="pagination__item">
+
+                    </li>
+                  </ul>
+                  <button class="pagination__next" type="button" aria-label="Next slide">
+                    <img class="icon" src="img/icon/arrow.svg" alt="Arrow image next slide">
+                  </button>
+                </div>
+              </div>
+              <ul class="genres__cards">
+                <!-- card 1-->
+                <li class="genres__card card-genres">
+                  <div class="card-genres__figure">
+                    <div class="card-genres__image">
+                      <img src="img/genres/poster-01.webp" alt="Poster">
+                    </div>
+                    <div class="card-genres__image">
+                      <img src="img/genres/poster-02.webp" alt="Poster">
+                    </div>
+                    <div class="card-genres__image">
+                      <img src="img/genres/poster-03.webp" alt="Poster">
+                    </div>
+                    <div class="card-genres__image">
+                      <img src="img/genres/poster-04.webp" alt="Poster">
+                    </div>
+                  </div>
+                  <a class="card-genres__body" href="#">
+                    <div class="card-genres__category">Action</div>
+                    <div class="card-genres__arrow">
+                      <img class="icon" src="img/icon/arrow.svg" alt="Vector icon arrow">
+                    </div>
+                  </a>
+                </li>
+                <!-- card 2-->
+                <li class="genres__card card-genres">
+                  <div class="card-genres__figure">
+                    <div class="card-genres__image">
+                      <img src="img/genres/poster-05.webp" alt="Poster">
+                    </div>
+                    <div class="card-genres__image">
+                      <img src="img/genres/poster-06.webp" alt="Poster">
+                    </div>
+                    <div class="card-genres__image">
+                      <img src="img/genres/poster-07.webp" alt="Poster">
+                    </div>
+                    <div class="card-genres__image">
+                      <img src="img/genres/poster-08.webp" alt="Poster">
+                    </div>
+                  </div>
+                  <a class="card-genres__body" href="#">
+                    <div class="card-genres__category">Adventure</div>
+                    <div class="card-genres__arrow">
+                      <img class="icon" src="img/icon/arrow.svg" alt="Vector icon arrow">
+                    </div>
+                  </a>
+                </li>
+                <!-- card 3-->
+                <li class="genres__card card-genres">
+                  <div class="card-genres__figure">
+                    <div class="card-genres__image">
+                      <img src="img/genres/poster-09.webp" alt="Poster">
+                    </div>
+                    <div class="card-genres__image">
+                      <img src="img/genres/poster-10.webp" alt="Poster">
+                    </div>
+                    <div class="card-genres__image">
+                      <img src="img/genres/poster-11.webp" alt="Poster">
+                    </div>
+                    <div class="card-genres__image">
+                      <img src="img/genres/poster-12.webp" alt="Poster">
+                    </div>
+                  </div>
+                  <a class="card-genres__body" href="#">
+                    <div class="card-genres__category">Comedy</div>
+                    <div class="card-genres__arrow">
+                      <img class="icon" src="img/icon/arrow.svg" alt="Vector icon arrow">
+                    </div>
+                  </a>
+                </li>
+                <!-- card 4-->
+                <div class="genres__card card-genres">
+                  <div class="card-genres__figure">
+                    <div class="card-genres__image">
+                      <img src="img/genres/poster-13.webp" alt="Poster">
+                    </div>
+                    <div class="card-genres__image">
+                      <img src="img/genres/poster-14.webp" alt="Poster">
+                    </div>
+                    <div class="card-genres__image">
+                      <img src="img/genres/poster-15.webp" alt="Poster">
+                    </div>
+                    <div class="card-genres__image">
+                      <img src="img/genres/poster-16.webp" alt="Poster">
+                    </div>
+                  </div>
+                  <a class="card-genres__body" href="#">
+                    <div class="card-genres__category">Drama</div>
+                    <div class="card-genres__arrow">
+                      <img class="icon" src="img/icon/arrow.svg" alt="Vector icon arrow">
+                    </div>
+                  </a>
+                </div>
+                <!-- card 5-->
+                <li class="genres__card card-genres">
+                  <div class="card-genres__figure">
+                    <div class="card-genres__image">
+                      <img src="img/genres/poster-17.webp" alt="Poster">
+                    </div>
+                    <div class="card-genres__image">
+                      <img src="img/genres/poster-18.webp" alt="Poster">
+                    </div>
+                    <div class="card-genres__image">
+                      <img src="img/genres/poster-19.webp" alt="Poster">
+                    </div>
+                    <div class="card-genres__image">
+                      <img src="img/genres/poster-20.webp" alt="Poster">
+                    </div>
+                  </div>
+                  <a class="card-genres__body" href="#">
+                    <div class="card-genres__category">Horror</div>
+                    <div class="card-genres__arrow">
+                      <img class="icon" src="img/icon/arrow.svg" alt="Vector icon arrow">
+                    </div>
+                  </a>
+                </li>
+                <!-- card -->
+              </ul>
+            </section>
+            <!-- end genres -->
+            <!-- popular -->
+            <section class="movies__popular popular">
+              <div class="popular__header">
+                <h2 class="popular__title title">Popular Top 10 In Genres</h2>
+                <div class="popular__pagination pagination">
+                  <button class="pagination__prev" type="button" aria-label="Privious slide">
+                    <img class="icon" src="img/icon/arrow.svg" alt="Arrow image previous slide">
+                  </button>
+                  <ul class="pagination__items">
+                    <li class="pagination__item pagination__item--active">
+
+                    </li>
+                    <li class="pagination__item">
+
+                    </li>
+                    <li class="pagination__item">
+
+                    </li>
+                    <li class="pagination__item">
+
+                    </li>
+                  </ul>
+                  <button class="pagination__next" type="button" aria-label="Next slide">
+                    <img class="icon" src="img/icon/arrow.svg" alt="Arrow image next slide">
+                  </button>
+                </div>
+              </div>
+              <ul class="popular__cards">
+                <!-- card 1 -->
+                <li class="popular__card card-popular">
+                  <div class="card-popular__figure">
+                    <div class="card-popular__image">
+                      <img src="img/popular/freedom.webp" alt="Poster">
+                    </div>
+                    <div class="card-popular__image">
+                      <img src="img/popular/bad-guys.webp" alt="Poster">
+                    </div>
+                    <div class="card-popular__image">
+                      <img src="img/popular/popular1.webp" alt="Poster">
+                    </div>
+                    <div class="card-popular__image">
+                      <img src="img/popular/popular2.webp" alt="Poster">
+                    </div>
+                  </div>
+                  <a class="popular__btn button" href="#">Top 10 In</a>
+                  <a class="card-popular__body" href="#">
+                    <div class="card-popular__category">Action</div>
+                    <div class="card-popular__arrow">
+                      <img class="icon" src="img/icon/arrow.svg" alt="Vector icon arrow">
+                    </div>
+                  </a>
+                </li>
+                <!-- card 2 -->
+                <li class="popular__card card-popular">
+                  <div class="card-popular__figure">
+                    <div class="card-popular__image">
+                      <img src="img/popular/archer.webp" alt="Poster">
+                    </div>
+                    <div class="card-popular__image">
+                      <img src="img/popular/jungle-cruise.webp" alt="Poster">
+                    </div>
+                    <div class="card-popular__image">
+                      <img src="img/popular/immortal.webp" alt="Poster">
+                    </div>
+                    <div class="card-popular__image">
+                      <img src="img/popular/popular3.webp" alt="Poster">
+                    </div>
+                  </div>
+                  <button class="popular__btn button" type="button">Top 10 In</button>
+                  <a class="card-popular__body" href="#">
+                    <div class="card-popular__category">Adventure</div>
+                    <div class="card-popular__arrow">
+                      <img class="icon" src="img/icon/arrow.svg" alt="Vector icon arrow">
+                    </div>
+                  </a>
+                </li>
+                <!-- card 3 -->
+                <li class="popular__card card-popular">
+                  <div class="card-popular__figure">
+                    <div class="card-popular__image">
+                      <img src="img/genres/poster-10.webp" alt="Poster">
+                    </div>
+                    <div class="card-popular__image">
+                      <img src="img/popular/popular4.webp" alt="Poster">
+                    </div>
+                    <div class="card-popular__image">
+                      <img src="img/popular/popular5.webp" alt="Poster">
+                    </div>
+                    <div class="card-popular__image">
+                      <img src="img/popular/popular6.webp" alt="Poster">
+                    </div>
+                  </div>
+                  <button class="popular__btn button" type="button">Top 10 In</button>
+                  <a class="card-popular__body" href="#">
+                    <div class="card-popular__category">Comedy</div>
+                    <div class="card-popular__arrow">
+                      <img class="icon" src="img/icon/arrow.svg" alt="Vector icon arrow">
+                    </div>
+                  </a>
+                </li>
+                <!-- card 4 -->
+                <li class="popular__card card-popular">
+                  <div class="card-popular__figure">
+                    <div class="card-popular__image">
+                      <img src="img/popular/the-dark-society.webp" alt="Poster">
+                    </div>
+                    <div class="card-popular__image">
+                      <img src="img/popular/popular7.webp" alt="Poster">
+                    </div>
+                    <div class="card-popular__image">
+                      <img src="img/popular/the-hole.webp" alt="Poster">
+                    </div>
+                    <div class="card-popular__image">
+                      <img src="img/popular/popular8.webp" alt="Poster">
+                    </div>
+                  </div>
+                  <button class="popular__btn button" type="button">Top 10 In</button>
+                  <a class="card-popular__body" href="#">
+                    <div class="card-popular__category">Drama</div>
+                    <div class="card-popular__arrow">
+                      <img class="icon" src="img/icon/arrow.svg" alt="Vector icon arrow">
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </section>
+            <!-- end popular -->
+            <!-- trending -->
+            <section class="movies__trending trending">
+              <div class="trending__header">
+                <h2 class="trending__title title">Trending Now</h2>
+                <div class="trending__pagination pagination">
+                  <button class="pagination__prev" type="button" aria-label="Privious slide">
+                    <img class="icon" src="img/icon/arrow.svg" alt="Arrow image previous slide">
+                  </button>
+                  <ul class="pagination__items">
+                    <li class="pagination__item pagination__item--active">
+
+                    </li>
+                    <li class="pagination__item">
+
+                    </li>
+                    <li class="pagination__item">
+
+                    </li>
+                    <li class="pagination__item">
+
+                    </li>
+                  </ul>
+                  <button class="pagination__next" type="button" aria-label="Next slide">
+                    <img class="icon" src="img/icon/arrow.svg" alt="Arrow image next slide">
+                  </button>
+                </div>
+              </div>
+              <ul class="trending__cards">
+                <!-- card 1 -->
+                <li class="trending__card card-trending">
+                  <a href="#">
+                    <div class="card-trending__figure">
+                      <img src="img/trending/morbius.webp" alt="Poster">
+                    </div>
+                    <div class="card-trending__body">
+                      <div class="card-trending__time">1h 30min</div>
+                      <div class="card-trending__views">2K</div>
+                    </div>
+                  </a>
+                </li>
+                <!-- card 2 -->
+                <li class="trending__card card-trending">
+                  <a href="#">
+                    <div class="card-trending__figure">
+                      <img src="img/trending/bhai-jaan.webp" alt="Poster">
+                    </div>
+                    <div class="card-trending__body">
+                      <div class="card-trending__time">1h 57min</div>
+                      <div class="card-trending__views">1.5K</div>
+                    </div>
+                  </a>
+                </li>
+                <!-- card 3 -->
+                <li class="trending__card card-trending">
+                  <a href="#">
+                    <div class="card-trending__figure">
+                      <img src="img/trending/mangal.webp" alt="Poster">
+                    </div>
+                    <div class="card-trending__body">
+                      <div class="card-trending__time">2h 10min</div>
+                      <div class="card-trending__views">1.8K</div>
+                    </div>
+                  </a>
+                </li>
+                <!-- card 4 -->
+                <li class="trending__card card-trending">
+                  <a href="#">
+                    <div class="card-trending__figure">
+                      <img src="img/trending/pathan.webp" alt="Poster">
+                    </div>
+                    <div class="card-trending__body">
+                      <div class="card-trending__time">2h 20min</div>
+                      <div class="card-trending__views">3K</div>
+                    </div>
+                  </a>
+                </li>
+                <!-- card 5 -->
+                <li class="trending__card card-trending">
+                  <a href="#">
+                    <div class="card-trending__figure">
+                      <img src="img/trending/ant-man.webp" alt="Poster">
+                    </div>
+                    <div class="card-trending__body">
+                      <div class="card-trending__time">1h 42min</div>
+                      <div class="card-trending__views">5K</div>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </section>
+            <!-- end trending -->
+            <!-- releases -->
+            <section class="movies__releases releases">
+              <div class="releases__header">
+                <h2 class="releases__title title">New Releases</h2>
+                <div class="releases__pagination pagination">
+                  <button class="pagination__prev" type="button" aria-label="Privious slide">
+                    <img class="icon" src="img/icon/arrow.svg" alt="Arrow image previous slide">
+                  </button>
+                  <ul class="pagination__items">
+                    <li class="pagination__item pagination__item--active">
+
+                    </li>
+                    <li class="pagination__item">
+
+                    </li>
+                    <li class="pagination__item">
+
+                    </li>
+                    <li class="pagination__item">
+
+                    </li>
+                  </ul>
+                  <button class="pagination__next" type="button" aria-label="Next slide">
+                    <img class="icon" src="img/icon/arrow.svg" alt="Arrow image next slide">
+                  </button>
+                </div>
+              </div>
+              <ul class="releases__cards">
+                <!-- card 1 -->
+                <li class="releases__card card-releases">
+                  <a href="#">
+                    <div class="card-releases__figure">
+                      <img src="img/releases/adipurush.webp" alt="Poster">
+                    </div>
+                    <div class="card-releases__body">
+                      Released at 14 April 2023
+                    </div>
+                  </a>
+                </li>
+                <!-- card 2 -->
+                <li class="releases__card card-releases">
+                  <a href="#">
+                    <div class="card-releases__figure">
+                      <img src="img/releases/relesas1.webp" alt="Poster">
+                    </div>
+                    <div class="card-releases__body">
+                      Released at 22 April 2023
+                    </div>
+                  </a>
+                </li>
+                <!-- card 3 -->
+                <li class="releases__card card-releases">
+                  <a href="#">
+                    <div class="card-releases__figure">
+                      <img src="img/releases/sin-sity.webp" alt="Poster">
+                    </div>
+                    <div class="card-releases__body">
+                      Released at 13 April 2023
+                    </div>
+                  </a>
+                </li>
+                <!-- card 4 -->
+                <li class="releases__card card-releases">
+                  <a href="#">
+                    <div class="card-releases__figure">
+                      <img src="img/releases/tomorrow-war.webp" alt="Poster">
+                    </div>
+                    <div class="card-releases__body">
+                      Released at 19 April 2023
+                    </div>
+                  </a>
+                </li>
+                <!-- card 5 -->
+                <li class="releases__card card-releases">
+                  <a href="#">
+                    <div class="card-releases__figure">
+                      <img src="img/releases/misfire.webp" alt="Poster">
+                    </div>
+                    <div class="card-releases__body">
+                      Released at 11 April 2023
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </section>
+            <!-- end trending -->
+          </div>
+
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer__container">
+        &copy; 2025
+      </div>
+    </footer>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+
+</html>
