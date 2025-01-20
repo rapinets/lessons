@@ -844,6 +844,7 @@ body {
   // .card-trending__figure
 
   &__figure {
+    border-radius: toRem(10);
     aspect-ratio: 240 / 280;
     overflow: hidden;
     max-height: toRem(280);

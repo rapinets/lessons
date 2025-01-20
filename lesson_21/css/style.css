@@ -1262,6 +1262,7 @@ body {
   }
 }
 .card-trending__figure, .card-releases__figure {
+  border-radius: 0.625rem;
   aspect-ratio: 240/280;
   overflow: hidden;
   max-height: 17.5rem;
