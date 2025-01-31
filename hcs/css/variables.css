@@ -1,0 +1,21 @@
+:root {
+  --absoluteWhite: #fff;
+  --prymery: #08254F;
+  --colorYellowBright: #F4CB0F;
+  --grayLight: #F1F1F1;
+  --colorBackground: #AABEDC;
+  --colorRed: #BA5B50;
+  --colorGrayDark: #908E8E;
+  --colorGray: #BDBDBD;
+  --colorGrayLight: #F1F1F1;
+  --colorBlue: #214670;
+  --colorBlue-2: #27B3F8;
+  --colorBlueLight: #E8F9FF;
+  --colorGreen: #3CB371;
+  --colorGreenDark: #13974E;
+  --colorGreenLight: #E3FCEE;
+  --colorRedBright: #CD1000;
+  --colorBlueBlackDark: #000E1C;
+  --colorBlueLight: #E8F9FF;
+  --colorOrangeBright: #FE8415;
+}
