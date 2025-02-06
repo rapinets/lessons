@@ -939,6 +939,13 @@
   padding-block: 1.38rem 2.12rem;
 }
 
+.graph-dispatcher__graph {
+  width: 8.9375rem;
+  /* 143/16 */
+  height: 8.9375rem;
+  /* 143/16 */
+}
+
 .notation-graph-dispatcher {
   display: flex;
   flex-direction: column;
@@ -1307,12 +1314,28 @@
     background-color: var(--colorBackground);
   }
 
+  .menu__item:hover .menu__link::before {
+    width: 1.25rem;
+  }
+
+  .menu__item:hover .menu__link::after {
+    width: 1.25rem;
+  }
+
   .menu__item:hover .menu__inner {
     display: block;
   }
 
   .sub-menu__link:hover {
     text-decoration: underline;
+  }
+
+  .tell-button:hover {
+    background-color: #E78D83;
+  }
+
+  .tell-button:hover .tooltip {
+    display: flex;
   }
 
   .group-form__item:hover {

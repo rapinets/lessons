@@ -101,12 +101,37 @@ svg {
   width: clamp(2.5rem, 1.781rem + 2.682vw, 5rem);
   height: clamp(2.5rem, 1.781rem + 2.682vw, 5rem);
   aspect-ratio: 1;
-  overflow: hidden;
   border-radius: 50%;
   background-color: var(--colorRedBright);
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
+}
+
+.tooltip {
+  display: none;
+  flex-direction: column;
+  row-gap: 0.62rem;
+  padding: 0.6875rem 1.25rem 1.25rem 1rem;
+  align-items: center;
+  position: absolute;
+  top: 65%;
+  left: -260%;
+  z-index: 3;
+  border-radius: 0.5rem 0rem 0.5rem 0.5rem;
+  border: 1px solid var(--colorGrayLight);
+  background-color: var(--absoluteWhite);
+}
+
+.tooltip__txt {
+  color: #000;
+  font-weight: 500;
+}
+
+.tooltip__tell {
+  font-size: 1.5rem;
+  font-weight: 600;
 }
 
 .tell-button img {

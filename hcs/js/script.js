@@ -9,6 +9,9 @@ for (let i = 0; i < subMenu.length; ++i) {
 				subMenu[i].classList.toggle('hide');
 			});
 		}
+		if (window.innerWidth > 992 && !subMenu[i].classList.contains('hide')) {
+			subMenu[i].classList.add('hide');
+		}
 	});
 }
 
@@ -76,6 +79,18 @@ document.querySelectorAll('.card-contract').forEach(card => {
 	toggle.addEventListener('click', () => {
 		card.classList.toggle('contract-open');
 	});
+});
+
+// =========================================================
+
+const dispatcherLink = document.querySelector('.dispatcher__link');
+
+dispatcherLink.addEventListener('click', () => {
+	const dispatcherList = document.querySelector('.dispatcher__list');
+	const linksDispatcher = document.querySelector('.dispatcher__links');
+	const dispatcherBtn = document.querySelector('.dispatcher__btn');
+
+	if (dispatcherBtn.style.display == 'none' && dispatcherLink.style.display == 'none' && linksDispatcher.style.display == 'none') { }
 });
 
 
