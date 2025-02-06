@@ -1,0 +1,64 @@
+/* reklama ============================================ */
+.reklama {
+  display: block;
+  border-radius: 1.25rem;
+  background: url("../images/reklama-bg.webp") 0 0 / cover no-repeat;
+  padding-block: 0.88rem;
+  padding-inline: 0.75rem;
+  position: relative;
+}
+
+.reklama__title {
+  font-weight: 700;
+  font-size: 1.25rem;
+  padding: 0.3125rem 0.625rem;
+  border-radius: 0.9375rem;
+  background-color: var(--absoluteWhite);
+  margin-block-end: 0.56rem;
+  text-align: center;
+}
+
+.reklama__list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.69rem;
+  margin-block-end: 0.56rem;
+}
+
+.reklama__item {
+  color: var(--absoluteWhite);
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  column-gap: 0.6rem;
+}
+
+.reklama__item::before {
+  content: "";
+  width: 0.7rem;
+  height: 0.7rem;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background-color: var(--colorYellowBright);
+}
+
+.reklama__item:nth-child(2) {
+  margin-block-end: 3.44rem;
+}
+
+.reklama__discount-free,
+.reklama__discount {
+  background-color: var(--colorYellowBright);
+  border-radius: 0.9375rem;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+  padding: 0.25rem 0.625rem;
+}
+
+.reklama__discount-free {
+  position: absolute;
+  left: 0.75rem;
+  top: 8.5rem;
+  width: calc(100% - 24px);
+}

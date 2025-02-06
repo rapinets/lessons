@@ -1,0 +1,42 @@
+/* news ====================================================== */
+.news {
+  display: block;
+  grid-row: span 2;
+  border-radius: 1.25rem;
+  background-color: var(--colorBlueLight);
+  padding-block: 1.56rem 1.81rem;
+  padding-inline: 1.44rem 1.19rem;
+}
+
+.news__header {
+  margin-block-end: 0.69rem;
+}
+
+.news__title {
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+
+.post-news {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+}
+
+.post-news__title {
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+.post-news__desc {
+  margin-block-end: 0.5rem;
+}
+
+.post-news__desc,
+.post-news__date {
+  font-weight: 500;
+}
+
+.post-news__date {
+  color: var(--colorGrayDark);
+}

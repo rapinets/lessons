@@ -6,8 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Бершадьводоканал</title>
   <link rel="stylesheet" href="./css/style.css">
-
-  <script async src="./js/script.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
 </head>
 
 <body>
@@ -36,6 +35,7 @@
               <a href="#" class="menu__link">
                 <img src="./images/icon/home.svg" alt="Menu icon home"><span>Головна</span>
               </a>
+
             </li>
             <li class="menu__item">
               <a href="#" class="menu__link">
@@ -46,23 +46,25 @@
               <a href="#" class="menu__link">
                 <img src="./images/icon/description.svg" alt="Menu icon description"><span>Бібліотека</span>
               </a>
-              <ul class="menu__sub sub-menu">
-                <li class="sub-menu__item">
-                  <a href="#" class="sub-menu__link">Методичні матеріали</a>
-                </li>
-                <li class="sub-menu__item">
-                  <a href="#" class="sub-menu__link">Нормативи</a>
-                </li>
-                <li class="sub-menu__item">
-                  <a href="#" class="sub-menu__link">Роз`яснення</a>
-                </li>
-                <li class="sub-menu__item">
-                  <a href="#" class="sub-menu__link">Типові документи</a>
-                </li>
-                <li class="sub-menu__item">
-                  <a href="#" class="sub-menu__link">Проєкти</a>
-                </li>
-              </ul>
+              <div class="menu__inner hide">
+                <ul class="menu__sub-list sub-menu">
+                  <li class="sub-menu__item">
+                    <a href="#" class="sub-menu__link">Методичні матеріали</a>
+                  </li>
+                  <li class="sub-menu__item">
+                    <a href="#" class="sub-menu__link">Нормативи</a>
+                  </li>
+                  <li class="sub-menu__item">
+                    <a href="#" class="sub-menu__link">Роз`яснення</a>
+                  </li>
+                  <li class="sub-menu__item">
+                    <a href="#" class="sub-menu__link">Типові документи</a>
+                  </li>
+                  <li class="sub-menu__item">
+                    <a href="#" class="sub-menu__link">Проєкти</a>
+                  </li>
+                </ul>
+              </div>
             </li>
             <li class="menu__item">
               <a href="#" class="menu__link">
@@ -106,13 +108,13 @@
                   <div class="group-form__fields">
                     <div class="group-form__item">
                       <input class="group-form__input" id="file" type="file">
-                      <label class="group-form__label" for="file" aria-label="Прикріпити файл" title="Прикріпити файл">
+                      <label class="group-form__label" for="file" aria-label="Прикріпити файл">
                         <img src="./images/icon/attachment.svg" alt="">
                       </label>
                     </div>
                     <div class="group-form__item">
                       <input class="group-form__input" id="photo" type="file">
-                      <label class="group-form__label" for="photo" aria-label="Прикріпити файл" title="Прикріпити файл">
+                      <label class="group-form__label" for="photo" aria-label="Прикріпити файл">
                         <img src="./images/icon/add-a-photo.svg" alt="">
                       </label>
                     </div>
@@ -184,79 +186,83 @@
             </div>
           </div>
           <div class="legal-aid__footer">
-            <div class="legal-aid__link">
-              <a href="#">
-                <span>Усі запитання</span>
+
+            <a href="#" class="legal-aid__link button-link">
+              <span>Усі запитання</span>
+              <div class="button-link__icon">
                 <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34" fill="none">
                   <path
                     d="M10.6065 21.9203L19.9191 12.6077H15.8462C15.2946 12.6077 14.8492 12.1622 14.8492 11.6106C14.8492 11.0591 15.2946 10.6136 15.8462 10.6136H22.3374C22.889 10.6136 23.3344 11.0591 23.3344 11.6106L23.3344 18.1019C23.3344 18.6534 22.889 19.0989 22.3374 19.0989C21.7859 19.0989 21.3404 18.6534 21.3404 18.1019L21.3333 14.0219L12.0207 23.3345C11.6318 23.7234 10.9954 23.7234 10.6065 23.3345C10.2176 22.9456 10.2176 22.3092 10.6065 21.9203Z"
                     fill="#27B3F8" />
                 </svg>
-              </a>
-            </div>
+              </div>
+            </a>
+
             <a class="legal-aid__btn button" href="#">Всі запити підприємства</a>
           </div>
         </section>
-        <!-- reklama ========================================= -->
-        <article class="reklama">
-          <a href="#">
-            <h3 class="reklama__title">Для членських організацій</h3>
-            <ul class="reklama__list">
-              <li class="reklama__item">навчальні вебінари</li>
-              <li class="reklama__item">консультаційна підтримка</li>
-              <li class="reklama__item">на програмне забезбечення та послуги розрахунку тарифів</li>
-            </ul>
-            <div class="reklama__discount-free">Безкоштовно</div>
-            <div class="reklama__discount">15% знижка</div>
-          </a>
-        </article>
-        <!-- news ==================================== -->
-        <article class="news">
-          <div class="news__header">
-            <div class="news__logo">
-              <img src="./images/icon/nitification-important-0.svg" alt="">
+        <div class="info-block">
+          <!-- reklama ========================================= -->
+          <article class="reklama">
+            <a href="#">
+              <h3 class="reklama__title">Для членських організацій</h3>
+              <ul class="reklama__list">
+                <li class="reklama__item"><span>навчальні вебінари</span></li>
+                <li class="reklama__item"><span>консультаційна підтримка</span></li>
+                <li class="reklama__item"><span>на програмне забезбечення та послуги розрахунку тарифів</span></li>
+              </ul>
+              <div class="reklama__discount-free">Безкоштовно</div>
+              <div class="reklama__discount">15% знижка</div>
+            </a>
+          </article>
+          <!-- news ==================================== -->
+          <article class="news">
+            <div class="news__header">
+              <div class="news__logo">
+                <img src="./images/icon/nitification-important-0.svg" alt="">
+              </div>
+              <h3 class="news__title">Новини і зміни</h3>
             </div>
-            <h3 class="news__title">Новини і зміни</h3>
-          </div>
-          <ul class="news__post post-news">
-            <li class="post-news__item">
-              <a href="#">
-                <h2 class="post-news__title">Чому вода мокрий</h2>
-              </a>
-              <div class="post-news__body">
-                <p class="post-news__desc">
-                  Чому вода мокрий, а снігЧому вода м окрий, а снігому вода м оода мокрий, а снігЧому вода м окрий, а
-                  снігому вода м о.
-                </p>
-                <div class="post-news__date"><time datetime="2024-12-24">24.12.24</time></div>
-              </div>
-            </li>
-            <li class="post-news__item">
-              <a href="#">
-                <h2 class="post-news__title">Чому вода мокрий</h2>
-              </a>
-              <div class="post-news__body">
-                <p class="post-news__desc">
-                  Чому вода мокрий, а снігЧому вода м окрий, а снігому вода м оода мокрий, а снігЧому вода м окрий, а
-                  снігому вода м о.
-                </p>
-                <div class="post-news__date"><time datetime="2024-12-24">24.12.24</time></div>
-              </div>
-            </li>
-            <li class="post-news__item">
-              <a href="#">
-                <h2 class="post-news__title">Чому вода мокрий</h2>
-              </a>
-              <div class="post-news__body">
-                <p class="post-news__desc">
-                  Чому вода мокрий, а снігЧому вода м окрий, а снігому вода м оода мокрий, а снігЧому вода м окрий, а
-                  снігому вода м о.
-                </p>
-                <div class="post-news__date"><time datetime="2024-12-24">24.12.24</time></div>
-              </div>
-            </li>
-          </ul>
-        </article>
+            <ul class="news__post post-news">
+              <li class="post-news__item">
+                <a href="#">
+                  <h2 class="post-news__title">Чому вода мокрий</h2>
+                </a>
+                <div class="post-news__body">
+                  <p class="post-news__desc">
+                    Чому вода мокрий, а снігЧому вода м окрий, а снігому вода м оода мокрий, а снігЧому вода м окрий, а
+                    снігому вода м о.
+                  </p>
+                  <div class="post-news__date"><time datetime="2024-12-24">24.12.24</time></div>
+                </div>
+              </li>
+              <li class="post-news__item">
+                <a href="#">
+                  <h2 class="post-news__title">Чому вода мокрий</h2>
+                </a>
+                <div class="post-news__body">
+                  <p class="post-news__desc">
+                    Чому вода мокрий, а снігЧому вода м окрий, а снігому вода м оода мокрий, а снігЧому вода м окрий, а
+                    снігому вода м о.
+                  </p>
+                  <div class="post-news__date"><time datetime="2024-12-24">24.12.24</time></div>
+                </div>
+              </li>
+              <li class="post-news__item">
+                <a href="#">
+                  <h2 class="post-news__title">Чому вода мокрий</h2>
+                </a>
+                <div class="post-news__body">
+                  <p class="post-news__desc">
+                    Чому вода мокрий, а снігЧому вода м окрий, а снігому вода м оода мокрий, а снігЧому вода м окрий, а
+                    снігому вода м о.
+                  </p>
+                  <div class="post-news__date"><time datetime="2024-12-24">24.12.24</time></div>
+                </div>
+              </li>
+            </ul>
+          </article>
+        </div>
       </div>
       <!-- service-pro ======================================================== -->
       <div class="main__item">
@@ -288,9 +294,7 @@
             <a href="#" class="services-pro__btn button">Відправити запит</a>
           </div>
         </section>
-      </div>
-      <!-- humor =============================================== -->
-      <div class="main__item">
+        <!-- humor =============================================== -->
         <section class="humor">
           <div class="humor__header">
             <div class="humor__logo">
@@ -299,23 +303,17 @@
             <h2 class="humor__title title">Хвилинка гумору</h2>
           </div>
           <div class="humor__body">
-            <ul id="slide" class="humor__cards">
-              <li class="humor__card card-humor">
+            <div class="humor__slider slider js-flickity" data-flickity-options='{ " wrapAround": true }'>
+              <div class="slider__figure">
                 <img src="./images/humor/image-52.webp" alt="">
-              </li>
-              <li class="humor__card card-humor">
+              </div>
+              <div class="slider__figure">
                 <img src="./images/humor/image-53.webp" alt="">
-              </li>
-              <li class="humor__card card-humor">
+              </div>
+              <div class="slider__figure">
                 <img src="./images/humor/image-54.webp" alt="">
-              </li>
-            </ul>
-            <button id="prev" class="humor__prev-slide" type="button" aria-label="previosly slide">
-              <img src="./images/icon/arrow-forward-ios.svg" alt="">
-            </button>
-            <button id="next" class="humor__next-slide" type="button" aria-label="next slide">
-              <img src="./images/icon/arrow-forward-ios.svg" alt="">
-            </button>
+              </div>
+            </div>
           </div>
           <div class="humor__footer">
             <a href="#" class="humor__btn button">Більше гумору</a>
@@ -425,13 +423,15 @@
             </div>
           </div>
           <div class="staff__footer">
-            <button class="staff__link" type="button">
+            <button class="staff__link button-link" type="button">
               <span>Показати більше</span>
-              <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34" fill="none">
-                <path
-                  d="M10.6065 21.9203L19.9191 12.6077H15.8462C15.2946 12.6077 14.8492 12.1622 14.8492 11.6106C14.8492 11.0591 15.2946 10.6136 15.8462 10.6136H22.3374C22.889 10.6136 23.3344 11.0591 23.3344 11.6106L23.3344 18.1019C23.3344 18.6534 22.889 19.0989 22.3374 19.0989C21.7859 19.0989 21.3404 18.6534 21.3404 18.1019L21.3333 14.0219L12.0207 23.3345C11.6318 23.7234 10.9954 23.7234 10.6065 23.3345C10.2176 22.9456 10.2176 22.3092 10.6065 21.9203Z"
-                  fill="#27B3F8" />
-              </svg>
+              <div class="button-link__icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34" fill="none">
+                  <path
+                    d="M10.6065 21.9203L19.9191 12.6077H15.8462C15.2946 12.6077 14.8492 12.1622 14.8492 11.6106C14.8492 11.0591 15.2946 10.6136 15.8462 10.6136H22.3374C22.889 10.6136 23.3344 11.0591 23.3344 11.6106L23.3344 18.1019C23.3344 18.6534 22.889 19.0989 22.3374 19.0989C21.7859 19.0989 21.3404 18.6534 21.3404 18.1019L21.3333 14.0219L12.0207 23.3345C11.6318 23.7234 10.9954 23.7234 10.6065 23.3345C10.2176 22.9456 10.2176 22.3092 10.6065 21.9203Z"
+                    fill="#27B3F8" />
+                </svg>
+              </div>
             </button>
             <a href="#" class="staff__btn button">Перейти в програму</a>
           </div>
@@ -450,56 +450,58 @@
             </a>
           </div>
           <div class="calculation__body">
-            <div class="calculation__text">
-              <ul class="calculation__list list-calculation">
-                <li class="list-calculation__item">
-                  <span class="list-calculation__title">Кількість абонентів: </span>
-                  <span class="list-calculation__text">456 765 ФО 3 445 ЮО 567</span>
-                </li>
-                <li class="list-calculation__item">
-                  <span class="list-calculation__title">Нарахування: </span>
-                  <span class="list-calculation__text">5 678 687 грн</span>
-                </li>
-                <li class="list-calculation__item">
-                  <span class="list-calculation__title">Дебіторська заборгованість: </span>
-                  <span class="list-calculation__text">4 556 345 грн</span>
-                </li>
-                <li class="list-calculation__item">
-                  <span class="list-calculation__title">Боржники 3 міс > </span>
-                  <span class="list-calculation__text">34 656 о/р (23%)</span>
-                </li>
-                <li class="list-calculation__item">
-                  <span class="list-calculation__title">Прилади обліку: </span>
-                  <span class="list-calculation__text">45 567 од. (34%)</span>
-                </li>
-              </ul>
-              <div class="calculation__sub-title">Надходження коштів за 23.12.24, грн</div>
-              <div class="calculation__table-wrapper">
-                <table class="calculation__table table-calculation">
-                  <tbody>
-                    <tr>
-                      <td class="table-calculation__title">
-                        UA23...8080
-                      </td>
-                      <td class="table-calculation__val">1 345 64</td>
-                    </tr>
-                    <tr>
-                      <td class="table-calculation__title">
-                        UA23...8081
-                      </td>
-                      <td class="table-calculation__val">1 678 64</td>
-                    </tr>
-                  </tbody>
-                </table>
+            <div class="calculation__inner">
+              <div class="calculation__text">
+                <ul class="calculation__list list-calculation">
+                  <li class="list-calculation__item">
+                    <span class="list-calculation__title">Кількість абонентів: </span>
+                    <span class="list-calculation__text">456 765 ФО 3 445 ЮО 567</span>
+                  </li>
+                  <li class="list-calculation__item">
+                    <span class="list-calculation__title">Нарахування: </span>
+                    <span class="list-calculation__text">5 678 687 грн</span>
+                  </li>
+                  <li class="list-calculation__item">
+                    <span class="list-calculation__title">Дебіторська заборгованість: </span>
+                    <span class="list-calculation__text">4 556 345 грн</span>
+                  </li>
+                  <li class="list-calculation__item">
+                    <span class="list-calculation__title">Боржники 3 міс > </span>
+                    <span class="list-calculation__text">34 656 о/р (23%)</span>
+                  </li>
+                  <li class="list-calculation__item">
+                    <span class="list-calculation__title">Прилади обліку: </span>
+                    <span class="list-calculation__text">45 567 од. (34%)</span>
+                  </li>
+                </ul>
+                <div class="calculation__sub-title">Надходження коштів за 23.12.24, грн</div>
+                <div class="calculation__table-wrapper">
+                  <table class="calculation__table table-calculation">
+                    <tbody>
+                      <tr>
+                        <td class="table-calculation__title">
+                          UA23...8080
+                        </td>
+                        <td class="table-calculation__val">1 345 64</td>
+                      </tr>
+                      <tr>
+                        <td class="table-calculation__title">
+                          UA23...8081
+                        </td>
+                        <td class="table-calculation__val">1 678 64</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
               </div>
-            </div>
-            <div class="calculation__graph graph-calculation">
-              <div class="graph-calculation__graph">
-                <canvas id="line-graph"></canvas>
-              </div>
-              <div class="graph-calculation__notation">
-                <div>Нараховано</div>
-                <div>Сплачено</div>
+              <div class="calculation__graph graph-calculation">
+                <div class="graph-calculation__graph">
+                  <canvas id="line-graph"></canvas>
+                </div>
+                <div class="graph-calculation__notation">
+                  <div>Нараховано</div>
+                  <div>Сплачено</div>
+                </div>
               </div>
             </div>
             <div class="calculation__tb-reciept-wrapper">
@@ -542,14 +544,16 @@
             </div>
           </div>
           <div class="calculation__footer">
-            <button class="calculation__link" type="button">
+            <button class="calculation__link button-link" type="button">
               <div>
                 <span>Показати більше</span>
-                <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34" fill="none">
-                  <path
-                    d="M10.6065 21.9203L19.9191 12.6077H15.8462C15.2946 12.6077 14.8492 12.1622 14.8492 11.6106C14.8492 11.0591 15.2946 10.6136 15.8462 10.6136H22.3374C22.889 10.6136 23.3344 11.0591 23.3344 11.6106L23.3344 18.1019C23.3344 18.6534 22.889 19.0989 22.3374 19.0989C21.7859 19.0989 21.3404 18.6534 21.3404 18.1019L21.3333 14.0219L12.0207 23.3345C11.6318 23.7234 10.9954 23.7234 10.6065 23.3345C10.2176 22.9456 10.2176 22.3092 10.6065 21.9203Z"
-                    fill="#27B3F8" />
-                </svg>
+                <div class="button-link__icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34" fill="none">
+                    <path
+                      d="M10.6065 21.9203L19.9191 12.6077H15.8462C15.2946 12.6077 14.8492 12.1622 14.8492 11.6106C14.8492 11.0591 15.2946 10.6136 15.8462 10.6136H22.3374C22.889 10.6136 23.3344 11.0591 23.3344 11.6106L23.3344 18.1019C23.3344 18.6534 22.889 19.0989 22.3374 19.0989C21.7859 19.0989 21.3404 18.6534 21.3404 18.1019L21.3333 14.0219L12.0207 23.3345C11.6318 23.7234 10.9954 23.7234 10.6065 23.3345C10.2176 22.9456 10.2176 22.3092 10.6065 21.9203Z"
+                      fill="#27B3F8" />
+                  </svg>
+                </div>
               </div>
             </button>
             <a href="#" class="calculation__btn button">Перейти в програму</a>
@@ -571,92 +575,120 @@
           </div>
           <div class="webinars__body">
             <ul class="webinars__cards">
-              <li class="webinars__card card-webinars">
+              <!-- webinars card -->
+              <li class="webinars__card card-webinars card-webinars--registered">
                 <div class="card-webinars__body">
                   <div class="card-webinars__datetime">
-                    <time class="card-webinar__date" datetime="20024-12-24">24.12.2024</time>
-                    <time class="card-webinar__time" datetime="12:30:00+03:00">12:30</time>
-                    <div class="card-webinar__price">500грн</div>
-                    <div class="card-webinars__part hide">Участь</div>
+                    <div class="card-webinars__part">Участь</div>
+                    <time class="card-webinars__date" datetime="20024-12-24">24.12.2024</time>
+                    <time class="card-webinars__time" datetime="12:30:00+03:00">12:30</time>
                   </div>
                   <div class="card-webinars__content">
-                    <div class="card-webinars__text">
-                      <p>
-                        Про повідомну реєстрацію колективних договорів Про повідомну реєстрацію колективних договорів
-                      </p>
-                    </div>
+                    <h3 class="card-webinars__text">
+                      Про повідомну реєстрацію колективних договорів Про повідомну реєстрацію колективних договорів
+                    </h3>
                     <div class="card-webinars__author">Астаф’єва Г.В</div>
                   </div>
                   <div class="card-webinars__toggle">
-                    <img src="./images/icon/expand-more.svg" alt="">
+                    <img src="./images/icon/expand-more.svg" alt="Розгорнути деталі">
                   </div>
                 </div>
                 <div class="card-webinars__buttons">
-                  <a href="#" class="card-webinars__btn light-btn">Детальніше</a>
+                  <a href="#" class="card-webinars__button">Детальніше</a>
+                  <div class="card-webinars__price">500грн</div>
                   <a href="#" class="card-webinars__btn button">Зареєструватися</a>
-                  <a href="#" class="hide card-webinars__btn blue-btn">ZOOM</a>
                 </div>
               </li>
-            </ul>
-            <ul class="webinars__cards">
-              <li class="webinars__card card-webinars">
+              <!-- end webinar card -->
+              <!-- webinars card -->
+              <li class="webinars__card card-webinars card-webinars--active">
                 <div class="card-webinars__body">
                   <div class="card-webinars__datetime">
-                    <time class="card-webinar__date" datetime="20024-12-24">24.12.2024</time>
-                    <time class="card-webinar__time" datetime="12:30:00+03:00">12:30</time>
-                    <div class="card-webinar__price">500грн</div>
-                    <div class="card-webinars__part hide">Участь</div>
+                    <div class="card-webinars__part">Участь</div>
+                    <time class="card-webinars__date" datetime="20024-12-24">24.12.2024</time>
+                    <time class="card-webinars__time" datetime="12:30:00+03:00">12:30</time>
                   </div>
                   <div class="card-webinars__content">
-                    <div class="card-webinars__text">
-                      <p>
-                        Про повідомну реєстрацію колективних договорів Про повідомну реєстрацію колективних договорів
-                      </p>
-                    </div>
+                    <h3 class="card-webinars__text">
+                      Про повідомну реєстрацію колективних договорів Про повідомну реєстрацію колективних договорів
+                    </h3>
                     <div class="card-webinars__author">Астаф’єва Г.В</div>
                   </div>
                   <div class="card-webinars__toggle">
-                    <img src="./images/icon/expand-more.svg" alt="">
+                    <img src="./images/icon/expand-more.svg" alt="Розгорнути деталі">
                   </div>
                 </div>
                 <div class="card-webinars__buttons">
-                  <a href="#" class="card-webinars__btn light-btn">Детальніше</a>
+                  <a href="#" class="card-webinars__button">Детальніше</a>
+                  <div class="card-webinars__price">500грн</div>
                   <a href="#" class="card-webinars__btn button">Зареєструватися</a>
-                  <a href="#" class="hide card-webinars__btn blue-btn">ZOOM</a>
                 </div>
               </li>
-            </ul>
-            <ul class="webinars__cards">
-              <li class="webinars__card card-webinars">
+              <!-- end webinar card -->
+              <!-- webinars card -->
+              <li class="webinars__card card-webinars card-webinars--registered">
                 <div class="card-webinars__body">
                   <div class="card-webinars__datetime">
-                    <time class="card-webinar__date" datetime="20024-12-24">24.12.2024</time>
-                    <time class="card-webinar__time" datetime="12:30:00+03:00">12:30</time>
-                    <div class="card-webinar__price">500грн</div>
-                    <div class="card-webinars__part hide">Участь</div>
+                    <div class="card-webinars__part">Участь</div>
+                    <time class="card-webinars__date" datetime="20024-12-24">24.12.2024</time>
+                    <time class="card-webinars__time" datetime="12:30:00+03:00">12:30</time>
                   </div>
                   <div class="card-webinars__content">
-                    <div class="card-webinars__text">
-                      <p>
-                        Про повідомну реєстрацію колективних договорів Про повідомну реєстрацію колективних договорів
-                      </p>
-                    </div>
+                    <h3 class="card-webinars__text">
+                      Про повідомну реєстрацію колективних договорів Про повідомну реєстрацію колективних договорів
+                    </h3>
                     <div class="card-webinars__author">Астаф’єва Г.В</div>
                   </div>
                   <div class="card-webinars__toggle">
-                    <img src="./images/icon/expand-more.svg" alt="">
+                    <img src="./images/icon/expand-more.svg" alt="Розгорнути деталі">
                   </div>
                 </div>
                 <div class="card-webinars__buttons">
-                  <a href="#" class="card-webinars__btn light-btn">Детальніше</a>
+                  <a href="#" class="card-webinars__button">Детальніше</a>
+                  <div class="card-webinars__price">500грн</div>
                   <a href="#" class="card-webinars__btn button">Зареєструватися</a>
-                  <a href="#" class="hide card-webinars__btn blue-btn">ZOOM</a>
                 </div>
               </li>
+              <!-- end webinar card -->
+              <!-- webinars card -->
+              <li class="webinars__card card-webinars">
+                <div class="card-webinars__body">
+                  <div class="card-webinars__datetime">
+                    <div class="card-webinars__part">Участь</div>
+                    <time class="card-webinars__date" datetime="20024-12-24">24.12.2024</time>
+                    <time class="card-webinars__time" datetime="12:30:00+03:00">12:30</time>
+                  </div>
+                  <div class="card-webinars__content">
+                    <h3 class="card-webinars__text">
+                      Про повідомну реєстрацію колективних договорів Про повідомну реєстрацію колективних договорів
+                    </h3>
+                    <div class="card-webinars__author">Астаф’єва Г.В</div>
+                  </div>
+                  <div class="card-webinars__toggle">
+                    <img src="./images/icon/expand-more.svg" alt="Розгорнути деталі">
+                  </div>
+                </div>
+                <div class="card-webinars__buttons">
+                  <a href="#" class="card-webinars__button">Детальніше</a>
+                  <div class="card-webinars__price">500грн</div>
+                  <a href="#" class="card-webinars__btn button">Зареєструватися</a>
+                </div>
+              </li>
+              <!-- end webinar card -->
             </ul>
           </div>
           <div class="webinars__footer">
-            <a href="#" class="webinars__link">Показати більше</a>
+            <a href="#" class="webinars__link button-link">
+              <span>Усі вебінари</span>
+              <div class="button-link__icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34" fill="none">
+                  <path
+                    d="M10.6065 21.9203L19.9191 12.6077H15.8462C15.2946 12.6077 14.8492 12.1622 14.8492 11.6106C14.8492 11.0591 15.2946 10.6136 15.8462 10.6136H22.3374C22.889 10.6136 23.3344 11.0591 23.3344 11.6106L23.3344 18.1019C23.3344 18.6534 22.889 19.0989 22.3374 19.0989C21.7859 19.0989 21.3404 18.6534 21.3404 18.1019L21.3333 14.0219L12.0207 23.3345C11.6318 23.7234 10.9954 23.7234 10.6065 23.3345C10.2176 22.9456 10.2176 22.3092 10.6065 21.9203Z"
+                    fill="#27B3F8" />
+                </svg>
+              </div>
+            </a>
+
           </div>
         </section>
       </div>
@@ -681,23 +713,25 @@
                 <textarea name="form[]" class="form__textarea"
                   placeholder="Введіть запитання, яке Вас цікавить..."></textarea>
                 <div class="form__group group-form">
-                  <div class="group-form__item">
-                    <input class="group-form__input" id="file" type="file">
-                    <label class="group-form__label" for="file">
-                      <img src="./images/icon/attachment.svg" alt="">
-                    </label>
+                  <div class="group-form__fields">
+                    <div class="group-form__item">
+                      <input class="group-form__input" id="file" type="file">
+                      <label class="group-form__label" for="file">
+                        <img src="./images/icon/attachment.svg" alt="">
+                      </label>
+                    </div>
+                    <div class="group-form__item">
+                      <input class="group-form__input" id="photo" type="file">
+                      <label class="group-form__label" for="photo">
+                        <img src="./images/icon/add-a-photo.svg" alt="">
+                      </label>
+                    </div>
                   </div>
-                  <div class="group-form__item">
-                    <input class="group-form__input" id="photo" type="file">
-                    <label class="group-form__label" for="photo">
-                      <img src="./images/icon/add-a-photo.svg" alt="">
-                    </label>
-                  </div>
-                  <div class="group-form__file-info">
+                  <div class="group-form__file-info hide">
                     <span>Питання док</span>
                     <span class="group-form__file-size">225КБ</span>
                   </div>
-                  <div class="group-form__file-info">
+                  <div class="group-form__file-info hide">
                     <span>Питання док</span>
                     <span class="group-form__file-size">225КБ</span>
                   </div>
@@ -724,15 +758,13 @@
             <a href="#" class="site__btn button">Адмінпанель</a>
           </div>
         </section>
-      </div>
-      <!-- office ============================================================== -->
-      <div class="main__item">
+        <!-- office ============================================================== -->
         <section class="office">
           <div class="office__header">
             <div class="office__logo">
               <img src="./images/icon/perm-identity.svg" alt="">
             </div>
-            <h2 class="office__title title">ЖКГ: Сайт</h2>
+            <h2 class="office__title title">ЖКГ: Кабінет</h2>
             <a href="#" class="office__tell-button tell-button">
               <img src="./images/icon/call-1.svg" alt="">
             </a>
@@ -808,30 +840,45 @@
               </li>
             </ul>
             <div class="dispatcher__graph graph-dispatcher">
-              <div class="graph-dispatcher__graph"></div>
+              <div class="graph-dispatcher__graph">
+                <canvas id="graph-dispatcher"></canvas>
+              </div>
               <div class="graph-dispatcher__notation notation-graph-dispatcher">
-                <div class="notation-graph-dispatcher__item">Кількість звернень</div>
-                <div class="notation-graph-dispatcher__item">45</div>
-                <div class="notation-graph-dispatcher__item"><span>Прийняті</span><span>Виконані</span></div>
+                <div class="notation-graph-dispatcher__title">Кількість звернень</div>
+                <div class="notation-graph-dispatcher__num">45</div>
+                <div class="notation-graph-dispatcher__legend"><span>Прийняті</span><span>Виконані</span></div>
               </div>
             </div>
-            <div class="dispatcher__links">
-              <a href="#">
-                <img src="./images/icon/send.svg" alt="">
-                <span>Розсилка повідомлень</span>
-                <div class="button">Перейти</div>
-              </a>
-            </div>
+
+            <a href="#" class="dispatcher__links">
+              <div class="dispatcher__icon-link">
+                <svg xmlns="http://www.w3.org/2000/svg" width="37" height="37" viewBox="0 0 37 37" fill="none">
+                  <path
+                    d="M5.6 31.0998L31.775 19.8798C32.99 19.3548 32.99 17.6448 31.775 17.1198L5.6 5.89978C4.61 5.46478 3.515 6.19978 3.515 7.26478L3.5 14.1798C3.5 14.9298 4.055 15.5748 4.805 15.6648L26 18.4998L4.805 21.3198C4.055 21.4248 3.5 22.0698 3.5 22.8198L3.515 29.7348C3.515 30.7998 4.61 31.5348 5.6 31.0998Z"
+                    fill="#08254F" />
+                </svg>
+              </div>
+              <span>Розсилка повідомлень</span>
+              <div class="button">Перейти</div>
+            </a>
+
           </div>
           <div class="dispatcher__footer">
-            <a href="#" class="dispatcher__link">Показати більше</a>
+            <a href="#" class="dispatcher__link button-link">
+              <span>Показати більше</span>
+              <div class="button-link__icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34" fill="none">
+                  <path
+                    d="M10.6651 21.9498L19.9777 12.6372H15.9048C15.3532 12.6372 14.9078 12.1917 14.9078 11.6402C14.9078 11.0886 15.3532 10.6432 15.9048 10.6432H22.396C22.9476 10.6432 23.393 11.0886 23.393 11.6402L23.393 18.1314C23.393 18.683 22.9476 19.1284 22.396 19.1284C21.8445 19.1284 21.399 18.683 21.399 18.1314L21.3919 14.0514L12.0793 23.364C11.6904 23.7529 11.054 23.7529 10.6651 23.364C10.2762 22.9751 10.2762 22.3387 10.6651 21.9498Z"
+                    fill="#27B3F8" />
+                </svg>
+              </div>
+            </a>
             <a href="#" class="dispatcher__btn button">Перейти в програму</a>
             <a href="#" class="dispatcher__btn light-btn">Адмініструвати доступ</a>
           </div>
         </section>
-      </div>
-      <!-- tariff ================================================================== -->
-      <div class="main__item">
+        <!-- tariff ================================================================== -->
         <section class="tariff">
           <div class="tariff__header">
             <div class="tariff__logo">
@@ -891,288 +938,310 @@
             </a>
           </div>
           <div class="contract__body">
-            <ul class="contract__cards cards-contract">
-              <li class="cards-contract__item card-contract">
-                <div class="card-contract__top">
-                  <div class="card-contract__val">+576грн</div>
-                  <div class="card-contract__status"><span>Активний</span></div>
-                  <div class="card-contract__toggle">
-                    <img src="./images/icon/expand-more.svg" alt="">
-                  </div>
-                </div>
+            <ul class="contract__cards">
+              <!-- contract card ========================================== -->
+              <li class="contract__card card-contract card-contract--active contract-minus">
                 <div class="card-contract__body">
                   <div class="card-contract__text">
-                    <p>
-                      №4525 від 25.12.2024 Про повідомну реєстрацію колективних договорів Про повідомну реєстрацію
-                      колективних договорів
-                    </p>
+                    №4525 від <time datetime="2024-12-24">24.12.2024</time> Договірна програмне забезпечення “ЖГК: Сайт”
+                  </div>
+                  <div class="card-contract__info">
+                    <div class="card-contract__val">+576грн</div>
+                    <div class="card-contract__status">Активний</div>
+                    <div class="card-contract__toggle">
+                      <img src="./images/icon/expand-more.svg" alt="">
+                    </div>
                   </div>
                   <a href="#" class="card-contract__icon">
                     <img src="./images/icon/description.svg" alt="">
                   </a>
                 </div>
                 <div class="card-contract__footer">
-                  <a href="#" class="card-contract__link">
+                  <a href="#" class="card-contract__link button-link">
                     <span>Детальніше</span>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34" fill="none">
-                      <path
-                        d="M10.6065 21.9203L19.9191 12.6077H15.8462C15.2946 12.6077 14.8492 12.1622 14.8492 11.6106C14.8492 11.0591 15.2946 10.6136 15.8462 10.6136H22.3374C22.889 10.6136 23.3344 11.0591 23.3344 11.6106L23.3344 18.1019C23.3344 18.6534 22.889 19.0989 22.3374 19.0989C21.7859 19.0989 21.3404 18.6534 21.3404 18.1019L21.3333 14.0219L12.0207 23.3345C11.6318 23.7234 10.9954 23.7234 10.6065 23.3345C10.2176 22.9456 10.2176 22.3092 10.6065 21.9203Z"
-                        fill="#27B3F8" />
-                    </svg>
+                    <div class="button-link__icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34" fill="none">
+                        <path
+                          d="M10.6065 21.9203L19.9191 12.6077H15.8462C15.2946 12.6077 14.8492 12.1622 14.8492 11.6106C14.8492 11.0591 15.2946 10.6136 15.8462 10.6136H22.3374C22.889 10.6136 23.3344 11.0591 23.3344 11.6106L23.3344 18.1019C23.3344 18.6534 22.889 19.0989 22.3374 19.0989C21.7859 19.0989 21.3404 18.6534 21.3404 18.1019L21.3333 14.0219L12.0207 23.3345C11.6318 23.7234 10.9954 23.7234 10.6065 23.3345C10.2176 22.9456 10.2176 22.3092 10.6065 21.9203Z"
+                          fill="#27B3F8" />
+                      </svg>
+                    </div>
                   </a>
                 </div>
               </li>
-              <li class="cards-contract__item card-contract">
-                <div class="card-contract__top">
-                  <div class="card-contract__val">+576грн</div>
-                  <div class="card-contract__status"><span>Активний</span></div>
-                  <div class="card-contract__toggle">
-                    <img src="./images/icon/expand-more.svg" alt="">
-                  </div>
-                </div>
+              <!-- end contract card =============================================== -->
+              <!-- contract card ========================================== -->
+              <li class="contract__card card-contract card-contract--closed">
                 <div class="card-contract__body">
                   <div class="card-contract__text">
-                    <p>
-                      №4525 від 25.12.2024 Про повідомну реєстрацію колективних договорів Про повідомну реєстрацію
-                      колективних договорів
-                    </p>
+                    №4525 від <time datetime="2024-12-24">24.12.2024</time> Угода
+                  </div>
+                  <div class="card-contract__info">
+                    <div class="card-contract__val">+576грн</div>
+                    <div class="card-contract__status">Активний</div>
+                    <div class="card-contract__toggle">
+                      <img src="./images/icon/expand-more.svg" alt="">
+                    </div>
                   </div>
                   <a href="#" class="card-contract__icon">
                     <img src="./images/icon/description.svg" alt="">
                   </a>
                 </div>
                 <div class="card-contract__footer">
-                  <a href="#" class="card-contract__link">
+                  <a href="#" class="card-contract__link button-link">
                     <span>Детальніше</span>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34" fill="none">
-                      <path
-                        d="M10.6065 21.9203L19.9191 12.6077H15.8462C15.2946 12.6077 14.8492 12.1622 14.8492 11.6106C14.8492 11.0591 15.2946 10.6136 15.8462 10.6136H22.3374C22.889 10.6136 23.3344 11.0591 23.3344 11.6106L23.3344 18.1019C23.3344 18.6534 22.889 19.0989 22.3374 19.0989C21.7859 19.0989 21.3404 18.6534 21.3404 18.1019L21.3333 14.0219L12.0207 23.3345C11.6318 23.7234 10.9954 23.7234 10.6065 23.3345C10.2176 22.9456 10.2176 22.3092 10.6065 21.9203Z"
-                        fill="#27B3F8" />
-                    </svg>
+                    <div class="button-link__icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34" fill="none">
+                        <path
+                          d="M10.6065 21.9203L19.9191 12.6077H15.8462C15.2946 12.6077 14.8492 12.1622 14.8492 11.6106C14.8492 11.0591 15.2946 10.6136 15.8462 10.6136H22.3374C22.889 10.6136 23.3344 11.0591 23.3344 11.6106L23.3344 18.1019C23.3344 18.6534 22.889 19.0989 22.3374 19.0989C21.7859 19.0989 21.3404 18.6534 21.3404 18.1019L21.3333 14.0219L12.0207 23.3345C11.6318 23.7234 10.9954 23.7234 10.6065 23.3345C10.2176 22.9456 10.2176 22.3092 10.6065 21.9203Z"
+                          fill="#27B3F8" />
+                      </svg>
+                    </div>
                   </a>
                 </div>
               </li>
-              <li class="cards-contract__item card-contract">
-                <div class="card-contract__top">
-                  <div class="card-contract__val">+576грн</div>
-                  <div class="card-contract__status"><span>Активний</span></div>
-                  <div class="card-contract__toggle">
-                    <img src="./images/icon/expand-more.svg" alt="">
-                  </div>
-                </div>
+              <!-- end contract card =============================================== -->
+              <!-- contract card ========================================== -->
+              <li class="contract__card card-contract">
                 <div class="card-contract__body">
                   <div class="card-contract__text">
-                    <p>
-                      №4525 від 25.12.2024 Про повідомну реєстрацію колективних договорів Про повідомну реєстрацію
-                      колективних договорів
-                    </p>
+                    №4525 від <time datetime="2024-12-24">24.12.2024</time> Акт звіряння рахунків
+                  </div>
+                  <div class="card-contract__info">
+                    <div class="card-contract__val">+576грн</div>
+                    <div class="card-contract__status">Активний</div>
+                    <div class="card-contract__toggle">
+                      <img src="./images/icon/expand-more.svg" alt="">
+                    </div>
                   </div>
                   <a href="#" class="card-contract__icon">
                     <img src="./images/icon/description.svg" alt="">
                   </a>
                 </div>
                 <div class="card-contract__footer">
-                  <a href="#" class="card-contract__link">
+                  <a href="#" class="card-contract__link button-link">
                     <span>Детальніше</span>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34" fill="none">
-                      <path
-                        d="M10.6065 21.9203L19.9191 12.6077H15.8462C15.2946 12.6077 14.8492 12.1622 14.8492 11.6106C14.8492 11.0591 15.2946 10.6136 15.8462 10.6136H22.3374C22.889 10.6136 23.3344 11.0591 23.3344 11.6106L23.3344 18.1019C23.3344 18.6534 22.889 19.0989 22.3374 19.0989C21.7859 19.0989 21.3404 18.6534 21.3404 18.1019L21.3333 14.0219L12.0207 23.3345C11.6318 23.7234 10.9954 23.7234 10.6065 23.3345C10.2176 22.9456 10.2176 22.3092 10.6065 21.9203Z"
-                        fill="#27B3F8" />
-                    </svg>
+                    <div class="button-link__icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34" fill="none">
+                        <path
+                          d="M10.6065 21.9203L19.9191 12.6077H15.8462C15.2946 12.6077 14.8492 12.1622 14.8492 11.6106C14.8492 11.0591 15.2946 10.6136 15.8462 10.6136H22.3374C22.889 10.6136 23.3344 11.0591 23.3344 11.6106L23.3344 18.1019C23.3344 18.6534 22.889 19.0989 22.3374 19.0989C21.7859 19.0989 21.3404 18.6534 21.3404 18.1019L21.3333 14.0219L12.0207 23.3345C11.6318 23.7234 10.9954 23.7234 10.6065 23.3345C10.2176 22.9456 10.2176 22.3092 10.6065 21.9203Z"
+                          fill="#27B3F8" />
+                      </svg>
+                    </div>
                   </a>
                 </div>
               </li>
-              <li class="cards-contract__item card-contract">
-                <div class="card-contract__top">
-                  <div class="card-contract__val">+576грн</div>
-                  <div class="card-contract__status"><span>Активний</span></div>
-                  <div class="card-contract__toggle">
-                    <img src="./images/icon/expand-more.svg" alt="">
-                  </div>
-                </div>
+              <!-- end contract card =============================================== -->
+              <!-- contract card ========================================== -->
+              <li class="contract__card card-contract contract-minus">
                 <div class="card-contract__body">
                   <div class="card-contract__text">
-                    <p>
-                      №4525 від 25.12.2024 Про повідомну реєстрацію колективних договорів Про повідомну реєстрацію
-                      колективних договорів
-                    </p>
+                    №4525 від <time datetime="2024-12-24">25.12.2024</time> Про повідомну реєстрацію колективних
+                    договорів Про повідомну реєстрацію
+                    колективних договорів
+                  </div>
+                  <div class="card-contract__info">
+                    <div class="card-contract__val">+576грн</div>
+                    <div class="card-contract__status">Активний</div>
+                    <div class="card-contract__toggle">
+                      <img src="./images/icon/expand-more.svg" alt="">
+                    </div>
                   </div>
                   <a href="#" class="card-contract__icon">
                     <img src="./images/icon/description.svg" alt="">
                   </a>
                 </div>
                 <div class="card-contract__footer">
-                  <a href="#" class="card-contract__link">
+                  <a href="#" class="card-contract__link button-link">
                     <span>Детальніше</span>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34" fill="none">
-                      <path
-                        d="M10.6065 21.9203L19.9191 12.6077H15.8462C15.2946 12.6077 14.8492 12.1622 14.8492 11.6106C14.8492 11.0591 15.2946 10.6136 15.8462 10.6136H22.3374C22.889 10.6136 23.3344 11.0591 23.3344 11.6106L23.3344 18.1019C23.3344 18.6534 22.889 19.0989 22.3374 19.0989C21.7859 19.0989 21.3404 18.6534 21.3404 18.1019L21.3333 14.0219L12.0207 23.3345C11.6318 23.7234 10.9954 23.7234 10.6065 23.3345C10.2176 22.9456 10.2176 22.3092 10.6065 21.9203Z"
-                        fill="#27B3F8" />
-                    </svg>
+                    <div class="button-link__icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34" fill="none">
+                        <path
+                          d="M10.6065 21.9203L19.9191 12.6077H15.8462C15.2946 12.6077 14.8492 12.1622 14.8492 11.6106C14.8492 11.0591 15.2946 10.6136 15.8462 10.6136H22.3374C22.889 10.6136 23.3344 11.0591 23.3344 11.6106L23.3344 18.1019C23.3344 18.6534 22.889 19.0989 22.3374 19.0989C21.7859 19.0989 21.3404 18.6534 21.3404 18.1019L21.3333 14.0219L12.0207 23.3345C11.6318 23.7234 10.9954 23.7234 10.6065 23.3345C10.2176 22.9456 10.2176 22.3092 10.6065 21.9203Z"
+                          fill="#27B3F8" />
+                      </svg>
+                    </div>
                   </a>
                 </div>
               </li>
+              <!-- end contract card =============================================== -->
             </ul>
           </div>
           <div class="contract__footer">
-            <a href="#" class="contract__link">
+
+            <a href="#" class="contract__link button-link">
               <span>Усі угоди</span>
-              <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34" fill="none">
-                <path
-                  d="M10.6065 21.9203L19.9191 12.6077H15.8462C15.2946 12.6077 14.8492 12.1622 14.8492 11.6106C14.8492 11.0591 15.2946 10.6136 15.8462 10.6136H22.3374C22.889 10.6136 23.3344 11.0591 23.3344 11.6106L23.3344 18.1019C23.3344 18.6534 22.889 19.0989 22.3374 19.0989C21.7859 19.0989 21.3404 18.6534 21.3404 18.1019L21.3333 14.0219L12.0207 23.3345C11.6318 23.7234 10.9954 23.7234 10.6065 23.3345C10.2176 22.9456 10.2176 22.3092 10.6065 21.9203Z"
-                  fill="#27B3F8" />
-              </svg>
+              <div class="button-link__icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34" fill="none">
+                  <path
+                    d="M10.6065 21.9203L19.9191 12.6077H15.8462C15.2946 12.6077 14.8492 12.1622 14.8492 11.6106C14.8492 11.0591 15.2946 10.6136 15.8462 10.6136H22.3374C22.889 10.6136 23.3344 11.0591 23.3344 11.6106L23.3344 18.1019C23.3344 18.6534 22.889 19.0989 22.3374 19.0989C21.7859 19.0989 21.3404 18.6534 21.3404 18.1019L21.3333 14.0219L12.0207 23.3345C11.6318 23.7234 10.9954 23.7234 10.6065 23.3345C10.2176 22.9456 10.2176 22.3092 10.6065 21.9203Z"
+                    fill="#27B3F8" />
+                </svg>
+              </div>
             </a>
-            <a href="#" class="contract__link">Стан розрахунків та Акт звіряння</a>
+
+            <a href="#" class="contract__link-to">Стан розрахунків та Акт звіряння</a>
           </div>
         </section>
       </div>
       <div class="main__item">
-        <section class="contract-ndi">
-          <div class="contract-ndi__header">
-            <div class="contract-ndi__logo">
+        <section class="contract">
+          <div class="contract__header">
+            <div class="contract__logo">
               <img src="./images/icon/work-outline.svg" alt="">
             </div>
-            <h2 class="contract-ndi__title title">Договори з Федерацією та стан їх виконання </h2>
-            <a href="#" class="contract-ndi__tell-button tell-button">
+            <h2 class="contract__title title">Договори з Федерацією та стан їх виконання </h2>
+            <a href="#" class="contract__tell-button tell-button">
               <img src="./images/icon/call-1.svg" alt="">
             </a>
           </div>
-          <div class="contract-ndi__body">
-            <ul class="contract-ndi__cards cards-contract">
-              <li class="cards-contract__item card-contract">
-                <div class="card-contract__top">
-                  <div class="card-contract__val">+576грн</div>
-                  <div class="card-contract__status"><span>Активний</span></div>
-                  <div class="card-contract__toggle">
-                    <img src="./images/icon/expand-more.svg" alt="">
-                  </div>
-                </div>
+
+          <div class="contract__body">
+            <ul class="contract__cards">
+              <!-- contract card ========================================== -->
+              <li class="contract__card card-contract card-contract--active">
                 <div class="card-contract__body">
                   <div class="card-contract__text">
-                    <p>
-                      №4525 від 25.12.2024 Про повідомну реєстрацію колективних договорів Про повідомну реєстрацію
-                      колективних договорів
-                    </p>
+                    №4525 від <time datetime="2024-12-24">24.12.2024</time> Договірна програмне забезпечення “ЖГК: Сайт”
+                  </div>
+                  <div class="card-contract__info">
+                    <div class="card-contract__val">+576грн</div>
+                    <div class="card-contract__status">Активний</div>
+                    <div class="card-contract__toggle">
+                      <img src="./images/icon/expand-more.svg" alt="">
+                    </div>
                   </div>
                   <a href="#" class="card-contract__icon">
                     <img src="./images/icon/description.svg" alt="">
                   </a>
                 </div>
                 <div class="card-contract__footer">
-                  <a href="#" class="card-contract__link">
+                  <a href="#" class="card-contract__link button-link">
                     <span>Детальніше</span>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34" fill="none">
-                      <path
-                        d="M10.6065 21.9203L19.9191 12.6077H15.8462C15.2946 12.6077 14.8492 12.1622 14.8492 11.6106C14.8492 11.0591 15.2946 10.6136 15.8462 10.6136H22.3374C22.889 10.6136 23.3344 11.0591 23.3344 11.6106L23.3344 18.1019C23.3344 18.6534 22.889 19.0989 22.3374 19.0989C21.7859 19.0989 21.3404 18.6534 21.3404 18.1019L21.3333 14.0219L12.0207 23.3345C11.6318 23.7234 10.9954 23.7234 10.6065 23.3345C10.2176 22.9456 10.2176 22.3092 10.6065 21.9203Z"
-                        fill="#27B3F8" />
-                    </svg>
+                    <div class="button-link__icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34" fill="none">
+                        <path
+                          d="M10.6065 21.9203L19.9191 12.6077H15.8462C15.2946 12.6077 14.8492 12.1622 14.8492 11.6106C14.8492 11.0591 15.2946 10.6136 15.8462 10.6136H22.3374C22.889 10.6136 23.3344 11.0591 23.3344 11.6106L23.3344 18.1019C23.3344 18.6534 22.889 19.0989 22.3374 19.0989C21.7859 19.0989 21.3404 18.6534 21.3404 18.1019L21.3333 14.0219L12.0207 23.3345C11.6318 23.7234 10.9954 23.7234 10.6065 23.3345C10.2176 22.9456 10.2176 22.3092 10.6065 21.9203Z"
+                          fill="#27B3F8" />
+                      </svg>
+                    </div>
                   </a>
                 </div>
               </li>
-              <li class="cards-contract__item card-contract">
-                <div class="card-contract__top">
-                  <div class="card-contract__val">+576грн</div>
-                  <div class="card-contract__status"><span>Активний</span></div>
-                  <div class="card-contract__toggle">
-                    <img src="./images/icon/expand-more.svg" alt="">
-                  </div>
-                </div>
+              <!-- end contract card =============================================== -->
+              <!-- contract card ========================================== -->
+              <li class="contract__card card-contract card-contract--closed">
                 <div class="card-contract__body">
                   <div class="card-contract__text">
-                    <p>
-                      №4525 від 25.12.2024 Про повідомну реєстрацію колективних договорів Про повідомну реєстрацію
-                      колективних договорів
-                    </p>
+                    №4525 від <time datetime="2024-12-24">24.12.2024</time> Угода
+                  </div>
+                  <div class="card-contract__info">
+                    <div class="card-contract__val">+576грн</div>
+                    <div class="card-contract__status">Активний</div>
+                    <div class="card-contract__toggle">
+                      <img src="./images/icon/expand-more.svg" alt="">
+                    </div>
                   </div>
                   <a href="#" class="card-contract__icon">
                     <img src="./images/icon/description.svg" alt="">
                   </a>
                 </div>
                 <div class="card-contract__footer">
-                  <a href="#" class="card-contract__link">
+                  <a href="#" class="card-contract__link button-link">
                     <span>Детальніше</span>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34" fill="none">
-                      <path
-                        d="M10.6065 21.9203L19.9191 12.6077H15.8462C15.2946 12.6077 14.8492 12.1622 14.8492 11.6106C14.8492 11.0591 15.2946 10.6136 15.8462 10.6136H22.3374C22.889 10.6136 23.3344 11.0591 23.3344 11.6106L23.3344 18.1019C23.3344 18.6534 22.889 19.0989 22.3374 19.0989C21.7859 19.0989 21.3404 18.6534 21.3404 18.1019L21.3333 14.0219L12.0207 23.3345C11.6318 23.7234 10.9954 23.7234 10.6065 23.3345C10.2176 22.9456 10.2176 22.3092 10.6065 21.9203Z"
-                        fill="#27B3F8" />
-                    </svg>
+                    <div class="button-link__icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34" fill="none">
+                        <path
+                          d="M10.6065 21.9203L19.9191 12.6077H15.8462C15.2946 12.6077 14.8492 12.1622 14.8492 11.6106C14.8492 11.0591 15.2946 10.6136 15.8462 10.6136H22.3374C22.889 10.6136 23.3344 11.0591 23.3344 11.6106L23.3344 18.1019C23.3344 18.6534 22.889 19.0989 22.3374 19.0989C21.7859 19.0989 21.3404 18.6534 21.3404 18.1019L21.3333 14.0219L12.0207 23.3345C11.6318 23.7234 10.9954 23.7234 10.6065 23.3345C10.2176 22.9456 10.2176 22.3092 10.6065 21.9203Z"
+                          fill="#27B3F8" />
+                      </svg>
+                    </div>
                   </a>
                 </div>
               </li>
-              <li class="cards-contract__item card-contract">
-                <div class="card-contract__top">
-                  <div class="card-contract__val">+576грн</div>
-                  <div class="card-contract__status"><span>Активний</span></div>
-                  <div class="card-contract__toggle">
-                    <img src="./images/icon/expand-more.svg" alt="">
-                  </div>
-                </div>
+              <!-- end contract card =============================================== -->
+              <!-- contract card ========================================== -->
+              <li class="contract__card card-contract">
                 <div class="card-contract__body">
                   <div class="card-contract__text">
-                    <p>
-                      №4525 від 25.12.2024 Про повідомну реєстрацію колективних договорів Про повідомну реєстрацію
-                      колективних договорів
-                    </p>
+                    №4525 від <time datetime="2024-12-24">24.12.2024</time> Акт звіряння рахунків
+                  </div>
+                  <div class="card-contract__info">
+                    <div class="card-contract__val">+576грн</div>
+                    <div class="card-contract__status">Активний</div>
+                    <div class="card-contract__toggle">
+                      <img src="./images/icon/expand-more.svg" alt="">
+                    </div>
                   </div>
                   <a href="#" class="card-contract__icon">
                     <img src="./images/icon/description.svg" alt="">
                   </a>
                 </div>
                 <div class="card-contract__footer">
-                  <a href="#" class="card-contract__link">
+                  <a href="#" class="card-contract__link button-link">
                     <span>Детальніше</span>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34" fill="none">
-                      <path
-                        d="M10.6065 21.9203L19.9191 12.6077H15.8462C15.2946 12.6077 14.8492 12.1622 14.8492 11.6106C14.8492 11.0591 15.2946 10.6136 15.8462 10.6136H22.3374C22.889 10.6136 23.3344 11.0591 23.3344 11.6106L23.3344 18.1019C23.3344 18.6534 22.889 19.0989 22.3374 19.0989C21.7859 19.0989 21.3404 18.6534 21.3404 18.1019L21.3333 14.0219L12.0207 23.3345C11.6318 23.7234 10.9954 23.7234 10.6065 23.3345C10.2176 22.9456 10.2176 22.3092 10.6065 21.9203Z"
-                        fill="#27B3F8" />
-                    </svg>
+                    <div class="button-link__icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34" fill="none">
+                        <path
+                          d="M10.6065 21.9203L19.9191 12.6077H15.8462C15.2946 12.6077 14.8492 12.1622 14.8492 11.6106C14.8492 11.0591 15.2946 10.6136 15.8462 10.6136H22.3374C22.889 10.6136 23.3344 11.0591 23.3344 11.6106L23.3344 18.1019C23.3344 18.6534 22.889 19.0989 22.3374 19.0989C21.7859 19.0989 21.3404 18.6534 21.3404 18.1019L21.3333 14.0219L12.0207 23.3345C11.6318 23.7234 10.9954 23.7234 10.6065 23.3345C10.2176 22.9456 10.2176 22.3092 10.6065 21.9203Z"
+                          fill="#27B3F8" />
+                      </svg>
+                    </div>
                   </a>
                 </div>
               </li>
-              <li class="cards-contract__item card-contract">
-                <div class="card-contract__top">
-                  <div class="card-contract__val">+576грн</div>
-                  <div class="card-contract__status"><span>Активний</span></div>
-                  <div class="card-contract__toggle">
-                    <img src="./images/icon/expand-more.svg" alt="">
-                  </div>
-                </div>
+              <!-- end contract card =============================================== -->
+              <!-- contract card ========================================== -->
+              <li class="contract__card card-contract">
                 <div class="card-contract__body">
                   <div class="card-contract__text">
-                    <p>
-                      №4525 від 25.12.2024 Про повідомну реєстрацію колективних договорів Про повідомну реєстрацію
-                      колективних договорів
-                    </p>
+                    №4525 від <time datetime="2024-12-24">24.12.2024</time> Про повідомну реєстрацію колективних
+                    договорів Про повідомну реєстрацію
+                    колективних договорів
+                  </div>
+                  <div class="card-contract__info">
+                    <div class="card-contract__val">+576грн</div>
+                    <div class="card-contract__status">Активний</div>
+                    <div class="card-contract__toggle">
+                      <img src="./images/icon/expand-more.svg" alt="">
+                    </div>
                   </div>
                   <a href="#" class="card-contract__icon">
                     <img src="./images/icon/description.svg" alt="">
                   </a>
                 </div>
                 <div class="card-contract__footer">
-                  <a href="#" class="card-contract__link">
+                  <a href="#" class="card-contract__link button-link">
                     <span>Детальніше</span>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34" fill="none">
-                      <path
-                        d="M10.6065 21.9203L19.9191 12.6077H15.8462C15.2946 12.6077 14.8492 12.1622 14.8492 11.6106C14.8492 11.0591 15.2946 10.6136 15.8462 10.6136H22.3374C22.889 10.6136 23.3344 11.0591 23.3344 11.6106L23.3344 18.1019C23.3344 18.6534 22.889 19.0989 22.3374 19.0989C21.7859 19.0989 21.3404 18.6534 21.3404 18.1019L21.3333 14.0219L12.0207 23.3345C11.6318 23.7234 10.9954 23.7234 10.6065 23.3345C10.2176 22.9456 10.2176 22.3092 10.6065 21.9203Z"
-                        fill="#27B3F8" />
-                    </svg>
+                    <div class="button-link__icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34" fill="none">
+                        <path
+                          d="M10.6065 21.9203L19.9191 12.6077H15.8462C15.2946 12.6077 14.8492 12.1622 14.8492 11.6106C14.8492 11.0591 15.2946 10.6136 15.8462 10.6136H22.3374C22.889 10.6136 23.3344 11.0591 23.3344 11.6106L23.3344 18.1019C23.3344 18.6534 22.889 19.0989 22.3374 19.0989C21.7859 19.0989 21.3404 18.6534 21.3404 18.1019L21.3333 14.0219L12.0207 23.3345C11.6318 23.7234 10.9954 23.7234 10.6065 23.3345C10.2176 22.9456 10.2176 22.3092 10.6065 21.9203Z"
+                          fill="#27B3F8" />
+                      </svg>
+                    </div>
                   </a>
                 </div>
               </li>
+              <!-- end contract card =============================================== -->
             </ul>
           </div>
-          <div class="contract-ndi__footer">
-            <a href="#" class="contract-ndi__link">
+          <div class="contract__footer">
+
+            <a href="#" class="contract__link button-link">
               <span>Усі угоди</span>
-              <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34" fill="none">
-                <path
-                  d="M10.6065 21.9203L19.9191 12.6077H15.8462C15.2946 12.6077 14.8492 12.1622 14.8492 11.6106C14.8492 11.0591 15.2946 10.6136 15.8462 10.6136H22.3374C22.889 10.6136 23.3344 11.0591 23.3344 11.6106L23.3344 18.1019C23.3344 18.6534 22.889 19.0989 22.3374 19.0989C21.7859 19.0989 21.3404 18.6534 21.3404 18.1019L21.3333 14.0219L12.0207 23.3345C11.6318 23.7234 10.9954 23.7234 10.6065 23.3345C10.2176 22.9456 10.2176 22.3092 10.6065 21.9203Z"
-                  fill="#27B3F8" />
-              </svg>
+              <div class="button-link__icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34" fill="none">
+                  <path
+                    d="M10.6065 21.9203L19.9191 12.6077H15.8462C15.2946 12.6077 14.8492 12.1622 14.8492 11.6106C14.8492 11.0591 15.2946 10.6136 15.8462 10.6136H22.3374C22.889 10.6136 23.3344 11.0591 23.3344 11.6106L23.3344 18.1019C23.3344 18.6534 22.889 19.0989 22.3374 19.0989C21.7859 19.0989 21.3404 18.6534 21.3404 18.1019L21.3333 14.0219L12.0207 23.3345C11.6318 23.7234 10.9954 23.7234 10.6065 23.3345C10.2176 22.9456 10.2176 22.3092 10.6065 21.9203Z"
+                    fill="#27B3F8" />
+                </svg>
+              </div>
             </a>
-            <a href="#" class="contract-ndi__link">Стан розрахунків та Акт звіряння</a>
           </div>
+          <a href="#" class="contract__link-to">Стан розрахунків та Акт звіряння</a>
+
+
         </section>
       </div>
       <!-- market =================================================================== -->
@@ -1191,149 +1260,151 @@
             <ul class="market__cards">
               <!-- card-market ========================================= -->
               <li class="market__card card-market">
-                <div class="card-market__figure">
-                  <img src="./images/market/lubricats.webp" alt="">
-                </div>
-                <div class="card-market__body">
-                  <a href="#" class="card-market__link-m">
+                <a href="" class="card-market__inner">
+                  <div class="card-market__figure">
+                    <img src="./images/market/lubricats.webp" alt="">
+                  </div>
+                  <div class="card-market__body">
                     <h4 class="card-market__title">Техніка</h4>
-                  </a>
-                  <p class="card-market__desc">
-                    Трактори, вантажні автомобілі
-                  </p>
-                </div>
+                    <p class="card-market__desc">
+                      Трактори, вантажні автомобілі
+                    </p>
+                  </div>
+                </a>
               </li>
               <!-- end card-market ======================================= -->
               <!-- card-market ========================================= -->
               <li class="market__card card-market">
-                <div class="card-market__figure">
-                  <img src="./images/market/lubricats.webp" alt="">
-                </div>
-                <div class="card-market__body">
-                  <a href="#" class="card-market__link-m">
+                <a href="#" class="card-market__inner">
+                  <div class="card-market__figure">
+                    <img src="./images/market/lubricats.webp" alt="">
+                  </div>
+                  <div class="card-market__body">
                     <h4 class="card-market__title">Спецодяг</h4>
-                  </a>
-                  <p class="card-market__desc">
-                    Трактори, вантажні автомобілі
-                  </p>
-                </div>
+                    <p class="card-market__desc">
+                      Трактори, вантажні автомобілі
+                    </p>
+                  </div>
+                </a>
               </li>
               <!-- end card-market ======================================= -->
               <!-- card-market ========================================= -->
               <li class="market__card card-market">
-                <div class="card-market__figure">
-                  <img src="./images/market/equipment.webp" alt="">
-                </div>
-                <div class="card-market__body">
-                  <a href="#" class="card-market__link-m">
+                <a href="#" class="card-market__inner">
+                  <div class="card-market__figure">
+                    <img src="./images/market/equipment.webp" alt="">
+                  </div>
+                  <div class="card-market__body">
                     <h4 class="card-market__title">Обладнання</h4>
-                  </a>
-                  <p class="card-market__desc">
-                    Трактори, вантажні автомобілі
-                  </p>
-                </div>
+                    <p class="card-market__desc">
+                      Трактори, вантажні автомобілі
+                    </p>
+                  </div>
+                </a>
               </li>
               <!-- end card-market ======================================= -->
               <!-- card-market ========================================= -->
               <li class="market__card card-market">
-                <div class="card-market__figure">
-                  <img src="./images/market/hardware.webp" alt="">
-                </div>
-                <div class="card-market__body">
-                  <a href="#" class="card-market__link-m">
+                <a href="#" class="card-market__inner">
+                  <div class="card-market__figure">
+                    <img src="./images/market/hardware.webp" alt="">
+                  </div>
+                  <div class="card-market__body">
                     <h4 class="card-market__title">Метизи та розходні матеріли</h4>
-                  </a>
-                  <p class="card-market__desc">
-                    Трактори, вантажні автомобілі
-                  </p>
-                </div>
+                    <p class="card-market__desc">
+                      Трактори, вантажні автомобілі
+                    </p>
+                  </div>
+                </a>
               </li>
               <!-- end card-market ======================================= -->
               <!-- card-market ========================================= -->
               <li class="market__card card-market">
-                <div class="card-market__figure">
-                  <img src="./images/market/lubricats.webp" alt="">
-                </div>
-                <div class="card-market__body">
-                  <a href="#" class="card-market__link-m">
+                <a href="#" class="card-market__inner">
+                  <div class="card-market__figure">
+                    <img src="./images/market/lubricats.webp" alt="">
+                  </div>
+                  <div class="card-market__body">
                     <h4 class="card-market__title">Паливно-мастильні матеріали</h4>
-                  </a>
-                  <p class="card-market__desc">
-                    Трактори, вантажні автомобілі
-                  </p>
-                </div>
+                    <p class="card-market__desc">
+                      Трактори, вантажні автомобілі
+                    </p>
+                  </div>
+                </a>
               </li>
               <!-- end card-market ======================================= -->
               <!-- card-market ========================================= -->
               <li class="market__card card-market">
-                <div class="card-market__figure">
-                  <img src="./images/market/lubricats.webp" alt="">
-                </div>
-                <div class="card-market__body">
-                  <a href="#" class="card-market__link-m">
+                <a href="#" class="card-market__inner">
+                  <div class="card-market__figure">
+                    <img src="./images/market/lubricats.webp" alt="">
+                  </div>
+                  <div class="card-market__body">
                     <h4 class="card-market__title">Канцелярія та оргтехніка</h4>
-                  </a>
-                  <p class="card-market__desc">
-                    Трактори, вантажні автомобілі
-                  </p>
-                </div>
+                    <p class="card-market__desc">
+                      Трактори, вантажні автомобілі
+                    </p>
+                  </div>
+                </a>
               </li>
               <!-- end card-market ======================================= -->
               <!-- card-market ========================================= -->
               <li class="market__card card-market">
-                <div class="card-market__figure">
-                  <img src="./images/market/pipes.webp" alt="">
-                </div>
-                <div class="card-market__body">
-                  <a href="#" class="card-market__link-m">
+                <a href="#" class="card-market__inner">
+                  <div class="card-market__figure">
+                    <img src="./images/market/pipes.webp" alt="">
+                  </div>
+                  <div class="card-market__body">
                     <h4 class="card-market__title">Труби та коплектуючі</h4>
-                  </a>
-                  <p class="card-market__desc">
-                    Трактори, вантажні автомобілі
-                  </p>
-                </div>
+                    <p class="card-market__desc">
+                      Трактори, вантажні автомобілі
+                    </p>
+                  </div>
+                </a>
               </li>
               <!-- end card-market ======================================= -->
               <!-- card-market ========================================= -->
               <li class="market__card card-market">
-                <div class="card-market__figure">
-                  <img src="./images/market/services.webp" alt="">
-                </div>
-                <div class="card-market__body">
-                  <a href="#" class="card-market__link-m">
+                <a href="#" class="card-market__inner">
+                  <div class="card-market__figure">
+                    <img src="./images/market/services.webp" alt="">
+                  </div>
+                  <div class="card-market__body">
                     <h4 class="card-market__title">Послуги</h4>
-                  </a>
-                  <p class="card-market__desc">
-                    Трактори, вантажні автомобілі
-                  </p>
-                </div>
+                    <p class="card-market__desc">
+                      Трактори, вантажні автомобілі
+                    </p>
+                  </div>
+                </a>
               </li>
               <!-- end card-market ======================================= -->
               <!-- card-market ========================================= -->
               <li class="market__card card-market">
-                <div class="card-market__figure">
-                  <img src="./images/market/bilding-materials.webp" alt="">
-                </div>
-                <div class="card-market__body">
-                  <a href="#" class="card-market__link-m">
+                <a href="#" class="card-market__inner">
+                  <div class="card-market__figure">
+                    <img src="./images/market/bilding-materials.webp" alt="">
+                  </div>
+                  <div class="card-market__body">
                     <h4 class="card-market__title">Будівельні матеріали</h4>
-                  </a>
-                  <p class="card-market__desc">
-                    Трактори, вантажні автомобілі
-                  </p>
-                </div>
+                    <p class="card-market__desc">
+                      Трактори, вантажні автомобілі
+                    </p>
+                  </div>
+                </a>
               </li>
               <!-- end card-market ======================================= -->
             </ul>
           </div>
           <div class="market__footer">
-            <a class="market__link" href="#">
+            <a class="market__link button-link" href="#">
               <span>Показати більше</span>
-              <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34" fill="none">
-                <path
-                  d="M10.6065 21.9203L19.9191 12.6077H15.8462C15.2946 12.6077 14.8492 12.1622 14.8492 11.6106C14.8492 11.0591 15.2946 10.6136 15.8462 10.6136H22.3374C22.889 10.6136 23.3344 11.0591 23.3344 11.6106L23.3344 18.1019C23.3344 18.6534 22.889 19.0989 22.3374 19.0989C21.7859 19.0989 21.3404 18.6534 21.3404 18.1019L21.3333 14.0219L12.0207 23.3345C11.6318 23.7234 10.9954 23.7234 10.6065 23.3345C10.2176 22.9456 10.2176 22.3092 10.6065 21.9203Z"
-                  fill="#27B3F8" />
-              </svg>
+              <div class="button-link__icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34" fill="none">
+                  <path
+                    d="M10.6065 21.9203L19.9191 12.6077H15.8462C15.2946 12.6077 14.8492 12.1622 14.8492 11.6106C14.8492 11.0591 15.2946 10.6136 15.8462 10.6136H22.3374C22.889 10.6136 23.3344 11.0591 23.3344 11.6106L23.3344 18.1019C23.3344 18.6534 22.889 19.0989 22.3374 19.0989C21.7859 19.0989 21.3404 18.6534 21.3404 18.1019L21.3333 14.0219L12.0207 23.3345C11.6318 23.7234 10.9954 23.7234 10.6065 23.3345C10.2176 22.9456 10.2176 22.3092 10.6065 21.9203Z"
+                    fill="#27B3F8" />
+                </svg>
+              </div>
             </a>
           </div>
         </section>
@@ -1342,6 +1413,9 @@
   </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
   <script src="./js/graph.js"></script>
+  <script src="./js/script.js"></script>
+  <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+
 </body>
 
 </html>

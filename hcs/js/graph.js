@@ -91,7 +91,7 @@ const lineGraph = new Chart(graphLine, {
   },
   options: {
     responsive: true,
-    maintainAspectRatio: 2,
+    maintainAspectRatio: false,
 
     plugins: {
       legend: {
@@ -109,4 +109,35 @@ const lineGraph = new Chart(graphLine, {
 
 window.addEventListener('resize', () => {
   myChart.resize();
+});
+
+const dispatcherGraph = document.getElementById('graph-dispatcher');
+
+const graphDispatcher = new Chart(dispatcherGraph, {
+  type: 'doughnut',
+  data: {
+    labels: [],
+    datasets: [{
+      label: ['Виконані', 'Прийняті'],
+      data: [24, 76],
+      backgroundColor: ['rgba(39, 179, 248, 1)', 'rgba(255, 255, 255, 1)'],
+
+    }]
+  },
+  options: {
+    responsive: true,
+    maintainAspectRatio: false,
+    width: 143,
+    height: 143,
+    cutout: "80%",
+    plugins: {
+      legend: {
+        display: false
+      }
+    }
+  }
+});
+
+window.addEventListener('resize', () => {
+  lineGraph.resize();
 });
