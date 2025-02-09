@@ -35,7 +35,49 @@
               <a href="#" class="menu__link">
                 <img src="./images/icon/home.svg" alt="Menu icon home"><span>Головна</span>
               </a>
-
+              <div class="menu__inner hide">
+                <ul class="menu__sub-list sub-menu">
+                  <li class="sub-menu__item">
+                    <a data-goto="#legal-aid" href="#" class="sub-menu__link">link 1</a>
+                  </li>
+                  <li class="sub-menu__item">
+                    <a data-goto="#services-pro" href="#" class="sub-menu__link">link 2</a>
+                  </li>
+                  <li class="sub-menu__item">
+                    <a data-goto="#humor" href="#" class="sub-menu__link">link 3</a>
+                  </li>
+                  <li class="sub-menu__item">
+                    <a data-goto="#staff" href="#" class="sub-menu__link">link 4</a>
+                  </li>
+                  <li class="sub-menu__item">
+                    <a data-goto="#calculation" href="#" class="sub-menu__link">link 5</a>
+                  </li>
+                  <li class="sub-menu__item">
+                    <a data-goto="#webinars" href="#" class="sub-menu__link">link 6</a>
+                  </li>
+                  <li class="sub-menu__item">
+                    <a data-goto="#site" href="#" class="sub-menu__link">link 7</a>
+                  </li>
+                  <li class="sub-menu__item">
+                    <a data-goto=".office" href="#" class="sub-menu__link">link 8</a>
+                  </li>
+                  <li class="sub-menu__item">
+                    <a data-goto="#dispatcher" href="#" class="sub-menu__link">link 9</a>
+                  </li>
+                  <li class="sub-menu__item">
+                    <a data-goto="#tariff" href="#" class="sub-menu__link">link 10</a>
+                  </li>
+                  <li class="sub-menu__item">
+                    <a data-goto="#contract" href="#" class="sub-menu__link">link 11</a>
+                  </li>
+                  <li class="sub-menu__item">
+                    <a data-goto="#contract-1" href="#" class="sub-menu__link">link 12</a>
+                  </li>
+                  <li class="sub-menu__item">
+                    <a data-goto="#market" href="#" class="sub-menu__link">link 13</a>
+                  </li>
+                </ul>
+              </div>
             </li>
             <li class="menu__item">
               <a href="#" class="menu__link">
@@ -65,6 +107,7 @@
                   </li>
                 </ul>
               </div>
+
             </li>
             <li class="menu__item">
               <a href="#" class="menu__link">
@@ -92,7 +135,7 @@
     <main class="main">
       <!-- legal-aid ================================================= -->
       <div class="main__item">
-        <section class="legal-aid">
+        <section id="legal-aid" class="legal-aid">
           <div class="legal-aid__header">
             <div class="legal-aid__logo">
               <img src="./images/icon/help-outline.svg" alt="Іконка допомоги">
@@ -150,12 +193,12 @@
               <table class="questions__table">
                 <tr>
                   <td class="questions__indicator">
-                    <span class="question__indicator-val question__indicator-val--red"></span>
+                    <span class="questions__indicator-val questions__indicator-val--red"></span>
                   </td>
                   <td class="questions__desc">Чому вода мокра, а сніг холодний</td>
                   <td class="questions__date"><time datetime="2024-12-20">20.12.2024</time></td>
                   <td class="questions__status questions__status--active">В роботі</td>
-                  <td class="question__notification">
+                  <td class="questions__notification">
                     <img class="questions__important hide" src="./images/icon/notification-important.svg"
                       alt="Іконка дзвоника з червоним кружечком">
                   </td>
@@ -164,24 +207,24 @@
                 </tr>
                 <tr>
                   <td class="questions__indicator">
-                    <span class="question__indicator-val question__indicator-val--green"></span>
+                    <span class="questions__indicator-val questions__indicator-val--green"></span>
                   </td>
                   <td class="questions__desc">Чому вода мокра, а сніг холодний</td>
                   <td class="questions__date"><time datetime="2024-12-20">20.12.2024</time></td>
                   <td class="questions__status">Відповідь <time datetime="2024-12-24">24.12.2024</time></td>
-                  <td class="question__notification">
+                  <td class="questions__notification">
                     <img class="questions__important" src="./images/icon/notification-important.svg" alt="">
                   </td>
                   <td class="questions__more"><a href="#"><img src="./images/icon/more-vert.svg" alt=""></a></td>
                 </tr>
                 <tr>
                   <td class="questions__indicator">
-                    <span class="question__indicator-val question__indicator-val--green"></span>
+                    <span class="questions__indicator-val questions__indicator-val--green"></span>
                   </td>
                   <td class="questions__desc">Чому вода мокра, а сніг холодний</td>
                   <td class="questions__date"><time datetime="2024-12-20">20.12.2024</time></td>
                   <td class="questions__status">Відповідь <time datetime="2024-12-24">24.12.2024</time></td>
-                  <td class="question__notification"><img class="questions__important"
+                  <td class="questions__notification"><img class="questions__important"
                       src="./images/icon/notification-important.svg" alt=""></td>
                   <td class="questions__more"><a href="#"><img src="./images/icon/more-vert.svg" alt=""></a></td>
                 </tr>
@@ -269,7 +312,7 @@
       </div>
       <!-- service-pro ======================================================== -->
       <div class="main__item">
-        <section class="services-pro">
+        <section id="services-pro" class="services-pro">
           <div class="services-pro__header">
             <div class="services-pro__logo">
               <img src="./images/icon/folder-shared.svg" alt="Іконка папки">
@@ -302,7 +345,7 @@
           </div>
         </section>
         <!-- humor =============================================== -->
-        <section class="humor">
+        <section id="humor" class="humor">
           <div class="humor__header">
             <div class="humor__logo">
               <img src="./images/icon/mood.svg" alt="Іконка смайлика">
@@ -310,7 +353,7 @@
             <h2 class="humor__title title">Хвилинка гумору</h2>
           </div>
           <div class="humor__body">
-            <div class="humor__slider slider js-flickity" data-flickity-options='{ " wrapAround": true }'>
+            <div class="humor__slider slider js-flickity" data-flickity='{ "wrapAround": true }'>
               <div class="slider__figure">
                 <img src="./images/humor/image-52.webp" alt="">
               </div>
@@ -329,7 +372,7 @@
       </div>
       <!-- staff =========================================================== -->
       <div class="main__item">
-        <section class="staff">
+        <section id="staff" class="staff">
           <div class="staff__header">
             <div class="staff__logo">
               <img src="./images/icon/group.svg" alt="Іконка групи">
@@ -348,15 +391,15 @@
               <li class="list-staff__item">
                 <span class="list-staff__title">Мінімальна заробітна плата: </span>
                 <span class="list-staff__val">
-                  <time datetime="2025-01-01">01.01.25</time> - 6 757грн
-                  <time datetime="2025-06-01">01.06.25</time> - 7 868грн
+                  <time datetime="2025-01-01">01.01.25</time><span> - 6 757грн </span>
+                  <time datetime="2025-06-01">01.06.25</time><span> - 7 868грн</span>
                 </span>
               </li>
               <li class="list-staff__item">
                 <span class="list-staff__title">Прожитковий мінімум для працездатних осіб: </span>
                 <span class="list-staff__val">
-                  <time datetime="2025-01-01">01.01.25</time> - 3 454грн
-                  <time datetime="2025-06-01">01.06.25</time> - 4 567грн
+                  <time datetime="2025-01-01">01.01.25</time><span> - 3 454грн </span>
+                  <time datetime="2025-06-01">01.06.25</time><span> - 4 567грн</span>
                 </span>
               </li>
 
@@ -406,23 +449,29 @@
                   грн.</span>
               </li>
             </ul>
-            <div class="staff__graph graph-staff">
-              <div class="graph-staff__graph-fop">
-                <h3 class="graph-staff__title">ФОП</h3>
-                <canvas id="graph-staff1" width="143" height="143">
-                </canvas>
-                <div class="graph-staff__legend">
-                  <span>КПФТС, середня З/П</span>
-                  <span>Робітники, 8 537.73, середня ЗП</span>
+            <div class="staff__inner">
+              <div class="staff__graph graph-staff">
+                <div class="graph-staff__graph-fop">
+                  <h3 class="graph-staff__title">ФОП</h3>
+                  <div class="graph-staff__inner">
+                    <canvas id="graph-staff1" width="143" height="143">
+                    </canvas>
+                  </div>
+                  <div class="graph-staff__legend">
+                    <span>КПФТС, середня З/П</span>
+                    <span>Робітники, 8 537.73, середня ЗП</span>
+                  </div>
                 </div>
-              </div>
-              <div class="graph-staff__graph-number">
-                <h3 class="graph-staff__title">Чисельність</h3>
-                <canvas id="graph-staff2" width="143" height="143">
-                </canvas>
-                <div class="graph-staff__legend">
-                  <span>КПФТС, 10 чис</span>
-                  <span>Робітники, 32 чис.</span>
+                <div class="graph-staff__graph-number">
+                  <h3 class="graph-staff__title">Чисельність</h3>
+                  <div class="graph-staff__inner">
+                    <canvas id="graph-staff2" width="143" height="143">
+                    </canvas>
+                  </div>
+                  <div class="graph-staff__legend">
+                    <span>КПФТС, 10 чис</span>
+                    <span>Робітники, 32 чис.</span>
+                  </div>
                 </div>
               </div>
               <div class="graph-staff__notation legend-staff">
@@ -433,24 +482,27 @@
               </div>
             </div>
           </div>
+
           <div class="staff__footer">
-            <button class="staff__link button-link" type="button">
-              <span>Показати більше</span>
-              <div class="button-link__icon">
-                <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34" fill="none">
-                  <path
-                    d="M10.6065 21.9203L19.9191 12.6077H15.8462C15.2946 12.6077 14.8492 12.1622 14.8492 11.6106C14.8492 11.0591 15.2946 10.6136 15.8462 10.6136H22.3374C22.889 10.6136 23.3344 11.0591 23.3344 11.6106L23.3344 18.1019C23.3344 18.6534 22.889 19.0989 22.3374 19.0989C21.7859 19.0989 21.3404 18.6534 21.3404 18.1019L21.3333 14.0219L12.0207 23.3345C11.6318 23.7234 10.9954 23.7234 10.6065 23.3345C10.2176 22.9456 10.2176 22.3092 10.6065 21.9203Z"
-                    fill="#27B3F8" />
-                </svg>
-              </div>
-            </button>
+            <div class="staff__link">
+              <button class="button-link" type="button">
+                <span>Показати більше</span>
+                <div class="button-link__icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34" fill="none">
+                    <path
+                      d="M10.6065 21.9203L19.9191 12.6077H15.8462C15.2946 12.6077 14.8492 12.1622 14.8492 11.6106C14.8492 11.0591 15.2946 10.6136 15.8462 10.6136H22.3374C22.889 10.6136 23.3344 11.0591 23.3344 11.6106L23.3344 18.1019C23.3344 18.6534 22.889 19.0989 22.3374 19.0989C21.7859 19.0989 21.3404 18.6534 21.3404 18.1019L21.3333 14.0219L12.0207 23.3345C11.6318 23.7234 10.9954 23.7234 10.6065 23.3345C10.2176 22.9456 10.2176 22.3092 10.6065 21.9203Z"
+                      fill="#27B3F8" />
+                  </svg>
+                </div>
+              </button>
+            </div>
             <a href="#" class="staff__btn button">Перейти в програму</a>
           </div>
         </section>
       </div>
       <!-- calculation ================================================== -->
       <div class="main__item">
-        <section class="calculation">
+        <section id="calculation" class="calculation">
           <div class="calculation__header">
             <div class="calculation__logo">
               <img src="./images/icon/trending-up.svg" alt="Іконка тренд вгору">
@@ -489,8 +541,8 @@
                     <span class="list-calculation__text">45 567 од. (34%)</span>
                   </li>
                 </ul>
-                <div class="calculation__sub-title">Надходження коштів за 23.12.24, грн</div>
                 <div class="calculation__table-wrapper">
+                  <h3 class="calculation__sub-title">Надходження коштів за 23.12.24, грн</h3>
                   <table class="calculation__table table-calculation">
                     <tbody>
                       <tr>
@@ -519,15 +571,9 @@
                 </div>
               </div>
             </div>
-            <div class="calculation__tb-reciept-wrapper">
-              <table class="calculation__table-reciept table-reciept">
-                <thead class="table-reciept__thead">
-                  <tr>
-                    <th>Надходження, грн</th>
-                    <th></th>
-                    <th></th>
-                  </tr>
-                </thead>
+            <div class="calculation__tb-reciept-wrapper table-reciept">
+              <h3 class="table-reciept__head">Надходження, грн</h3>
+              <table class="table-reciept__table">
                 <tbody>
                   <tr>
                     <td>Приватбанк</td>
@@ -560,25 +606,23 @@
           </div>
           <div class="calculation__footer">
             <button class="calculation__link button-link" type="button">
-              <div>
-                <span>Показати більше</span>
-                <div class="button-link__icon">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34" fill="none">
-                    <path
-                      d="M10.6065 21.9203L19.9191 12.6077H15.8462C15.2946 12.6077 14.8492 12.1622 14.8492 11.6106C14.8492 11.0591 15.2946 10.6136 15.8462 10.6136H22.3374C22.889 10.6136 23.3344 11.0591 23.3344 11.6106L23.3344 18.1019C23.3344 18.6534 22.889 19.0989 22.3374 19.0989C21.7859 19.0989 21.3404 18.6534 21.3404 18.1019L21.3333 14.0219L12.0207 23.3345C11.6318 23.7234 10.9954 23.7234 10.6065 23.3345C10.2176 22.9456 10.2176 22.3092 10.6065 21.9203Z"
-                      fill="#27B3F8" />
-                  </svg>
-                </div>
+              <span>Показати більше</span>
+              <div class="button-link__icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34" fill="none">
+                  <path
+                    d="M10.6065 21.9203L19.9191 12.6077H15.8462C15.2946 12.6077 14.8492 12.1622 14.8492 11.6106C14.8492 11.0591 15.2946 10.6136 15.8462 10.6136H22.3374C22.889 10.6136 23.3344 11.0591 23.3344 11.6106L23.3344 18.1019C23.3344 18.6534 22.889 19.0989 22.3374 19.0989C21.7859 19.0989 21.3404 18.6534 21.3404 18.1019L21.3333 14.0219L12.0207 23.3345C11.6318 23.7234 10.9954 23.7234 10.6065 23.3345C10.2176 22.9456 10.2176 22.3092 10.6065 21.9203Z"
+                    fill="#27B3F8" />
+                </svg>
               </div>
             </button>
-            <a href="#" class="calculation__btn button">Перейти в програму</a>
-            <a href="#" class="calculation__btn light-btn">Адмініструвати доступ</a>
+            <a href="#" class="calculation__btn-dark button">Перейти в програму</a>
+            <a href="#" class="calculation__btn-light light-btn">Адмініструвати доступ</a>
           </div>
         </section>
       </div>
       <!-- webinars ========================================================== -->
       <div class="main__item">
-        <section class="webinars">
+        <section id="webinars" class="webinars">
           <div class="webinars__header">
             <div class="webinars__logo">
               <img src="./images/icon/computer.svg" alt="Іконка комп'ютера">
@@ -713,7 +757,7 @@
       </div>
       <!-- site ======================================================== -->
       <div class="main__item">
-        <section class="site">
+        <section id="site" class="site">
           <div class="site__header">
             <div class="site__logo">
               <img src="./images/icon/language.svg" alt="Іконка мова">
@@ -782,19 +826,65 @@
           </div>
         </section>
         <!-- office ============================================================== -->
-        <section class="office">
+        <section id="office" class="office">
           <div class="office__header">
             <div class="office__logo">
               <img src="./images/icon/perm-identity.svg" alt="іконка б'юста">
             </div>
             <h2 class="office__title title">ЖКГ: Кабінет</h2>
-            <a href="#" class="office__tell-button tell-button">
-              <img src="./images/icon/call-1.svg" alt="Служба підтримки">
-              <div class="tell-button__tooltip tooltip">
-                <span class="tooltip__txt">Служба підтримки</span>
-                <span class="tooltip__tell">0 800 30 69 69 </span>
+            <div class="offise__tell-button-wrapper">
+              <a href="#" class="office__tell-button tell-button">
+                <img src="./images/icon/call-1.svg" alt="Служба підтримки">
+
+              </a>
+              <div class="tell-button__tooltip tooltip-card">
+                <div class="tooltip-card__header">
+                  <figure>
+                    <img src="./images/photo-lawyer.webp" alt="">
+                  </figure>
+                  <figcaption>
+                    <h3 class="tooltip-card__name">Анна Асеєва</h3>
+                    <div class="tooltip-card__position">Юрист</div>
+                  </figcaption>
+                </div>
+                <address class="tooltip-card__body">
+                  <ul class="tooltip-card__list">
+                    <li class="tooltip-card__item">
+                      <a href="tel:+380987562556" class="tooltip-card__link">
+                        <img src="./images/icon/viber.svg" alt="Viber логотип">
+                        <span>+380987562556</span>
+                      </a>
+                    </li>
+                    <li class="tooltip-card__item">
+                      <a href="tel:+380987562556" class="tooltip-card__link">
+                        <img src="./images/icon/call.svg" alt="Телефонна трубка синього кольору">
+                        <span>+380987562556</span>
+                      </a>
+                    </li>
+                    <li class="tooltip-card__item">
+                      <a href="tel:1122" class="tooltip-card__link">
+                        <img src="./images/icon/call.svg" alt="Телефонна трубка синього кольору">
+                        <span>1122</span>
+                      </a>
+                    </li>
+                    <li class="tooltip-card__item">
+                      <a href="#" class="tooltip-card__link">
+                        <img src="./images/icon/question-answer.svg" alt="Телефонна трубка синього кольору">
+                        <span>Anna_Aseeva</span>
+                      </a>
+                    </li>
+                    <li class="tooltip-card__item">
+                      <a href="mailto:annaaseeva@gmail.com" class="tooltip-card__link">
+                        <img src="./images/icon/markunread.svg" alt="Електронна адресса">
+                        <span>annaaseeva@gmail.com</span>
+                      </a>
+                    </li>
+                  </ul>
+                </address>
               </div>
-            </a>
+
+            </div>
+
           </div>
           <div class="office__body">
             <ul class="office__list list-office">
@@ -823,7 +913,7 @@
       </div>
       <!-- dispatcher ================================================= -->
       <div class="main__item">
-        <section class="dispatcher">
+        <section id="dispatcher" class="dispatcher">
           <div class="dispatcher__header">
             <div class="dispatcher__logo">
               <img src="./images/icon/headset-mic.svg" alt="Іконка наушників з мікрофоном">
@@ -871,13 +961,15 @@
               </li>
             </ul>
             <div class="dispatcher__graph graph-dispatcher">
-              <div class="graph-dispatcher__graph">
-                <canvas id="graph-dispatcher"></canvas>
-              </div>
-              <div class="graph-dispatcher__notation notation-graph-dispatcher">
-                <div class="notation-graph-dispatcher__title">Кількість звернень</div>
-                <div class="notation-graph-dispatcher__num">45</div>
-                <div class="notation-graph-dispatcher__legend"><span>Прийняті</span><span>Виконані</span></div>
+              <div class="graph-dispatcher__wrapper">
+                <div class="graph-dispatcher__graph">
+                  <canvas id="graph-dispatcher"></canvas>
+                </div>
+                <div class="graph-dispatcher__notation notation-graph-dispatcher">
+                  <div class="notation-graph-dispatcher__title">Кількість звернень</div>
+                  <div class="notation-graph-dispatcher__num">45</div>
+                  <div class="notation-graph-dispatcher__legend"><span>Прийняті</span><span>Виконані</span></div>
+                </div>
               </div>
             </div>
 
@@ -895,7 +987,7 @@
 
           </div>
           <div class="dispatcher__footer">
-            <a href="#" class="dispatcher__link button-link">
+            <button type="button" class="dispatcher__link button-link">
               <span>Показати більше</span>
               <div class="button-link__icon">
                 <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34" fill="none">
@@ -904,13 +996,13 @@
                     fill="#27B3F8" />
                 </svg>
               </div>
-            </a>
-            <a href="#" class="dispatcher__btn button">Перейти в програму</a>
-            <a href="#" class="dispatcher__btn light-btn">Адмініструвати доступ</a>
+            </button>
+            <a href="#" class="dispatcher__btn-dark button">Перейти в програму</a>
+            <a href="#" class="dispatcher__btn-light light-btn">Адмініструвати доступ</a>
           </div>
         </section>
         <!-- tariff ================================================================== -->
-        <section class="tariff">
+        <section id="tariff" class="tariff">
           <div class="tariff__header">
             <div class="tariff__logo">
               <img src="./images/icon/account-balance-wallet.svg" alt="Іконка кошелька">
@@ -962,7 +1054,7 @@
       </div>
       <!-- contract ===================================================== -->
       <div class="main__item">
-        <section class="contract">
+        <section id="contract" class="contract">
           <div class="contract__header">
             <div class="contract__logo">
               <img src="./images/icon/work-outline.svg" alt="іконка портфеля">
@@ -1124,7 +1216,7 @@
         </section>
       </div>
       <div class="main__item">
-        <section class="contract">
+        <section id="contract-1" class="contract">
           <div class="contract__header">
             <div class="contract__logo">
               <img src="./images/icon/work-outline.svg" alt="Іконка портфеля">
@@ -1289,7 +1381,7 @@
       </div>
       <!-- market =================================================================== -->
       <div class="main__item">
-        <section class="market">
+        <section id="market" class="market">
           <div class="market__header">
             <div class="market__logo">
               <img src="./images/icon/shopping-cart.svg" alt="Іконка магазинного кошика">
@@ -1457,6 +1549,9 @@
         </section>
       </div>
     </main>
+    <button id="scrollTopBtn" onclick="scrollToTop()">
+      <img src="./images/icon/arrow-forward-ios.svg" alt="Стрілка вгору">
+    </button>
   </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
   <script src="./js/graph.js"></script>

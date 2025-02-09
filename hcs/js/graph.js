@@ -74,19 +74,20 @@ const lineGraph = new Chart(graphLine, {
     datasets: [{
       data: accrued,
       borderColor: 'rgba(186, 91, 80, 1)',
-      borderWidth: 2,
+      borderWidth: 1,
       fill: true,
       backgroundColor: gradient,
       tension: 0.4,
-      pointBorderWidth: 0,
+      pointStyle: false,
+
     }, {
       data: paid,
       borderColor: 'rgba(39, 179, 248, 1)',
-      borderWidth: 2,
+      borderWidth: 1,
       fill: true,
       backgroundColor: gradient2,
       tension: 0.4,
-      pointBorderWidth: 0,
+      pointStyle: false,
     }]
   },
   options: {
@@ -96,12 +97,27 @@ const lineGraph = new Chart(graphLine, {
     plugins: {
       legend: {
         display: false
-      }
+      },
+      tooltip: {
+        enabled: true,
+        mode: 'nearest',
+        intersect: false,
+        backgroundColor: 'rgba(0, 0, 0, 0.8)',
+        titleColor: '#fff',
+        bodyColor: '#fff',
+        callbacks: {
+          label: function (context) {
+            let value = context.raw;
+            let percent = ((value / 4) * 100).toFixed(0);
+            return ` ${percent}%`;
+          }
+        }
+      },
     },
     scales: {
       y: {
         beginAtZero: true,
-        offset: false
+        max: 4
       },
     }
   }

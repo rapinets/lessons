@@ -11,6 +11,10 @@ body {
   color: var(--prymery);
 }
 
+body.lock {
+  overflow: hidden;
+}
+
 .hide {
   display: none;
 }
@@ -70,9 +74,9 @@ svg {
 }
 
 .button,
-.light-btn,
-.blue-btn {
+.light-btn {
   text-align: center;
+  white-space: nowrap;
   padding: 1.25rem 1.875rem;
   border-radius: 0.625rem;
   font-size: clamp(1rem, -2.036rem + 3.571vw, 2.25rem);
@@ -109,6 +113,10 @@ svg {
   position: relative;
 }
 
+.offise__tell-button-wrapper {
+  position: relative;
+}
+
 .tooltip {
   display: none;
   flex-direction: column;
@@ -122,6 +130,7 @@ svg {
   border-radius: 0.5rem 0rem 0.5rem 0.5rem;
   border: 1px solid var(--colorGrayLight);
   background-color: var(--absoluteWhite);
+  box-shadow: 0px 4px 10px 0px rgba(36, 36, 92, 0.25);
 }
 
 .tooltip__txt {
@@ -133,6 +142,85 @@ svg {
   font-size: 1.5rem;
   font-weight: 600;
 }
+
+/* tooltip-card ============================================== */
+
+.tooltip-card {
+  display: none;
+  flex-direction: column;
+  border-radius: 0.9375rem;
+  background: var(--absoluteWhite);
+  position: absolute;
+  top: 65%;
+  left: -400%;
+  z-index: 3;
+  box-shadow: 0px 4px 10px 0px rgba(36, 36, 92, 0.25);
+}
+
+.tooltip-card__header {
+  background-color: var(--colorBlueLight);
+  padding-block-end: 0.75rem;
+  padding-block-start: 0.81rem;
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.62rem;
+  align-items: center;
+  border-radius: 0.9375rem 0.9375rem 0 0;
+}
+
+.tooltip-card__header figure {
+  width: 6.25rem;
+  height: 6.25rem;
+  overflow: hidden;
+  border-radius: 50%;
+
+}
+
+.tooltip-card__header figcaption {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.62rem;
+  align-items: center;
+}
+
+.tooltip-card-name {
+  font-size: 1.875rem;
+  font-weight: 500;
+}
+
+.tooltip-card__position {
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+.tooltip-card__body {
+  padding-block-end: 2.5rem;
+  padding-block-start: 1.47rem;
+  padding-inline-start: 2rem;
+  padding-inline-end: 1.25rem;
+}
+
+.tooltip-card__list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.25rem;
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+.tooltip-card__link {
+  display: flex;
+  column-gap: 0.62rem;
+  align-items: center;
+}
+
+.tooltip-card__link img {
+  width: 1.5rem;
+  height: 1.5rem;
+  overflow: hidden;
+}
+
+/* tooltip-card ============================================== */
 
 .tell-button img {
   width: clamp(1.5rem, 1.069rem + 1.609vw, 3rem);
@@ -156,7 +244,7 @@ svg {
 }
 
 .header__container {
-  max-height: 6.63rem;
+  max-height: clamp(6.63rem, 3.65rem + 6.208vw, 11.1rem);
   background-color: var(--prymery);
   padding-inline-end: 3.25rem;
   padding-block-end: 2.38rem;
@@ -166,9 +254,8 @@ svg {
 }
 
 .header__logo {
-  aspect-ratio: 236 / 236;
-  max-height: 9rem;
-  aspect-ratio: 1;
+  aspect-ratio: 236 / 241;
+  max-height: 15.0625rem;
   overflow: hidden;
   transform: translateY(2.38rem);
 }
@@ -180,6 +267,7 @@ svg {
 
 .header__title {
   font-size: clamp(1rem, 0.167rem + 1.736vw, 2.25rem);
+  margin-block-end: clamp(0.625rem, 0.375rem + 0.521vw, 1rem);
 }
 
 .header__desc {
@@ -197,12 +285,12 @@ svg {
 .main {
   grid-column: span 2;
   background-color: var(--colorBackground);
-  padding: 1.25rem;
+  padding: clamp(0.625rem, 0.208rem + 0.868vw, 1.25rem);
   border-radius: 1.25rem;
 }
 
 .main__item {
-  margin-block-end: 1.25rem;
+  margin-block-end: clamp(0.625rem, 0.208rem + 0.868vw, 1.25rem);
 }
 
 .main__item:first-child {
@@ -214,7 +302,7 @@ svg {
 .main__item:nth-child(6),
 .main__item:nth-child(7) {
   display: flex;
-  gap: 1.25rem;
+  gap: clamp(0.625rem, 0.208rem + 0.868vw, 1.25rem);
   justify-content: space-between;
 }
 
@@ -239,4 +327,54 @@ section>[class*="__body"] {
   display: flex;
   flex-direction: column;
   row-gap: 1.25rem;
+}
+
+.flickity-page-dots {
+  bottom: 0px;
+}
+
+.flickity-page-dots .dot {
+  position: absolute;
+  left: -30000px;
+  top: 0;
+  z-index: -300;
+  width: 0;
+  height: 0;
+  opacity: 0;
+  background: transparent;
+  border: 1px solid transparent;
+}
+
+/* fill-in selected dot */
+.flickity-page-dots .dot.is-selected {
+  background: transparent;
+}
+
+#scrollTopBtn {
+  position: fixed;
+  bottom: 1.25rem;
+  right: 1.5rem;
+  display: none;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 0.625rem;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.125rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: opacity 0.3s, transform 0.3s;
+}
+
+#scrollTopBtn img {
+  transform: rotate(-90deg);
+}
+
+#scrollTopBtn.show {
+  display: block;
+  opacity: 1;
+  transform: scale(1);
+}
+
+#scrollTopBtn.hide {
+  opacity: 0;
+  transform: scale(0.8);
 }
