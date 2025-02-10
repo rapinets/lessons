@@ -2210,9 +2210,12 @@
   }
 
   .card-market {
+    aspect-ratio: 388 / 180;
     background-color: var(--absoluteWhite);
     box-shadow: 0px 4px 10px 0px rgba(36, 36, 92, 0.25);
-    min-height: 11.25rem;
+    min-height: auto;
+    max-height: 11.25rem;
+    overflow: hidden;
   }
 
   .card-market__inner {
@@ -2221,8 +2224,10 @@
   }
 
   .card-market__figure {
-    max-height: 11.25rem;
+    aspect-ratio: 152 / 180;
+    min-height: 11.25rem;
     border-radius: 0.9375rem 0rem 0rem 0.9375rem;
+    overflow: hidden;
   }
 
   .card-market__figure img {
