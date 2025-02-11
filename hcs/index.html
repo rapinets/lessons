@@ -7,6 +7,9 @@
   <title>Бершадьводоканал</title>
   <link rel="stylesheet" href="./css/style.css">
   <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+  <script async src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
+  <script async src="./js/graph.js"></script>
+  <script async src="./js/script.js"></script>
 </head>
 
 <body>
@@ -417,60 +420,78 @@
               <a href="#" class="staff__list-btn button">Замовити Витяг</a>
               <span class="staff__list-success">Витяг замовлено <time datetime="2023-02-01">01.02.23</time>р.</span>
             </div>
-            <h3 class="staff__sub-title">
-              Нормативний штатний розпис підприємства
-              <time datetime="2023-02-01">01.02.2023</time>
-            </h3>
-            <ul class="staff__regulatory-list regulatory-list">
-              <li class="regulatory-list__item">
-                <span class="regulatory-list__title">Види діяльності:</span>
-                <span class="regulatory-list__text">Централізоване водопостачання та Централізоване
-                  водовідведення</span>
-              </li>
-              <li class="regulatory-list__item">
-                <span class="regulatory-list__title">Основна професія:</span>
-                <span class="regulatory-list__text">Робітник зеленого будівництва</span>
-              </li>
-              <li class="regulatory-list__item">
-                <span class="regulatory-list__title">Штатна чисельність:</span>
-                <span class="regulatory-list__text">40 чол.</span>
-              </li>
-            </ul>
-            <p class="staff__label">Керівники - 2 чол. Професіонали - 4 чол. Фахівці - 5 чол. ТС - 4 чол. Робітники - 28
-              чол.</p>
-            <ul class="staff__regulatory-list regulatory-list">
-              <li class="regulatory-list__item">
-                <span class="regulatory-list__title">Середня заробітна плата:</span>
-                <span class="regulatory-list__text">14 787 грн КПФТС - 45 654 грн. Робітники - 9 768 грн.</span>
-              </li>
-              <li class="regulatory-list__item">
-                <span class="regulatory-list__title">Фонд оплати праці:</span>
-                <span class="regulatory-list__text">567 574 чол. Основна ЗП - 345 765 грн. Додаткова ЗП - 124 677
-                  грн.</span>
-              </li>
-            </ul>
+            <div class="staff__regulatory-list-wrapper">
+              <h3 class="staff__sub-title">
+                Нормативний штатний розпис підприємства
+                <time datetime="2023-02-01">01.02.2023</time>
+              </h3>
+              <ul class="staff__regulatory-list regulatory-list">
+                <li class="regulatory-list__item">
+                  <span class="regulatory-list__title">Види діяльності:</span>
+                  <span class="regulatory-list__text">Централізоване водопостачання та Централізоване
+                    водовідведення</span>
+                </li>
+                <li class="regulatory-list__item">
+                  <span class="regulatory-list__title">Основна професія:</span>
+                  <span class="regulatory-list__text">Робітник зеленого будівництва</span>
+                </li>
+                <li class="regulatory-list__item">
+                  <span class="regulatory-list__title">Штатна чисельність:</span>
+                  <span class="regulatory-list__text">40 чол.</span>
+                  <span class="regulatory-list__label">Керівники - 2 чол. Професіонали - 4 чол. Фахівці - 5 чол. ТС - 4
+                    чол. Робітники - 28
+                    чол.</span>
+                </li>
+              </ul>
+              <p class="staff__label">Керівники - 2 чол. Професіонали - 4 чол. Фахівці - 5 чол. ТС - 4 чол. Робітники -
+                28
+                чол.</p>
+              <ul class="staff__regulatory-list regulatory-list">
+                <li class="regulatory-list__item">
+                  <span class="regulatory-list__title">Середня заробітна плата:</span>
+                  <span class="regulatory-list__text">14 787 грн КПФТС - 45 654 грн. Робітники - 9 768 грн.</span>
+                </li>
+                <li class="regulatory-list__item">
+                  <span class="regulatory-list__title">Фонд оплати праці:</span>
+                  <span class="regulatory-list__text">567 574 чол. Основна ЗП - 345 765 грн. Додаткова ЗП - 124 677
+                    грн.</span>
+                </li>
+              </ul>
+            </div>
             <div class="staff__inner">
               <div class="staff__graph graph-staff">
                 <div class="graph-staff__graph-fop">
                   <h3 class="graph-staff__title">ФОП</h3>
                   <div class="graph-staff__inner">
-                    <canvas id="graph-staff1" width="143" height="143">
-                    </canvas>
+                    <svg width="144" height="144" viewBox="0 0 100 100">
+                      <circle cx="50" cy="50" r="40" fill="none" stroke="#fff" stroke-width="10"></circle>
+                      <circle class="progress-ring" data-percent="64" cx="50" cy="50" r="40" fill="none"
+                        stroke="#27B3F8" stroke-width="10" stroke-dasharray="251.2" stroke-dashoffset="251.2"
+                        stroke-linecap="round"></circle>
+                    </svg>
+                    <div class="graph-staff__label left">64%</div>
+                    <div class="graph-staff__label right">36%</div>
                   </div>
                   <div class="graph-staff__legend">
-                    <span>КПФТС, середня З/П</span>
-                    <span>Робітники, 8 537.73, середня ЗП</span>
+                    <p><span>КПФТС, середня З/П</span></p>
+                    <p><span>Робітники, 8 537.73, середня ЗП</span></p>
                   </div>
                 </div>
                 <div class="graph-staff__graph-number">
                   <h3 class="graph-staff__title">Чисельність</h3>
                   <div class="graph-staff__inner">
-                    <canvas id="graph-staff2" width="143" height="143">
-                    </canvas>
+                    <svg width="144" height="144" viewBox="0 0 100 100">
+                      <circle cx="50" cy="50" r="40" fill="none" stroke="#fff" stroke-width="10"></circle>
+                      <circle class="progress-ring" data-percent="75" cx="50" cy="50" r="40" fill="none"
+                        stroke="#27B3F8" stroke-width="10" stroke-dasharray="251.2" stroke-dashoffset="251.2"
+                        stroke-linecap="round"></circle>
+                    </svg>
+                    <div class="graph-staff__label left">76%</div>
+                    <div class="graph-staff__label right">24%</div>
                   </div>
                   <div class="graph-staff__legend">
-                    <span>КПФТС, 10 чис</span>
-                    <span>Робітники, 32 чис.</span>
+                    <p><span>КПФТС, 10 чис</span></p>
+                    <p><span>Робітники, 32 чис.</span></p>
                   </div>
                 </div>
               </div>
@@ -484,8 +505,8 @@
           </div>
 
           <div class="staff__footer">
-            <div class="staff__link">
-              <button class="button-link" type="button">
+            <div class="staff__link-wrapper">
+              <button class="staff__link button-link" type="button">
                 <span>Показати більше</span>
                 <div class="button-link__icon">
                   <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34" fill="none">
@@ -519,28 +540,30 @@
           <div class="calculation__body">
             <div class="calculation__inner">
               <div class="calculation__text">
-                <ul class="calculation__list list-calculation">
-                  <li class="list-calculation__item">
-                    <span class="list-calculation__title">Кількість абонентів: </span>
-                    <span class="list-calculation__text">456 765 ФО 3 445 ЮО 567</span>
-                  </li>
-                  <li class="list-calculation__item">
-                    <span class="list-calculation__title">Нарахування: </span>
-                    <span class="list-calculation__text">5 678 687 грн</span>
-                  </li>
-                  <li class="list-calculation__item">
-                    <span class="list-calculation__title">Дебіторська заборгованість: </span>
-                    <span class="list-calculation__text">4 556 345 грн</span>
-                  </li>
-                  <li class="list-calculation__item">
-                    <span class="list-calculation__title">Боржники 3 міс > </span>
-                    <span class="list-calculation__text">34 656 о/р (23%)</span>
-                  </li>
-                  <li class="list-calculation__item">
-                    <span class="list-calculation__title">Прилади обліку: </span>
-                    <span class="list-calculation__text">45 567 од. (34%)</span>
-                  </li>
-                </ul>
+                <div class="calculation__list-wrapper">
+                  <ul class="calculation__list list-calculation">
+                    <li class="list-calculation__item">
+                      <span class="list-calculation__title">Кількість абонентів: </span>
+                      <span class="list-calculation__text">456 765 ФО 3 445 ЮО 567</span>
+                    </li>
+                    <li class="list-calculation__item">
+                      <span class="list-calculation__title">Нарахування: </span>
+                      <span class="list-calculation__text">5 678 687 грн</span>
+                    </li>
+                    <li class="list-calculation__item">
+                      <span class="list-calculation__title">Дебіторська заборгованість: </span>
+                      <span class="list-calculation__text">4 556 345 грн</span>
+                    </li>
+                    <li class="list-calculation__item">
+                      <span class="list-calculation__title">Боржники 3 міс > </span>
+                      <span class="list-calculation__text">34 656 о/р (23%)</span>
+                    </li>
+                    <li class="list-calculation__item">
+                      <span class="list-calculation__title">Прилади обліку: </span>
+                      <span class="list-calculation__text">45 567 од. (34%)</span>
+                    </li>
+                  </ul>
+                </div>
                 <div class="calculation__table-wrapper">
                   <h3 class="calculation__sub-title">Надходження коштів за 23.12.24, грн</h3>
                   <table class="calculation__table table-calculation">
@@ -615,8 +638,12 @@
                 </svg>
               </div>
             </button>
-            <a href="#" class="calculation__btn-dark button">Перейти в програму</a>
-            <a href="#" class="calculation__btn-light light-btn">Адмініструвати доступ</a>
+            <div class="calculation__buttons">
+              <div class="calculation__buttons-inner">
+                <a href="#" class="calculation__btn-dark button">Перейти в програму</a>
+                <a href="#" class="calculation__btn-light light-btn">Адмініструвати доступ</a>
+              </div>
+            </div>
           </div>
         </section>
       </div>
@@ -642,7 +669,9 @@
               <li class="webinars__card card-webinars card-webinars--registered">
                 <div class="card-webinars__body">
                   <div class="card-webinars__datetime">
-                    <div class="card-webinars__part">Участь</div>
+                    <div class="card-webinars__part">
+                      <div><span>Участь</span></div>
+                    </div>
                     <time class="card-webinars__date" datetime="20024-12-24">24.12.2024</time>
                     <time class="card-webinars__time" datetime="12:30:00+03:00">12:30</time>
                   </div>
@@ -658,7 +687,9 @@
                 </div>
                 <div class="card-webinars__buttons">
                   <a href="#" class="card-webinars__button">Детальніше</a>
-                  <div class="card-webinars__price">500грн</div>
+                  <div class="card-webinars__price">
+                    <div><span>500грн</span></div>
+                  </div>
                   <a href="#" class="card-webinars__btn button">Зареєструватися</a>
                 </div>
               </li>
@@ -667,7 +698,9 @@
               <li class="webinars__card card-webinars card-webinars--active">
                 <div class="card-webinars__body">
                   <div class="card-webinars__datetime">
-                    <div class="card-webinars__part">Участь</div>
+                    <div class="card-webinars__part">
+                      <div><span>Участь</span></div>
+                    </div>
                     <time class="card-webinars__date" datetime="20024-12-24">24.12.2024</time>
                     <time class="card-webinars__time" datetime="12:30:00+03:00">12:30</time>
                   </div>
@@ -683,7 +716,9 @@
                 </div>
                 <div class="card-webinars__buttons">
                   <a href="#" class="card-webinars__button">Детальніше</a>
-                  <div class="card-webinars__price">500грн</div>
+                  <div class="card-webinars__price">
+                    <div><span>500грн</span></div>
+                  </div>
                   <a href="#" class="card-webinars__btn button">Зареєструватися</a>
                 </div>
               </li>
@@ -692,7 +727,9 @@
               <li class="webinars__card card-webinars card-webinars--registered">
                 <div class="card-webinars__body">
                   <div class="card-webinars__datetime">
-                    <div class="card-webinars__part">Участь</div>
+                    <div class="card-webinars__part">
+                      <div><span>Участь</span></div>
+                    </div>
                     <time class="card-webinars__date" datetime="20024-12-24">24.12.2024</time>
                     <time class="card-webinars__time" datetime="12:30:00+03:00">12:30</time>
                   </div>
@@ -708,7 +745,9 @@
                 </div>
                 <div class="card-webinars__buttons">
                   <a href="#" class="card-webinars__button">Детальніше</a>
-                  <div class="card-webinars__price">500грн</div>
+                  <div class="card-webinars__price">
+                    <div><span>500грн</span></div>
+                  </div>
                   <a href="#" class="card-webinars__btn button">Зареєструватися</a>
                 </div>
               </li>
@@ -717,7 +756,9 @@
               <li class="webinars__card card-webinars">
                 <div class="card-webinars__body">
                   <div class="card-webinars__datetime">
-                    <div class="card-webinars__part">Участь</div>
+                    <div class="card-webinars__part">
+                      <div><span>Участь</span></div>
+                    </div>
                     <time class="card-webinars__date" datetime="20024-12-24">24.12.2024</time>
                     <time class="card-webinars__time" datetime="12:30:00+03:00">12:30</time>
                   </div>
@@ -733,7 +774,9 @@
                 </div>
                 <div class="card-webinars__buttons">
                   <a href="#" class="card-webinars__button">Детальніше</a>
-                  <div class="card-webinars__price">500грн</div>
+                  <div class="card-webinars__price">
+                    <div><span>500грн</span></div>
+                  </div>
                   <a href="#" class="card-webinars__btn button">Зареєструватися</a>
                 </div>
               </li>
@@ -751,7 +794,16 @@
                 </svg>
               </div>
             </a>
-
+            <button type="button" class="webinars__btn button-link">
+              <span>Показати більше</span>
+              <div class="button-link__icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34" fill="none">
+                  <path
+                    d="M10.6065 21.9203L19.9191 12.6077H15.8462C15.2946 12.6077 14.8492 12.1622 14.8492 11.6106C14.8492 11.0591 15.2946 10.6136 15.8462 10.6136H22.3374C22.889 10.6136 23.3344 11.0591 23.3344 11.6106L23.3344 18.1019C23.3344 18.6534 22.889 19.0989 22.3374 19.0989C21.7859 19.0989 21.3404 18.6534 21.3404 18.1019L21.3333 14.0219L12.0207 23.3345C11.6318 23.7234 10.9954 23.7234 10.6065 23.3345C10.2176 22.9456 10.2176 22.3092 10.6065 21.9203Z"
+                    fill="#27B3F8" />
+                </svg>
+              </div>
+            </button>
           </div>
         </section>
       </div>
@@ -963,12 +1015,22 @@
             <div class="dispatcher__graph graph-dispatcher">
               <div class="graph-dispatcher__wrapper">
                 <div class="graph-dispatcher__graph">
-                  <canvas id="graph-dispatcher"></canvas>
+                  <svg width="144" height="144" viewBox="0 0 100 100">
+                    <circle cx="50" cy="50" r="40" fill="none" stroke="#fff" stroke-width="10"></circle>
+                    <circle class="progress-ring" data-percent="64" cx="50" cy="50" r="40" fill="none" stroke="#27B3F8"
+                      stroke-width="10" stroke-dasharray="251.2" stroke-dashoffset="251.2" stroke-linecap="round">
+                    </circle>
+                  </svg>
+                  <div class="graph-staff__label left">74%</div>
+                  <div class="graph-staff__label right">26%</div>
                 </div>
                 <div class="graph-dispatcher__notation notation-graph-dispatcher">
                   <div class="notation-graph-dispatcher__title">Кількість звернень</div>
                   <div class="notation-graph-dispatcher__num">45</div>
-                  <div class="notation-graph-dispatcher__legend"><span>Прийняті</span><span>Виконані</span></div>
+                  <div class="notation-graph-dispatcher__legend">
+                    <p><span>Прийняті</span></p>
+                    <p><span>Виконані</span></p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -1373,10 +1435,8 @@
                 </svg>
               </div>
             </a>
+            <a href="#" class="contract__link-to">Стан розрахунків та Акт звіряння</a>
           </div>
-          <a href="#" class="contract__link-to">Стан розрахунків та Акт звіряння</a>
-
-
         </section>
       </div>
       <!-- market =================================================================== -->
@@ -1401,7 +1461,7 @@
               <li class="market__card card-market">
                 <a href="" class="card-market__inner">
                   <div class="card-market__figure">
-                    <img src="./images/market/lubricats.webp" alt="">
+                    <img class="card-market__img" src="./images/market/machinery.webp" alt="">
                   </div>
                   <div class="card-market__body">
                     <h4 class="card-market__title">Техніка</h4>
@@ -1416,7 +1476,7 @@
               <li class="market__card card-market">
                 <a href="#" class="card-market__inner">
                   <div class="card-market__figure">
-                    <img src="./images/market/lubricats.webp" alt="">
+                    <img class="card-market__img" src="./images/market/overall.webp" alt="">
                   </div>
                   <div class="card-market__body">
                     <h4 class="card-market__title">Спецодяг</h4>
@@ -1431,7 +1491,7 @@
               <li class="market__card card-market">
                 <a href="#" class="card-market__inner">
                   <div class="card-market__figure">
-                    <img src="./images/market/equipment.webp" alt="">
+                    <img class="card-market__img" src="./images/market/equipment.webp" alt="">
                   </div>
                   <div class="card-market__body">
                     <h4 class="card-market__title">Обладнання</h4>
@@ -1446,7 +1506,7 @@
               <li class="market__card card-market">
                 <a href="#" class="card-market__inner">
                   <div class="card-market__figure">
-                    <img src="./images/market/hardware.webp" alt="">
+                    <img class="card-market__img" src="./images/market/hardware.webp" alt="">
                   </div>
                   <div class="card-market__body">
                     <h4 class="card-market__title">Метизи та розходні матеріли</h4>
@@ -1461,7 +1521,7 @@
               <li class="market__card card-market">
                 <a href="#" class="card-market__inner">
                   <div class="card-market__figure">
-                    <img src="./images/market/lubricats.webp" alt="">
+                    <img class="card-market__img" src="./images/market/lubricats.webp" alt="">
                   </div>
                   <div class="card-market__body">
                     <h4 class="card-market__title">Паливно-мастильні матеріали</h4>
@@ -1476,7 +1536,7 @@
               <li class="market__card card-market">
                 <a href="#" class="card-market__inner">
                   <div class="card-market__figure">
-                    <img src="./images/market/lubricats.webp" alt="">
+                    <img class="card-market__img" src="./images/market/office.webp" alt="">
                   </div>
                   <div class="card-market__body">
                     <h4 class="card-market__title">Канцелярія та оргтехніка</h4>
@@ -1491,7 +1551,7 @@
               <li class="market__card card-market">
                 <a href="#" class="card-market__inner">
                   <div class="card-market__figure">
-                    <img src="./images/market/pipes.webp" alt="">
+                    <img class="card-market__img" src="./images/market/pipes.webp" alt="">
                   </div>
                   <div class="card-market__body">
                     <h4 class="card-market__title">Труби та коплектуючі</h4>
@@ -1506,7 +1566,7 @@
               <li class="market__card card-market">
                 <a href="#" class="card-market__inner">
                   <div class="card-market__figure">
-                    <img src="./images/market/services.webp" alt="">
+                    <img class="card-market__img" src="./images/market/services.webp" alt="">
                   </div>
                   <div class="card-market__body">
                     <h4 class="card-market__title">Послуги</h4>
@@ -1521,7 +1581,7 @@
               <li class="market__card card-market">
                 <a href="#" class="card-market__inner">
                   <div class="card-market__figure">
-                    <img src="./images/market/bilding-materials.webp" alt="">
+                    <img class="card-market__img" src="./images/market/bilding-materials.webp" alt="">
                   </div>
                   <div class="card-market__body">
                     <h4 class="card-market__title">Будівельні матеріали</h4>
@@ -1535,7 +1595,7 @@
             </ul>
           </div>
           <div class="market__footer">
-            <a class="market__link button-link" href="#">
+            <button class="market__link button-link" type="button">
               <span>Показати більше</span>
               <div class="button-link__icon">
                 <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34" fill="none">
@@ -1544,7 +1604,7 @@
                     fill="#27B3F8" />
                 </svg>
               </div>
-            </a>
+            </button>
           </div>
         </section>
       </div>
@@ -1553,9 +1613,8 @@
       <img src="./images/icon/arrow-forward-ios.svg" alt="Стрілка вгору">
     </button>
   </div>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
-  <script src="./js/graph.js"></script>
-  <script src="./js/script.js"></script>
+
+
   <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
 
 </body>
