@@ -13,6 +13,10 @@ document.querySelectorAll('.progress-ring').forEach(circle => {
   animateProgress(circle, percent);
 });
 
+
+
+// line ghart =================================================
+
 const graphLine = document.getElementById('line-graph').getContext('2d');
 
 const gradientRed = graphLine.createLinearGradient(0, 0, 0, 400);
@@ -85,15 +89,80 @@ const lineGraph = new Chart(graphLine, {
 });
 
 window.addEventListener('resize', () => {
-  myChart.resize();
+  lineGraph.resize();
 });
+
+
+
+// doughunt staff chart fop =====================================================
+
+// const dispatcherGraph = document.getElementById('staff-chart-fop');
+
+// const graphDispatcher = new Chart(dispatcherGraph, {
+//   type: 'doughnut',
+//   data: {
+//     labels: ['64%', '36%'],
+//     datasets: [{
+//       label: ['КПФТС, середня З/П', 'Робітники, 8 537.73, середня ЗП'],
+//       data: [74, 36],
+//       backgroundColor: ['rgba(39, 179, 248, 1)', 'rgba(255, 255, 255, 1)'],
+//       borderWidth: 0,
+//       borderRadius: 5
+//     }]
+//   },
+//   options: {
+//     responsive: true,
+//     maintainAspectRatio: false,
+//     width: 143,
+//     height: 143,
+//     cutout: "80%",
+//     plugins: {
+//       legend: {
+//         display: false
+//       }
+//     }
+//   }
+// });
+
+
+// doughunt staff chart number =====================================================
+
+// const dispatcherGraph = document.getElementById('staff-chart-num');
+
+// const graphDispatcher = new Chart(dispatcherGraph, {
+//   type: 'doughnut',
+//   data: {
+//     labels: ['76%', '24%'],
+//     datasets: [{
+//       label: ['КПФТС, середня З/П', 'Робітники, 8 537.73, середня ЗП'],
+//       data: [76, 24],
+//       backgroundColor: ['rgba(39, 179, 248, 1)', 'rgba(255, 255, 255, 1)'],
+//       borderWidth: 0,
+//       borderRadius: 5
+//     }]
+//   },
+//   options: {
+//     responsive: true,
+//     maintainAspectRatio: false,
+//     width: 143,
+//     height: 143,
+//     cutout: "80%",
+//     plugins: {
+//       legend: {
+//         display: false
+//       }
+//     }
+//   }
+// });
+
+// dispatcher chart =================================================================
 
 // const dispatcherGraph = document.getElementById('graph-dispatcher');
 
 // const graphDispatcher = new Chart(dispatcherGraph, {
 //   type: 'doughnut',
 //   data: {
-//     labels: [],
+//     labels: ['24%', '76%'],
 //     datasets: [{
 //       label: ['Виконані', 'Прийняті'],
 //       data: [24, 76],
@@ -116,6 +185,4 @@ window.addEventListener('resize', () => {
 //   }
 // });
 
-// window.addEventListener('resize', () => {
-//   lineGraph.resize();
-// });
+

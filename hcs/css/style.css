@@ -17,6 +17,8 @@
 
 @import url('news.css');
 
+@import url('popup.css');
+
 @media (min-width: 48em) {
 
   .card-webinars--registered .card-webinars__body:not(.card-webinars__author) {
@@ -2382,6 +2384,11 @@
 
   /* market ============================================ */
 
+  .market__cards {
+    grid-template-columns: 1fr;
+    row-gap: 1.25rem;
+  }
+
   .card-market {
     aspect-ratio: 375 / 180;
     background-color: var(--absoluteWhite);
@@ -2422,5 +2429,34 @@
 
   .card-market__desc {
     display: inline-block;
+  }
+
+  .popup {
+    left: calc(50% - 236px / 2);
+  }
+
+  .popup__body {
+    max-width: 14.75rem;
+    min-height: 16.0625rem;
+    padding-inline: 1.44rem;
+    padding-block: 3.12rem;
+  }
+
+  .popup__close-btn {
+    display: block;
+  }
+
+  .popup__pic {
+    padding: 1.875rem 1.75rem 1.8125rem 1.8125rem;
+  }
+
+  .popup__figure {
+    width: 3.6875rem;
+    height: 3.6875rem;
+    padding: 0.5rem;
+  }
+
+  .popup__footer {
+    display: none;
   }
 }

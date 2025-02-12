@@ -1,0 +1,117 @@
+.popup {
+  position: fixed;
+  z-index: 10;
+  top: clamp(7.88rem, 4.9rem + 6.208vw, 12.35rem);
+  left: calc(50% - 335px / 2);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.8s ease;
+}
+
+.popup.show-popup {
+  opacity: 1;
+  visibility: visible;
+}
+
+.popup__body {
+  max-width: 20.9375rem;
+  min-height: 29.0625rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  row-gap: 0.88rem;
+  border-radius: 0.9375rem;
+  background-color: var(--absoluteWhite);
+  box-shadow: 0px 4px 10px 0px rgba(36, 36, 92, 0.25);
+  padding-inline: 1.75rem;
+  padding-block: 2.19rem;
+  transform: translate(0, -100%);
+  opacity: 0;
+  transition: all 0.8s ease;
+}
+
+.show-popup .popup__body {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+.popup__close-btn {
+  display: none;
+  position: absolute;
+  top: -1.9rem;
+  right: -2.6rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  box-shadow: 0px 4px 10px rgba(36, 36, 92, 0.25);
+  background-color: var(--absoluteWhite);
+}
+
+.popup__pic {
+  border-radius: 0.9375rem;
+  padding: 4.1875rem 4.0625rem 4.1875rem 4.125rem;
+  margin-block-end: 1.44rem;
+}
+
+.success .popup__pic {
+  background-color: var(--colorGreenLight);
+}
+
+.not-success .popup__pic {
+  background-color: var(--colorRedLight);
+}
+
+.popup__figure {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  padding: 0.88rem;
+}
+
+.success .popup__figure {
+  background-color: var(--colorGreenDark);
+}
+
+.popup__desc {
+  flex-grow: 1;
+  font-size: 1.25rem;
+  font-weight: 500;
+  margin-block-end: 1.88rem;
+}
+
+.not-success .popup__desc {
+  color: var(--colorRedBright);
+}
+
+.popup__btn.button {
+  width: 13.0625rem;
+  padding-block: 0.875rem;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.not-success__figure {
+  background-color: var(--colorRedBright);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.not-success__figure span {
+  display: block;
+  height: 5px;
+  border-radius: 5px;
+  width: 100%;
+  background-color: var(--absoluteWhite);
+
+}
+
+.not-success__figure span:first-child {
+  transform: rotate(45deg) translateY(3px);
+}
+
+.not-success__figure span:last-child {
+  transform: rotate(-45deg) translateY(-3px);
+}

@@ -246,7 +246,7 @@ dispatcherLink.addEventListener('click', () => {
 const marketCards = document.querySelectorAll('.market__card');
 const marketLink = document.querySelector('.market__link');
 const marketLinkSpan = document.querySelector('.market__link span');
-console.log(marketCards)
+
 window.addEventListener('resize', () => {
 	for (let i = 3; i < marketCards.length; i++) {
 		if (window.innerWidth <= 768) {

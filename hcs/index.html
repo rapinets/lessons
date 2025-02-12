@@ -152,13 +152,13 @@
                   placeholder="Введіть запитання, яке Вас цікавить..."></textarea>
                 <div class="form__group group-form">
                   <div class="group-form__fields">
-                    <div class="group-form__item">
+                    <div id="open-success" class="group-form__item">
                       <input class="group-form__input" id="file" type="file">
                       <label class="group-form__label" for="file" aria-label="Прикріпити файл">
                         <img src="./images/icon/attachment.svg" alt="Іконка скрепки">
                       </label>
                     </div>
-                    <div class="group-form__item">
+                    <div id="open-not-success" class="group-form__item">
                       <input class="group-form__input" id="photo" type="file">
                       <label class="group-form__label" for="photo" aria-label="Прикріпити фото">
                         <img src="./images/icon/add-a-photo.svg" alt="Іконка фотоапарата">
@@ -463,6 +463,7 @@
                 <div class="graph-staff__graph-fop">
                   <h3 class="graph-staff__title">ФОП</h3>
                   <div class="graph-staff__inner">
+                    <!-- <canvas id="staff-chart-fop"></canvas> -->
                     <svg width="144" height="144" viewBox="0 0 100 100">
                       <circle cx="50" cy="50" r="40" fill="none" stroke="#fff" stroke-width="10"></circle>
                       <circle class="progress-ring" data-percent="64" cx="50" cy="50" r="40" fill="none"
@@ -480,6 +481,7 @@
                 <div class="graph-staff__graph-number">
                   <h3 class="graph-staff__title">Чисельність</h3>
                   <div class="graph-staff__inner">
+                    <!-- <canvas id="staff-chart-num"></canvas> -->
                     <svg width="144" height="144" viewBox="0 0 100 100">
                       <circle cx="50" cy="50" r="40" fill="none" stroke="#fff" stroke-width="10"></circle>
                       <circle class="progress-ring" data-percent="75" cx="50" cy="50" r="40" fill="none"
@@ -1015,6 +1017,7 @@
             <div class="dispatcher__graph graph-dispatcher">
               <div class="graph-dispatcher__wrapper">
                 <div class="graph-dispatcher__graph">
+                  <!-- <canvas id="graph-dispatcher"></canvas> -->
                   <svg width="144" height="144" viewBox="0 0 100 100">
                     <circle cx="50" cy="50" r="40" fill="none" stroke="#fff" stroke-width="10"></circle>
                     <circle class="progress-ring" data-percent="64" cx="50" cy="50" r="40" fill="none" stroke="#27B3F8"
@@ -1612,10 +1615,54 @@
     <button id="scrollTopBtn" onclick="scrollToTop()">
       <img src="./images/icon/arrow-forward-ios.svg" alt="Стрілка вгору">
     </button>
+
+    <div id="success" class="success popup">
+      <div class="popup__body">
+        <button class="popup__close-btn" type="button">
+          <img src="./images/icon/close.svg" alt="Кнопка закрити">
+        </button>
+        <div class="popup__pic">
+          <div class="popup__figure">
+            <img src="./images/icon/check.svg" alt="Іконка галочки">
+          </div>
+        </div>
+        <div class="popup__desc">
+          <p>
+            Ваше запитання успішно відправлено. Чекайте на відповідь нашого експерта
+          </p>
+        </div>
+        <div class="popup__footer">
+          <button class="popup__btn button" type="button"><span>Ok</span></button>
+        </div>
+      </div>
+    </div>
+
+    <div id="not-success" class="not-success popup">
+      <div class="popup__body">
+        <button class="popup__close-btn" type="button">
+          <img src="./images/icon/close.svg" alt="Кнопка закрити">
+        </button>
+        <div class="popup__pic">
+          <div class="not-success__figure popup__figure">
+            <span></span><span></span>
+          </div>
+        </div>
+
+        <div class="popup__desc">
+          <p>
+            Щось пішло не так. Перевірте, будь ласка, свій запит ще раз
+          </p>
+        </div>
+        <div class="popup__footer">
+          <button class="popup__btn button" type="button"><span>Ok</span></button>
+        </div>
+      </div>
+    </div>
   </div>
 
 
   <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+  <script src="./js/popup.js"></script>
 
 </body>
 
