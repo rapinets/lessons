@@ -2344,7 +2344,7 @@
 
   .contract-open .card-contract__text {
     white-space: wrap;
-    max-width: 16rem;
+    max-width: 14rem;
   }
 
   .contract-open .card-contract__icon {
@@ -2352,7 +2352,7 @@
   }
 
   .contract-open .card-contract__toggle img {
-    transform: rotate(180deg);
+    transform: rotate(-180deg);
   }
 
   .contract-open .card-contract__link {
