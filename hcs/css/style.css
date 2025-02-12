@@ -2046,7 +2046,7 @@
 
   .registered-open .card-webinars__toggle img,
   .webinars-open .card-webinars__toggle img {
-    transform: rotate(-90deg);
+    transform: rotate(-180deg);
   }
 
   .registered-open .card-webinars__body,
@@ -2107,7 +2107,7 @@
     color: var(--colorBlue);
     border-radius: 0.625rem;
     text-align: center;
-    padding: 1rem 1.63rem;
+    padding: 1rem 0.5rem;
   }
 
   .registered-open .card-webinars__btn.button {
@@ -2115,9 +2115,13 @@
     border-color: #0C5CFF;
   }
 
+  .card-webinars__btn.button {
+    padding-inline: 0.5rem;
+  }
+
   .card-webinars__btn {
     flex-grow: 0;
-    flex-basis: 49.333%;
+    flex-basis: 48.333%;
   }
 
   .card-webinars--registered .card-webinars__body {
@@ -2135,8 +2139,12 @@
 
   .card-webinars__body {
     width: 100%;
+    column-gap: 0.31rem;
   }
 
+  .card-webinars__datetime {
+    column-gap: 0.31rem;
+  }
 
   .card-webinars__time {
     display: none;
@@ -2156,7 +2164,7 @@
   }
 
   .card-webinars__toggle {
-    width: 2.25rem;
+    width: 3.25rem;
     height: 2.25rem;
     overflow: hidden;
     display: block;
