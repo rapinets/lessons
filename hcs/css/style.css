@@ -30,6 +30,33 @@
   }
 }
 
+.pic-wrapper {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2rem;
+  background-color: gray;
+  padding: 2rem;
+}
+
+.pic1,
+.pic2,
+.pic3 {
+  padding: 1rem;
+  background-color: #fff;
+}
+
+.pic1 img {
+  filter: brightness(65%) contrast(200%) grayscale(100%);
+}
+
+.pic2 img {
+  filter: blur(1px) brightness(105%) contrast(100%) grayscale(100%) hue-rotate(0deg) invert(100%) opacity(70%) saturate(0%) sepia(0%);
+}
+
+.pic3 img {
+  filter: brightness(65%) contrast(200%) grayscale(100%) invert(100%);
+}
+
 /* legal-aid ============================================================== */
 
 .legal-aid {
@@ -1395,7 +1422,7 @@
 
 .card-market__img {
   border-radius: 0.9375rem 0.9375rem 0rem 0rem;
-  filter: blur(1px) brightness(105%) contrast(100%) grayscale(100%) hue-rotate(0deg) invert(100%) opacity(70%) saturate(0%) sepia(0%);
+  filter: brightness(200%) contrast(200%) grayscale(100%);
 }
 
 .card-market__body {
