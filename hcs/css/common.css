@@ -279,11 +279,13 @@ svg {
 
 .header__logo {
   aspect-ratio: 236 / 241;
-  max-height: 15.1rem;
+  max-height: clamp(6.36rem, 0.533rem + 12.139vw, 15.1rem);
   overflow: hidden;
   position: absolute;
   left: -0.8%;
   top: -37%;
+  /* left: clamp(-1.5rem, -1.833rem + 0.694vw, -1rem);
+  top: clamp(-0.1rem, 2.627rem + -5.681vw, -4.19rem); */
 }
 
 .header__text {

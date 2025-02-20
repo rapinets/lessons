@@ -28,5 +28,3 @@ window.addEventListener('scroll', () => {
   }
 });
 
-document.getElementById('open-success').addEventListener('click', () => { successPopup.classList.add('show-popup') });
-document.getElementById('open-not-success').addEventListener('click', () => { notSuccessPopup.classList.add('show-popup') });

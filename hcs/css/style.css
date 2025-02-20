@@ -1547,6 +1547,10 @@
 
 @media (max-width: 85em) {
 
+  .header__logo {
+    top: -24%;
+  }
+
   [class*="__btn"] {
     width: fit-content;
   }
@@ -1586,6 +1590,10 @@
     row-gap: 0.62rem;
   }
 
+  .graph-staff__legend p {
+    flex-basis: auto;
+  }
+
   .graph-staff__legend span:first-child::after {
     display: none;
   }
@@ -1608,6 +1616,10 @@
 
 @media (max-width: 71em) {
 
+  .header__logo {
+    top: -15%;
+  }
+
   .card-webinars__author {
     display: none;
   }
@@ -1621,6 +1633,14 @@
 
   .header {
     grid-column: 1;
+  }
+
+  .header__container {
+    column-gap: 2rem;
+  }
+
+  .header__logo {
+    top: -10%;
   }
 
   .actions-header {
@@ -1716,6 +1736,7 @@
 
   .list-staff__item {
     flex-direction: column;
+    align-items: flex-start;
   }
 
   .list-staff__item:not(:last-child)::after {
@@ -1775,8 +1796,7 @@
   }
 
   .header__logo {
-    max-height: 7.36rem;
-    transform: translateY(1.22rem) translateX(-1rem);
+    top: -2%;
   }
 
   [class*="__header"] {
@@ -2089,6 +2109,10 @@
     padding-inline: 0.63rem;
   }
 
+  .card-webinars:nth-child(n+5) {
+    display: none;
+  }
+
   .card-webinars--registered {
     background-color: var(--colorGreen);
   }
@@ -2337,12 +2361,12 @@
   }
 
   .dispatcher__footer {
-    justify-content: flex-end;
-    flex-wrap: wrap;
+    flex-direction: column;
   }
 
   .dispatcher__link {
     display: flex;
+    align-self: flex-end;
   }
 
   .dispatcher__buttons {
@@ -2466,6 +2490,7 @@
   .market__cards {
     grid-template-columns: 1fr;
     row-gap: 1.25rem;
+    justify-items: center;
   }
 
   .card-market {
@@ -2549,5 +2574,11 @@
 
   #scrollTopBtn {
     right: -100rem;
+  }
+}
+
+@media (max-width: 24em) {
+  .header__logo {
+    left: -8%;
   }
 }

@@ -1,69 +1,5 @@
 "use strict"
 
-// const subMenus = document.querySelectorAll('.menu__inner');
-
-// if (subMenus.length > 0) {
-// 	subMenus.forEach(subMenu => {
-// 		const parent = subMenu.parentElement;
-
-// 		if (parent) {
-// 			parent.addEventListener('click', function (event) {
-
-// 				subMenus.forEach(menu => {
-// 					if (menu !== subMenu) {
-// 						menu.classList.add('hide');
-// 					}
-// 				});
-
-// 				subMenu.classList.toggle('hide');
-
-// 				event.stopPropagation();
-// 			});
-// 		}
-// 	});
-// }
-
-// document.addEventListener('click', function () {
-// 	subMenus.forEach(subMenu => subMenu.classList.add('hide'));
-// });
-
-// const burgerIcon = document.querySelector('.burger-icon');
-// const asideBody = document.querySelector('.aside__body');
-
-// if (burgerIcon) {
-// 	burgerIcon.addEventListener('click', (e) => {
-// 		document.body.classList.toggle('lock');
-// 		burgerIcon.classList.toggle('open-menu');
-// 		asideBody.classList.toggle('open-menu');
-// 	});
-// }
-
-// const subLinks = document.querySelectorAll('.sub-menu__link[data-goto]');
-
-// if (subLinks.length) {
-// 	subLinks.forEach((subLink) => {
-
-// 		subLink.addEventListener('click', (e) => {
-// 			if (subLink.dataset.goto && document.querySelector(subLink.dataset.goto)) {
-// 				const gotoBlock = document.querySelector(subLink.dataset.goto);
-// 				const gotoBlockValue = gotoBlock.getBoundingClientRect().top + scrollY - document.querySelector('header').offsetHeight;
-
-// 				if (burgerIcon.classList.contains('open-menu')) {
-// 					document.body.classList.remove('lock');
-// 					burgerIcon.classList.remove('open-menu');
-// 					asideBody.classList.remove('open-menu');
-// 				}
-
-// 				window.scrollTo({
-// 					top: gotoBlockValue,
-// 					behavior: 'smooth',
-// 				});
-// 				e.preventDefault();
-// 			}
-// 		});
-// 	});
-// }
-
 // ===================================================================
 
 const formBtn = document.querySelector('.btn-form');
@@ -77,18 +13,16 @@ formTextarea.addEventListener('input', () => {
 	}
 });
 
-formBtn.addEventListener('click', () => {
-	formBtn.classList.toggle('btn-form--onclick');
-});
-
 // webinars ===================================================================
 
-const webinarsCard = document.querySelectorAll('.card-webinars--registered .card-webinars__btn');
-webinarsCard.forEach(item => {
+document.querySelectorAll('.card-webinars--registered .card-webinars__btn').forEach(item => {
 	item.textContent = 'Приєднатися';
 });
 
-document.querySelectorAll('.card-webinars').forEach((card) => {
+
+const webinarsCards = document.querySelectorAll('.card-webinars');
+
+webinarsCards.forEach((card) => {
 	const webinarsToggle = card.querySelector('.card-webinars__toggle');
 	const webinarsCardBtn = card.querySelector('.card-webinars__btn');
 	webinarsToggle.addEventListener('click', () => {
@@ -120,26 +54,6 @@ window.addEventListener('resize', movePriceBlocks);
 
 const webinars = document.getElementById('webinars');
 
-const cardsWebinars = document.querySelectorAll('.card-webinars');
-const webinarsBtn = document.querySelector('.webinars__btn');
-const webinarsBtnSpan = document.querySelector('.webinars__btn span');
-
-for (let i = 3; i < cardsWebinars.length; i++) {
-	if (window.innerWidth <= 768) {
-		cardsWebinars[i].classList.add('hide');
-		webinarsBtn.addEventListener('click', () => {
-			if (cardsWebinars[i].classList.contains('hide')) {
-				cardsWebinars[i].classList.remove('hide');
-				webinarsBtnSpan.textContent = 'Показати менше';
-			} else {
-				cardsWebinars[i].classList.add('hide');
-				webinarsBtnSpan.textContent = 'Показати більше';
-				webinars.scrollIntoView({ behavior: 'instant', block: 'start' });
-			}
-		});
-	}
-}
-
 // contract =============================================================================
 
 const contractStatus = document.querySelectorAll('.card-contract--closed .card-contract__status');
@@ -148,8 +62,6 @@ contractStatus.forEach(item => {
 	item.textContent = 'Закритий';
 });
 
-// =====================================================================
-
 document.querySelectorAll('.card-contract').forEach(card => {
 	const toggle = card.querySelector('.card-contract__toggle');
 	toggle.addEventListener('click', () => {
@@ -157,108 +69,30 @@ document.querySelectorAll('.card-contract').forEach(card => {
 	});
 });
 
-// ===============================================================
+// staff ===============================================================
 
 const staff = document.getElementById('staff');
-
 const staffHidden = document.querySelector('.staff__inner-body');
 const staffBtn = document.querySelector('.staff__btn');
-const staffLink = document.querySelector('.staff__link');
-const staffLinkSpan = document.querySelector('.staff__link span');
-
-staffLink.addEventListener('click', () => {
-	if ((staffHidden.style.display === 'none' || staffHidden.style.display === '') && (staffBtn.style.display === 'none' || staffBtn.style.display === '')) {
-		staffHidden.style.display = 'block';
-		staffBtn.style.display = 'block';
-
-		staffLinkSpan.textContent = 'Показати менше';
-	} else {
-		staffHidden.style.display = 'none';
-		staffBtn.style.display = 'none';
-
-		staffLinkSpan.textContent = 'Показати більше';
-		staff.scrollIntoView({ behavior: 'instant', block: 'start' });
-	}
-});
 
 // calculation =======================================================================
 
-const calculationLink = document.querySelector('.calculation__link');
 const calculationList = document.querySelector('.calculation__list-wrapper');
 const calculationTable = document.querySelector('.calculation__table-wrapper');
 const calculationTableRecepient = document.querySelector('.calculation__tb-reciept-wrapper');
 const calculationBtn = document.querySelector('.calculation__buttons');
-
-const calculationLinkSpan = document.querySelector('.calculation__link span');
-
 const calculation = document.getElementById('calculation');
 
-calculationLink.addEventListener('click', () => {
-	if ((calculationList.style.display === 'none' || calculationList.style.display === '') && (calculationTableRecepient.style.display === 'none' || calculationTableRecepient.style.display === '') && (calculationBtn.style.display === 'none' || calculationBtn.style.display === '')) {
-		calculationList.style.display = 'block';
-		calculationTableRecepient.style.display = 'block';
-		calculationBtn.style.display = 'block';
-
-		calculationLinkSpan.textContent = 'Показати менше';
-		calculationTable.style.backgroundColor = 'rgba(241, 241, 241, 1)';
-	} else {
-		calculationList.style.display = 'none';
-		calculationTableRecepient.style.display = 'none';
-		calculationBtn.style.display = 'none';
-
-		calculationLinkSpan.textContent = 'Показати більше';
-		calculationTable.style.backgroundColor = 'rgba(0, 0, 0, 0)';
-
-		calculation.scrollIntoView({ behavior: 'instant', block: 'start' });
-	}
-});
-
-// =========================================================
+// dispatcher =========================================================
 
 const dispatcher = document.getElementById('dispatcher');
-
-const dispatcherLink = document.querySelector('.dispatcher__link');
 const dispatcherList = document.querySelector('.dispatcher__list-wrapper');
 const linksDispatcher = document.querySelector('.dispatcher__links-wrapper');
 const dispatcherBtn = document.querySelector('.dispatcher__buttons');
 
-const dispatcherLinkSpan = document.querySelector('.dispatcher__link span');
-
-dispatcherLink.addEventListener('click', () => {
-	if ((dispatcherBtn.style.display === 'none' || dispatcherBtn.style.display === '') && (linksDispatcher.style.display === 'none' || linksDispatcher.style.display === '') && (dispatcherList.style.display === 'none' || dispatcherList.style.display === '')) {
-		dispatcherBtn.style.display = 'flex';
-		dispatcherList.style.display = 'block';
-		linksDispatcher.style.display = 'block';
-
-		dispatcherLinkSpan.textContent = 'Показати менше';
-	} else {
-		dispatcherBtn.style.display = 'none';
-		dispatcherList.style.display = 'none';
-		linksDispatcher.style.display = 'none';
-
-		dispatcherLinkSpan.textContent = 'Показати більше';
-
-		dispatcher.scrollIntoView({ behavior: 'instant', block: 'start' });
-	}
-});
-
 // market ==================================================================
 
 const marketCards = document.querySelectorAll('.market__card');
-const marketLink = document.querySelector('.market__link');
-const marketLinkSpan = document.querySelector('.market__link span');
-
-marketLink.addEventListener('click', () => {
-	for (let i = 0; i < marketCards.length; i++) {
-		if (getComputedStyle(marketCards[i]).display === 'none') {
-			marketCards[i].style.display = 'block';
-			marketLinkSpan.textContent = 'Показати менше';
-		} else {
-			marketCards[i].style.display = '';
-			marketLinkSpan.textContent = 'Показати більше';
-		}
-	}
-});
 
 // ========================================================
 
@@ -286,6 +120,95 @@ function scrollToTop() {
 }
 
 // ===================================================================
+
+function documentClick(e) {
+	const elementTarget = e.target;
+	// legal-aid form button change background =============================
+	if (elementTarget.closest('.btn-form') && e.type === 'click') {
+		formBtn.classList.toggle('btn-form--onclick');
+	}
+	// show more webinars cards ===========================================
+	if (elementTarget.closest('.webinars__btn') && e.type === 'click') {
+		for (let i = 0; i < webinarsCards.length; i++) {
+			if (getComputedStyle(webinarsCards[i]).display === 'none') {
+				webinarsCards[i].style.display = 'flex';
+				elementTarget.textContent = 'Показати менше';
+			} else {
+				webinarsCards[i].style.display = '';
+				elementTarget.textContent = 'Показати більше';
+				webinars.scrollIntoView({ behavior: 'instant', block: 'start' });
+			}
+		}
+	}
+	// staff show more info =============================================
+	if (elementTarget.closest('.staff__link') && e.type === 'click') {
+
+		if ((staffHidden.style.display === 'none' || staffHidden.style.display === '') && (staffBtn.style.display === 'none' || staffBtn.style.display === '')) {
+			staffHidden.style.display = 'block';
+			staffBtn.style.display = 'block';
+
+			elementTarget.textContent = 'Показати менше';
+		} else {
+			staffHidden.style.display = 'none';
+			staffBtn.style.display = 'none';
+
+			elementTarget.textContent = 'Показати більше';
+			staff.scrollIntoView({ behavior: 'instant', block: 'start' });
+		}
+	}
+	// calculation show more info =========================================
+	if (elementTarget.closest('.calculation__link') && e.type === 'click') {
+		if ((calculationList.style.display === 'none' || calculationList.style.display === '') && (calculationTableRecepient.style.display === 'none' || calculationTableRecepient.style.display === '') && (calculationBtn.style.display === 'none' || calculationBtn.style.display === '')) {
+			calculationList.style.display = 'block';
+			calculationTableRecepient.style.display = 'block';
+			calculationBtn.style.display = 'block';
+
+			elementTarget.textContent = 'Показати менше';
+			calculationTable.style.backgroundColor = 'rgba(241, 241, 241, 1)';
+		} else {
+			calculationList.style.display = 'none';
+			calculationTableRecepient.style.display = 'none';
+			calculationBtn.style.display = 'none';
+
+			elementTarget.textContent = 'Показати більше';
+			calculationTable.style.backgroundColor = 'rgba(0, 0, 0, 0)';
+
+			calculation.scrollIntoView({ behavior: 'instant', block: 'start' });
+		}
+	}
+	// dispatcher show more info =============================================
+	if (elementTarget.closest('.dispatcher__link') && e.type === 'click') {
+		if ((dispatcherBtn.style.display === 'none' || dispatcherBtn.style.display === '') && (linksDispatcher.style.display === 'none' || linksDispatcher.style.display === '') && (dispatcherList.style.display === 'none' || dispatcherList.style.display === '')) {
+			dispatcherBtn.style.display = 'flex';
+			dispatcherList.style.display = 'block';
+			linksDispatcher.style.display = 'block';
+
+			elementTarget.textContent = 'Показати менше';
+		} else {
+			dispatcherBtn.style.display = 'none';
+			dispatcherList.style.display = 'none';
+			linksDispatcher.style.display = 'none';
+
+			elementTarget.textContent = 'Показати більше';
+
+			dispatcher.scrollIntoView({ behavior: 'instant', block: 'start' });
+		}
+	}
+	// market show all cards =======================================
+	if (elementTarget.closest('.market__link') && e.type === 'click') {
+		for (let i = 0; i < marketCards.length; i++) {
+			if (getComputedStyle(marketCards[i]).display === 'none') {
+				marketCards[i].style.display = 'block';
+				elementTarget.textContent = 'Показати менше';
+			} else {
+				marketCards[i].style.display = '';
+				elementTarget.textContent = 'Показати більше';
+			}
+		}
+	}
+}
+
+document.addEventListener('click', documentClick);
 
 
 
