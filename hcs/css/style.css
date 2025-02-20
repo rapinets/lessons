@@ -30,33 +30,6 @@
   }
 }
 
-.pic-wrapper {
-  display: flex;
-  flex-direction: column;
-  row-gap: 2rem;
-  background-color: gray;
-  padding: 2rem;
-}
-
-.pic1,
-.pic2,
-.pic3 {
-  padding: 1rem;
-  background-color: #fff;
-}
-
-.pic1 img {
-  filter: brightness(65%) contrast(200%) grayscale(100%);
-}
-
-.pic2 img {
-  filter: blur(1px) brightness(105%) contrast(100%) grayscale(100%) hue-rotate(0deg) invert(100%) opacity(70%) saturate(0%) sepia(0%);
-}
-
-.pic3 img {
-  filter: brightness(65%) contrast(200%) grayscale(100%) invert(100%);
-}
-
 /* legal-aid ============================================================== */
 
 .legal-aid {
@@ -93,10 +66,12 @@
   min-height: 6.5rem;
   padding: 0.28619rem;
   border-bottom: 0.0625rem solid var(--colorGray);
+  font-size: 1.5rem;
 }
 
 .form__textarea::placeholder {
   color: var(--colorGrayDark);
+  font-size: 1.5rem;
 }
 
 .form__textarea:focus {
@@ -128,6 +103,16 @@
 
 .btn-form path {
   fill: var(--absoluteWhite);
+}
+
+.btn-form--active {
+  color: var(--absoluteWhite);
+  background-color: var(--colorBlue-2);
+}
+
+.btn-form--onclick {
+  background-color: var(--prymery);
+  box-shadow: 0px 4px 10px 0px rgba(36, 36, 92, 0.25);
 }
 
 .group-form {
@@ -269,7 +254,7 @@
 
 .legal-aid__link {
   width: fit-content;
-  align-self: flex-end;
+  margin-block-end: 3.5rem;
 }
 
 .legal-aid__btn {
@@ -292,7 +277,7 @@
 }
 
 .services-pro__list-title {
-  font-size: 1.875rem;
+  font-size: clamp(1.25rem, 0.833rem + 0.868vw, 1.875rem);
   font-weight: 600;
   margin-block-end: 1.25rem;
 }
@@ -308,18 +293,14 @@
   display: flex;
   column-gap: 0.65rem;
   align-items: center;
-  font-size: 1.5rem;
+  font-size: clamp(1.25rem, 1.083rem + 0.347vw, 1.5rem);
   font-weight: 600;
-}
-
-.services-pro__item {
-  font-size: 1rem;
 }
 
 .services-pro__item::before {
   content: "";
-  height: 0.19rem;
-  width: 0.19rem;
+  height: 0.25rem;
+  width: 0.25rem;
   border-radius: 50%;
   background-color: var(--prymery);
 }
@@ -337,8 +318,8 @@
 }
 
 .humor__header {
-  margin-block-end: 3.5rem;
-  padding-inline: 2.19rem;
+  margin-block-end: clamp(1.88rem, 0.8rem + 2.25vw, 3.5rem);
+  padding-inline: clamp(0.62rem, -0.427rem + 2.181vw, 2.19rem);
 }
 
 .humor__body {
@@ -353,7 +334,7 @@
 }
 
 .humor__footer {
-  padding-inline: clamp(1.12rem, 0.407rem + 1.486vw, 2.19rem);
+  padding-inline: clamp(0.62rem, -0.427rem + 2.181vw, 2.19rem);
 }
 
 .humor__btn {
@@ -403,7 +384,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: -3rem;
+  margin-top: -2.6rem;
   margin-block-end: 3rem;
   column-gap: 1rem;
   transform: translateX(1rem);
@@ -450,6 +431,10 @@
   font-weight: 600;
 }
 
+.regulatory-list__text span {
+  font-size: 1rem;
+}
+
 .regulatory-list__label {
   display: none;
 }
@@ -461,7 +446,7 @@
   margin-block-end: 1.03rem;
 }
 
-.staff__inner {
+.staff__graph-wrapper {
   display: flex;
   column-gap: 1.25rem;
   justify-content: space-between;
@@ -528,13 +513,15 @@
   min-width: 100%;
   font-weight: 500;
   display: flex;
-  justify-content: space-between;
+  column-gap: 0.44rem;
+  justify-content: center;
 }
 
 .graph-staff__legend p {
+  flex-basis: 12rem;
   display: flex;
-  align-items: center;
   column-gap: 0.34rem;
+  justify-content: center;
 }
 
 .graph-staff__legend p::before {
@@ -550,6 +537,10 @@
 
 .graph-staff__legend p:last-child::before {
   background-color: var(--colorBlue-2);
+}
+
+.graph-staff__legend span {
+  flex-basis: 9.5rem;
 }
 
 .legend-staff {
@@ -898,7 +889,10 @@
 }
 
 .card-webinars__button {
-  padding: 0.3125rem 0.625rem;
+  padding-block-start: 0.3125rem;
+
+  padding-block-end: 0.25rem;
+  border-bottom: 0.0625rem solid transparent;
   color: var(--colorRedBright);
   display: flex;
   justify-content: center;
@@ -1011,7 +1005,7 @@
   display: flex;
   flex-direction: column;
   row-gap: 0.62rem;
-  font-size: 1.5rem;
+  font-size: clamp(1rem, 0.667rem + 0.694vw, 1.5rem);
   font-weight: 600;
 }
 
@@ -1023,10 +1017,11 @@
 }
 
 .sub-list-dispatcher {
+  padding-block-start: 0.62rem;
   flex-grow: 1;
   display: flex;
   flex-direction: column;
-  row-gap: 0.31rem;
+  row-gap: 0.62rem;
   font-size: 1.5rem;
   font-weight: 500;
 }
@@ -1182,6 +1177,13 @@
   display: none;
 }
 
+.dispatcher__buttons {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.25rem;
+}
+
 /* tariff ============================== */
 
 .tariff {
@@ -1318,7 +1320,7 @@
   min-width: 8.06rem;
   display: flex;
   justify-content: center;
-  padding: 0.13rem 0.38rem;
+  padding: 0.38rem 0.38rem;
   border-radius: 0.5rem;
   background-color: var(--colorGreen);
   color: var(--absoluteWhite);
@@ -1402,7 +1404,7 @@
 .card-market__inner {
   display: flex;
   flex-direction: column;
-  row-gap: 0.62rem;
+  row-gap: 1.25rem;
 
 }
 
@@ -1500,11 +1502,6 @@
     display: block;
   }
 
-  .btn-form:hover {
-    color: var(--absoluteWhite);
-    background-color: var(--colorBlue-2);
-  }
-
   .btn-form:hover path {
     fill: var(--absoluteWhite);
   }
@@ -1522,7 +1519,7 @@
   }
 
   .card-webinars__button:hover {
-    text-decoration: underline;
+    border-color: var(--colorBlue-2);
     color: var(--colorBlue-2);
   }
 
@@ -1559,6 +1556,10 @@
   .main__item:nth-child(6),
   .main__item:nth-child(7) {
     flex-direction: column;
+  }
+
+  .legal-aid__link {
+    margin-block-end: 0;
   }
 
   .info-block {
@@ -1609,11 +1610,6 @@
 
   .card-webinars__author {
     display: none;
-  }
-
-  .calculation__body {
-    grid-template-columns: 0.7fr auto;
-    grid-template-rows: auto;
   }
 }
 
@@ -1733,6 +1729,7 @@
     justify-content: space-between;
     margin-top: 0;
     margin-block-end: 1.5rem;
+    transform: translateX(0);
   }
 
   .staff__list-success {
@@ -1757,6 +1754,11 @@
 
 @media (max-width: 48em) {
 
+  .wrapper {
+    row-gap: 0;
+    background-color: var(--colorBackground);
+  }
+
   .button-link {
     font-size: 1.25rem;
   }
@@ -1769,12 +1771,19 @@
   .header__container {
     padding-block-end: 1.22rem;
     padding-inline-end: 0.94rem;
+    column-gap: 1rem;
   }
 
   .header__logo {
     max-height: 7.36rem;
-    transform: translateY(1.22rem);
+    transform: translateY(1.22rem) translateX(-1rem);
   }
+
+  [class*="__header"] {
+    align-items: flex-start;
+  }
+
+  /* legal-aid ================================ */
 
   .legal-aid__header {
     margin-block-end: 0.75rem;
@@ -1782,6 +1791,14 @@
 
   .form {
     grid-template-columns: 1fr;
+  }
+
+  .form__textarea {
+    font-size: 1rem;
+  }
+
+  .form__textarea::placeholder {
+    font-size: 1rem;
   }
 
   .form__line:first-child {
@@ -1836,6 +1853,10 @@
     align-items: flex-end;
   }
 
+  .legal-aid__link {
+    justify-content: flex-end;
+  }
+
   .legal-aid__btn {
     display: none;
   }
@@ -1843,12 +1864,8 @@
   /* services-pro ======================================== */
 
   .services-pro__list-title {
-    font-size: 1.25rem;
     margin-block-end: 1.44rem;
-  }
-
-  .services-pro__item {
-    font-size: 1rem;
+    font-weight: 700;
   }
 
   /* humor ================================================ */
@@ -1863,6 +1880,10 @@
 
   .list-staff__item {
     align-items: flex-start;
+  }
+
+  .staff__inner-body {
+    display: none;
   }
 
   .staff__sub-title {
@@ -1886,7 +1907,6 @@
   }
 
   .regulatory-list__text {
-    font-size: 1rem;
     font-weight: 700;
   }
 
@@ -1916,11 +1936,7 @@
     row-gap: 2.25rem;
   }
 
-  .staff__label {
-    display: none;
-  }
-
-  .staff__inner {
+  .staff__graph-wrapper {
     flex-direction: column;
     row-gap: 1.38rem;
   }
@@ -1929,6 +1945,7 @@
     flex-direction: column;
     row-gap: 1.25rem;
     background-color: unset;
+    padding-inline: 0;
   }
 
   .graph-staff__graph-fop,
@@ -1940,13 +1957,22 @@
     padding-inline: 0.62rem;
   }
 
-  .graph-staff__inner {
-    width: 10.30113rem;
-    height: 10.30113rem;
+  .graph-staff__inner svg {
+    width: 12.30113rem;
+    height: 12.30113rem;
   }
 
   .graph-staff__legend {
     flex-direction: row;
+  }
+
+  .graph-staff__legend p::before {
+    width: 1rem;
+    height: 1rem;
+  }
+
+  .staff__btn {
+    display: none;
   }
 
   /* calculation ================================================ */
@@ -1956,11 +1982,15 @@
   }
 
   .calculation__body {
-    grid-template-columns: 1fr;
+    margin-block-end: 0;
   }
 
   .calculation__inner {
     flex-direction: column;
+  }
+
+  .calculation__list-wrapper {
+    display: none;
   }
 
   .list-calculation {
@@ -2020,13 +2050,19 @@
     height: 1.25rem;
   }
 
+  .calculation__tb-reciept-wrapper {
+    display: none;
+    padding-inline: 0.62rem;
+  }
+
   .table-reciept__table {
     width: 100%;
-    border-spacing: 0.75rem 1rem;
+    border-spacing: 0 0.75rem;
   }
 
   .table-reciept__table td:nth-child(2) {
     width: 100%;
+    text-align: center;
   }
 
   .calculation__link {
@@ -2035,6 +2071,7 @@
   }
 
   .calculation__buttons {
+    display: none;
     margin-block-start: 2.32rem;
   }
 
@@ -2219,12 +2256,8 @@
     margin-block-end: 2.31rem;
   }
 
-  .dispatcher__list {
+  .dispatcher__list-wrapper {
     display: none;
-  }
-
-  .list-dispatcher {
-    font-size: 1.25rem;
   }
 
   .list-dispatcher__item {
@@ -2240,6 +2273,11 @@
   .list-dispatcher__val {
     color: var(--colorGreenDark);
     font-weight: 700;
+  }
+
+  .sub-list-dispatcher {
+    padding-block-start: 0;
+    font-size: 1.25rem;
   }
 
   .graph-dispatcher {
@@ -2276,8 +2314,22 @@
     font-size: 1.5rem;
   }
 
-  .dispatcher__links {
+  .notation-graph-dispatcher__legend p::before {
+    width: 1rem;
+    height: 1rem;
+  }
+
+  .dispatcher__links-wrapper {
     display: none;
+  }
+
+  .dispatcher__links {
+    padding: 0.625rem 0.625rem;
+  }
+
+  .dispatcher__links .button {
+    padding-block: 0.75rem;
+    padding-inline: 1rem;
   }
 
   .dispatcher__links span {
@@ -2293,19 +2345,15 @@
     display: flex;
   }
 
-  .dispatcher__btn-dark {
+  .dispatcher__buttons {
     display: none;
   }
 
-  .dispatcher__btn-dark.button {
+  .dispatcher__btn.button {
     width: 100%;
   }
 
-  .dispatcher__btn-light {
-    display: none;
-  }
-
-  .dispatcher__btn-light.light-btn {
+  .dispatcher__btn.light-btn {
     width: 100%;
   }
 
@@ -2406,7 +2454,7 @@
   }
 
   .contract__card:nth-child(4) {
-    display: block;
+    display: flex;
   }
 
   .contract__card:nth-child(n+5) {
@@ -2427,6 +2475,10 @@
     min-height: auto;
     max-height: 11.25rem;
     overflow: hidden;
+  }
+
+  .card-market:nth-child(n+4) {
+    display: none;
   }
 
   .card-market__inner {
@@ -2489,5 +2541,13 @@
 
   .popup__footer {
     display: none;
+  }
+
+  #scrollTopBtn1 {
+    left: 1.5rem;
+  }
+
+  #scrollTopBtn {
+    right: -100rem;
   }
 }

@@ -9,8 +9,6 @@ function closePopup() {
   notSuccessPopup.classList.remove('show-popup');
 }
 
-// closePopup();
-
 popupBtn.forEach((btn) => {
   btn.addEventListener('click', () => {
     closePopup();

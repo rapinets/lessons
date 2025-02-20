@@ -265,23 +265,25 @@ svg {
   left: 0;
   z-index: 6;
   grid-column: span 3;
+  background-color: var(--prymery);
 }
 
 .header__container {
-  max-height: clamp(6.63rem, 3.65rem + 6.208vw, 11.1rem);
-  background-color: var(--prymery);
+  min-height: clamp(6.63rem, 3.65rem + 6.208vw, 11.1rem);
   padding-inline-end: 3.25rem;
   padding-block-end: 2.38rem;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: flex-end;
 }
 
 .header__logo {
   aspect-ratio: 236 / 241;
-  max-height: 15.0625rem;
+  max-height: 15.1rem;
   overflow: hidden;
-  transform: translateY(2.38rem);
+  position: absolute;
+  left: -0.8%;
+  top: -37%;
 }
 
 .header__text {
@@ -376,8 +378,8 @@ section>[class*="__body"] {
 
 #scrollTopBtn {
   position: fixed;
-  top: clamp(7.88rem, 4.9rem + 6.208vw, 12.35rem);
-  left: 1.5rem;
+  bottom: 2.25rem;
+  right: 2.25rem;
   display: none;
   background-color: rgba(0, 0, 0, 0.4);
   padding: 0.625rem;
@@ -387,19 +389,35 @@ section>[class*="__body"] {
   transition: opacity 0.3s, transform 0.3s;
 }
 
-#scrollTopBtn img {
+#scrollTopBtn1 {
+  position: fixed;
+  top: clamp(7.88rem, 4.9rem + 6.208vw, 12.35rem);
+  left: -100.5rem;
+  display: none;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 0.625rem;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: opacity 0.3s, transform 0.3s;
+}
+
+#scrollTopBtn img,
+#scrollTopBtn1 img {
   transform: rotate(-90deg);
   width: 1.5rem;
   height: 1.5rem;
 }
 
-#scrollTopBtn.show {
+#scrollTopBtn.show,
+#scrollTopBtn1.show {
   display: block;
   opacity: 1;
   transform: scale(1);
 }
 
-#scrollTopBtn.hide {
+#scrollTopBtn.hide,
+#scrollTopBtn1.hide {
   opacity: 0;
   transform: scale(0.8);
 }
