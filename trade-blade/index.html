@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TradeBlade</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script defer src="js/script.js"></script>
+</head>
+
+<body>
+  <div class="wrapper">
+    <header data-pl class="header">
+      <div class="header__container">
+        <a href="#" class="header__logo">
+          <img src="img/logo/logo.svg" alt="Logo">
+        </a>
+        <div class="header__menu menu">
+          <nav class="menu__body">
+            <ul id="menu" class="menu__list">
+              <li class="menu__item"><a data-goto="#numbers" href="#" class="menu__link">Цифры</a></li>
+              <li class="menu__item"><a data-goto="#transactions" href="#" class="menu__link">Сделки онлайн</a></li>
+              <li class="menu__item"><a data-goto="#company" href="#" class="menu__link">о компании</a></li>
+              <li class="menu__item"><a data-goto="" href="#" class="menu__link">как начать</a></li>
+              <li class="menu__item"><a data-goto="#tariffs" href="#" class="menu__link">тарифы</a></li>
+              <li class="menu__item"><a data-goto="" href="#" class="menu__link">отзывы</a></li>
+              <li class="menu__item"><a data-goto="#questions" href="#" class="menu__link">FAQ</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="header__actions actions-header">
+          <div class="actions-header__auth">
+            <button data-popup="#popup-login-in" type="button" class="actions-header__item login-in-btn">вход</button>
+            <button data-popup="#popup-registration" type="button"
+              class="actions-header__item registration-btn">регистрация</button>
+          </div>
+          <button type="button" class="actions-header__item icon-menu"><span></span></button>
+        </div>
+      </div>
+    </header>
+
+    <main class="main">
+      <section class="hero">
+        <div class="hero__container">
+          <div class="hero__desc">
+            <h1 class="hero__title">моментально Копируй сделки профи трейдеров</h1>
+            <p class="hero__details">
+              Начни копировать сделки с успешной командой профессиональных трейдеров в автоматическом режиме.
+            </p>
+            <form class="hero__form form" action="#">
+              <input class="hero__input input" name="form[]" type="email" placeholder="ваш e-mail">
+              <button class="hero__btn btn-form registration-btn" type="submit">начать</button>
+            </form>
+            <p class="hero__info">
+              5 дней бесплатного пользования
+            </p>
+          </div>
+          <div class="hero__img img-hero">
+            <div class="img-hero__el-dashed">
+              <div class="img-hero__rec1"></div>
+              <span class="img-hero__quotes">EtH/USDT</span>
+              <span class="img-hero__short">Short</span>
+              <span class="img-hero__percentage">+141%</span>
+            </div>
+            <div class="img-hero__el-solid">
+              <span class="img-hero__quotes">EtH/USDT</span>
+              <span class="img-hero__short">Short</span>
+              <span class="img-hero__percentage">+141%</span>
+              <div class="img-hero__rec2"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="numbers" class="numbers">
+        <div class="numbers__top top-line">
+          <div class="top-line__item"></div>
+          <div class="top-line__item"></div>
+          <div class="top-line__item"></div>
+        </div>
+        <div class="numbers__container">
+          <div class="numbers__header">
+            <h2 class="numbers__title">Цифры</h2>
+            <time class="numbers__date" datetime="2022-09">Cентябрь 2022</time>
+          </div>
+          <ul class="numbers__cards">
+            <li class="numbers__item card-numbers">
+              <h3 class="card-numbers__title">Торговой прибыли</h3>
+              <span class="card-numbers__num">2756%</span>
+            </li>
+            <li class="numbers__item card-numbers">
+              <h3 class="card-numbers__title">фьючерсных и спотовых сделок</h3>
+              <span class="card-numbers__num">67</span>
+            </li>
+            <li class="numbers__item card-numbers">
+              <h3 class="card-numbers__title">прибыль подписчиков</h3>
+              <span class="card-numbers__num">375000</span>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section id="transactions" class="past-transactions">
+        <div class="past-transactions__container">
+          <h1 class="past-transactions__title title">Прошедшие сделки</h1>
+          <div class="past-transactions__status">
+            <span>Онлайн</span>
+          </div>
+          <ul class="past-transactions__cards">
+            <li class="past-transactions__item card-transactions">
+              <div class="card-transactions__body">
+                <div class="card-transactions__content">
+                  <div class="card-transactions__info">
+                    <h3 class="card-transactions__quotes">NEAR/USDT</h3>
+                    <p class="card-transactions__spot">SPOT · <span>1 мин. назад</span></p>
+                  </div>
+                  <div class="card-transactions__desc">
+                    <span class="card-transactions__title">Прибыль</span>
+                    <div class="card-transactions__profit">
+                      <span class="card-transactions__num">58.6206%</span>
+                      <svg class="card-transactions__icon">
+                        <use xlink:href="img/icons/sprite.svg#arrow-up"></use>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-transactions__img">
+                  <img src="img/transactions/group-38.svg" alt="Image">
+                </div>
+              </div>
+              <div class="card-transactions__footer">
+                <div class="card-transactions__goal">Цель 4</div>
+                <div class="card-transactions__date">Дата входа <time datetime="2022-10-06">06.10.2022</time></div>
+              </div>
+            </li>
+            <li class="past-transactions__item card-transactions">
+              <div class="card-transactions__body">
+                <div class="card-transactions__content">
+                  <div class="card-transactions__info">
+                    <h3 class="card-transactions__quotes">NEAR/USDT</h3>
+                    <p class="card-transactions__spot">SPOT · <span>1 мин. назад</span></p>
+                  </div>
+                  <div class="card-transactions__desc">
+                    <span class="card-transactions__title">Прибыль</span>
+                    <div class="card-transactions__profit">
+                      <span class="card-transactions__num">58.6206%</span>
+                      </svg><svg class="card-transactions__icon">
+                        <use xlink:href="img/icons/sprite.svg#arrow-up"></use>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-transactions__img">
+                  <img src="img/transactions/group-38.svg" alt="Image">
+                </div>
+              </div>
+              <div class="card-transactions__footer">
+                <div class="card-transactions__goal">Цель 4</div>
+                <div class="card-transactions__date">Дата входа <time datetime="2022-10-06">06.10.2022</time></div>
+              </div>
+            </li>
+            <li class="past-transactions__item card-transactions">
+              <div class="card-transactions__body">
+                <div class="card-transactions__content">
+                  <div class="card-transactions__info">
+                    <h3 class="card-transactions__quotes">NEAR/USDT</h3>
+                    <p class="card-transactions__spot">SPOT · <span>1 мин. назад</span></p>
+                  </div>
+                  <div class="card-transactions__desc">
+                    <span class="card-transactions__title">Прибыль</span>
+                    <div class="card-transactions__profit">
+                      <span class="card-transactions__num">58.6206%</span>
+                      </svg><svg class="card-transactions__icon">
+                        <use xlink:href="img/icons/sprite.svg#arrow-up"></use>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-transactions__img">
+                  <img src="img/transactions/group-38.svg" alt="Image">
+                </div>
+              </div>
+              <div class="card-transactions__footer">
+                <div class="card-transactions__goal">Цель 4</div>
+                <div class="card-transactions__date">Дата входа <time datetime="2022-10-06">06.10.2022</time></div>
+              </div>
+            </li>
+            <li class="past-transactions__item card-transactions">
+              <div class="card-transactions__body">
+                <div class="card-transactions__content">
+                  <div class="card-transactions__info">
+                    <h3 class="card-transactions__quotes">NEAR/USDT</h3>
+                    <p class="card-transactions__spot">SPOT · <span>1 мин. назад</span></p>
+                  </div>
+                  <div class="card-transactions__desc">
+                    <span class="card-transactions__title">Прибыль</span>
+                    <div class="card-transactions__profit">
+                      <span class="card-transactions__num">58.6206%</span>
+                      </svg><svg class="card-transactions__icon">
+                        <use xlink:href="img/icons/sprite.svg#arrow-up"></use>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-transactions__img">
+                  <img src="img/transactions/group-38.svg" alt="Image">
+                </div>
+              </div>
+              <div class="card-transactions__footer">
+                <div class="card-transactions__goal">Цель 4</div>
+                <div class="card-transactions__date">Дата входа <time datetime="2022-10-06">06.10.2022</time></div>
+              </div>
+            </li>
+            <li class="past-transactions__item card-transactions">
+              <div class="card-transactions__body">
+                <div class="card-transactions__content">
+                  <div class="card-transactions__info">
+                    <h3 class="card-transactions__quotes">NEAR/USDT</h3>
+                    <p class="card-transactions__spot">SPOT · <span>1 мин. назад</span></p>
+                  </div>
+                  <div class="card-transactions__desc">
+                    <span class="card-transactions__title">Прибыль</span>
+                    <div class="card-transactions__profit">
+                      <span class="card-transactions__num">58.6206%</span>
+                      </svg><svg class="card-transactions__icon">
+                        <use xlink:href="img/icons/sprite.svg#arrow-up"></use>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-transactions__img">
+                  <img src="img/transactions/group-38.svg" alt="Image">
+                </div>
+              </div>
+              <div class="card-transactions__footer">
+                <div class="card-transactions__goal">Цель 4</div>
+                <div class="card-transactions__date">Дата входа <time datetime="2022-10-06">06.10.2022</time></div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section id="company" class="company">
+        <div class="company__top top-line">
+          <div class="top-line__item"></div>
+          <div class="top-line__item"></div>
+          <div class="top-line__item"></div>
+        </div>
+        <div class="company__container">
+          <div class="company__text">
+            <h2 class="company__title">О компании</h2>
+            <div class="company__desc">
+              <p>
+                Мы опытная команда, для которой трейдинг – профессия. TradeBlade является авторизованным официальным
+                брокером биржи Binance.
+              </p>
+              <p>
+                Он представляет пользователям множество преимуществ, таких как более високая скорость синхронизации API
+                и возможность создать учетную запись Binance через платформу TradeBlade всего в 1 клик.
+              </p>
+            </div>
+          </div>
+          <div class="company__form-section">
+            <h3 class="company__form-title">Попробуйте сейчас и получите 5 дней бесплатного пользования</h3>
+            <form action="#" class="company__form form">
+              <input type="email" placeholder="Ваш e–mail" class="input">
+              <button class="company__btn-form btn-form registration-btn" type="submit">попробовать</button>
+            </form>
+          </div>
+        </div>
+      </section>
+      <section id="tariffs" class="tariffs">
+        <div class="tariffs__container">
+          <h2 class="tariffs__title title">тарифы</h2>
+
+          <div class="tariffs__nav nav-tariffs">
+            <button class="nav-tariffs__btn nav-tariffs__btn--active" type="button">СПОТ</button>
+            <button class="nav-tariffs__btn" type="button">фьючерс</button>
+          </div>
+
+          <ul class="tariffs__cards tariffs__cards--anim">
+            <li class="tariffs__item">
+              <article class="tariffs__card card-tariffs">
+                <div class="card-tariffs__header">
+                  <h3 class="card-tariffs__title">STANDART</h3>
+                </div>
+                <div class="card-tariffs__body">
+                  <ul class="card-tariffs__list">
+                    <li class="card-tariffs__item">
+                      <svg class="card-tariffs__icon">
+                        <use xlink:href="img/icons/sprite.svg#check"></use>
+                      </svg>
+                      <span>Ручной трейдинг</span>
+                    </li>
+                    <li class="card-tariffs__item">
+                      <svg class="card-tariffs__icon">
+                        <use xlink:href="img/icons/sprite.svg#check"></use>
+                      </svg>
+                      <span>Автоматическое или полуавтоматическое копирование сделок</span>
+                    </li>
+                    <li class="card-tariffs__item">
+                      <svg class="card-tariffs__icon">
+                        <use xlink:href="img/icons/sprite.svg#check"></use>
+                      </svg>
+                      <span>Личный кабинет со статистикой</span>
+                    </li>
+                    <li class="card-tariffs__item">
+                      <svg class="card-tariffs__icon">
+                        <use xlink:href="img/icons/sprite.svg#check"></use>
+                      </svg>
+                      <span>Среднесрочные сделки с уровнями набора портфеля</span>
+                    </li>
+                  </ul>
+                </div>
+                <div class="card-tariffs__footer footer-tariffs">
+                  <div class="footer-tariffs__prices">
+                    <div class="footer-tariffs__price">
+                      <span class="footer-tariffs__val">$234</span>
+                      <span class="footer-tariffs__discont">-35%</span>
+                    </div>
+                    <select class="footer-tariffs__select" name="month-count" id="month-count">
+                      <option value="value1" selected>12 месяцев</option>
+                      <option value="value2">Значение 2</option>
+                      <option value="value3">Значение 3</option>
+                    </select>
+                  </div>
+                  <a href="#" class="footer-tariffs__link registration-btn"><span>Попробовать</span><span>5 дней
+                      бесплатно</span></a>
+                </div>
+              </article>
+            </li>
+            <!-- ====================================================================== -->
+            <li class="tariffs__item">
+              <article class="tariffs__card card-tariffs card-tariffs--active">
+                <div class="card-tariffs__header">
+                  <h3 class="card-tariffs__title">VIP</h3>
+                </div>
+                <div class="card-tariffs__body">
+                  <ul class="card-tariffs__list">
+                    <li class="card-tariffs__item">
+                      <svg class="card-tariffs__icon">
+                        <use xlink:href="img/icons/sprite.svg#check"></use>
+                      </svg>
+                      <span>Ручной трейдинг</span>
+                    </li>
+                    <li class="card-tariffs__item">
+                      <svg class="card-tariffs__icon">
+                        <use xlink:href="img/icons/sprite.svg#check"></use>
+                      </svg>
+                      <span>Автоматическое или полуавтоматическое копирование сделок</span>
+                    </li>
+                    <li class="card-tariffs__item">
+                      <svg class="card-tariffs__icon">
+                        <use xlink:href="img/icons/sprite.svg#check"></use>
+                      </svg>
+                      <span>Личный кабинет со статистикой</span>
+                    </li>
+                    <li class="card-tariffs__item">
+                      <svg class="card-tariffs__icon">
+                        <use xlink:href="img/icons/sprite.svg#check"></use>
+                      </svg>
+                      <span>Краткосрочные, среднесрочные и инвест сделки</span>
+                    </li>
+                    <li class="card-tariffs__item">
+                      <svg class="card-tariffs__icon">
+                        <use xlink:href="img/icons/sprite.svg#check"></use>
+                      </svg>
+                      <span>Доступ в Vip чат с командой</span>
+                    </li>
+                    <li class="card-tariffs__item">
+                      <svg class="card-tariffs__icon">
+                        <use xlink:href="img/icons/sprite.svg#check"></use>
+                      </svg>
+                      <span>Наш авторский курс по трейдингу</span>
+                    </li>
+                  </ul>
+                </div>
+                <div class="card-tariffs__footer footer-tariffs">
+                  <div class="footer-tariffs__prices">
+                    <div class="footer-tariffs__price">
+                      <span class="footer-tariffs__val">$585</span>
+                      <span class="footer-tariffs__discont">-35%</span>
+                    </div>
+                    <select class="footer-tariffs__select" name="month-count" id="month-count">
+                      <option value="value1" selected>12 месяцев</option>
+                      <option value="value2">Значение 2</option>
+                      <option value="value3">Значение 3</option>
+                    </select>
+                  </div>
+                  <a href="#" class="footer-tariffs__link registration-btn"><span>Попробовать</span><span>5 дней
+                      бесплатно</span></a>
+                </div>
+              </article>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section id="questions" class="questions">
+        <div class="questions__container">
+          <h2 class="questions__title title">часто задаваемые вопросы</h2>
+          <div class="questions__body">
+            <div class="questions__item item-questions">
+              <details class="item-questions__body">
+                <summary class="item-questions__title">
+                  <span>Что такое TradeBlade</span>
+                  <div class="item-questions__icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="9" viewBox="0 0 14 9" fill="none">
+                      <path d="M0.999999 1.5L7 7.5L13 1.5" stroke="white" stroke-width="1.4" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    </svg>
+                  </div>
+
+                </summary>
+                <div class="item-questions__content">
+                  <p>
+                    Мы опытная команда, для которой трейдинг – профессия. TradeBlade является авторизованным официальным
+                    брокером биржи Binance.
+                  </p>
+                  <p>
+                    Он представляет пользователям множество преимуществ, таких как более високая скорость синхронизации
+                    API и возможность создать учетную запись Binance через платформу TradeBlade всего в 1 клик.
+                  </p>
+                </div>
+              </details>
+            </div>
+            <div class="questions__item item-questions">
+              <details class="item-questions__body">
+                <summary class="item-questions__title">
+                  <span>Что TradeBlade предлагает инвесторам</span>
+                  <div class="item-questions__icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="9" viewBox="0 0 14 9" fill="none">
+                      <path d="M0.999999 1.5L7 7.5L13 1.5" stroke="white" stroke-width="1.4" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    </svg>
+                  </div>
+
+                </summary>
+                <div class="item-questions__content">
+                  <p>
+                    Мы опытная команда, для которой трейдинг – профессия. TradeBlade является авторизованным официальным
+                    брокером биржи Binance.
+                  </p>
+                  <p>
+                    Он представляет пользователям множество преимуществ, таких как более високая скорость синхронизации
+                    API и возможность создать учетную запись Binance через платформу TradeBlade всего в 1 клик.
+                  </p>
+                </div>
+              </details>
+            </div>
+            <div class="questions__item item-questions">
+              <details class="item-questions__body">
+                <summary class="item-questions__title">
+                  <span>Должен ли я перевести свои средства на TradeBlade</span>
+                  <div class="item-questions__icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="9" viewBox="0 0 14 9" fill="none">
+                      <path d="M0.999999 1.5L7 7.5L13 1.5" stroke="white" stroke-width="1.4" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    </svg>
+                  </div>
+
+                </summary>
+                <div class="item-questions__content">
+                  <p>
+                    Мы опытная команда, для которой трейдинг – профессия. TradeBlade является авторизованным официальным
+                    брокером биржи Binance.
+                  </p>
+                  <p>
+                    Он представляет пользователям множество преимуществ, таких как более високая скорость синхронизации
+                    API и возможность создать учетную запись Binance через платформу TradeBlade всего в 1 клик.
+                  </p>
+                </div>
+              </details>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer__container">
+        <div class="footer__item">
+          <div class="footer__body">
+            <div class="footer__title">
+              <p>Быстрая навигация</p>
+            </div>
+            <div class="footer__menu">
+              <ul class="menu__list">
+                <li class="menu__item"><a data-goto="#numbers" href="#" class="menu__link">Цифры</a></li>
+                <li class="menu__item"><a data-goto="#transactions" href="#" class="menu__link">Сделки онлайн</a></li>
+                <li class="menu__item"><a data-goto="#company" href="#" class="menu__link">о компании</a></li>
+                <li class="menu__item"><a data-goto="" href="#" class="menu__link">как начать</a></li>
+                <li class="menu__item"><a data-goto="#tariffs" href="#" class="menu__link">тарифы</a></li>
+                <li class="menu__item"><a data-goto="" href="#" class="menu__link">отзывы</a></li>
+                <li class="menu__item"><a data-goto="#questions" href="#" class="menu__link">FAQ</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="footer__item">
+          <div class="footer__logo">
+            <img src="img/logo/logo.svg" alt="Logo">
+          </div>
+          <div class="footer__copy">
+            &copy; 2022 TradeBlade. All rights reserved
+          </div>
+        </div>
+
+      </div>
+    </footer>
+
+  </div>
+
+  <div id="popup-login-in" class="popup popup--fixed">
+    <div class="popup__wrapper">
+      <div class="popup__body body-popup">
+        <button class="body-popup__close" type="button"></button>
+        <div class="body-popup__header">
+          <h2 class="body-popup__title title">login in</h2>
+        </div>
+        <form action="#" class="body-popup__login-in form-popup">
+          <div class="form-popup__group">
+            <input type="email" placeholder="email" class="login-in-popup__input input" name="form[]">
+            <input type="password" placeholder="password" class="login-in-popup__input input" name="form[]">
+          </div>
+          <button type="submit" class="login-in-popup__button login-in-btn">login in</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div id="popup-registration" class="popup popup--fixed">
+    <div class="popup__wrapper">
+      <div class="popup__body body-popup">
+        <button class="body-popup__close" type="button"></button>
+        <div class="body-popup__header">
+          <h2 class="section-header__title title">registration</h2>
+        </div>
+        <form action="#" class="body-popup__registration form-popup">
+          <div class="form-popup__group">
+            <input type="text" placeholder="name" class="login-in-popup__input input" name="form[]">
+            <input type="email" placeholder="email" class="login-in-popup__input input" name="form[]">
+            <input type="password" placeholder="password" class="login-in-popup__input input" name="form[]">
+          </div>
+          <button type="submit" class="login-in-popup__button registration-btn">registration</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>
