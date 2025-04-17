@@ -1,0 +1,48 @@
+{
+    "name": "CBC.ca",
+    "short_name": "CBC.ca",
+    "lang": "en-CA",
+    "dir": "ltr",
+    "orientation": "portrait-primary",
+    "scope": "/",
+    "start_url": "/?utm_source=web_app_manifest",
+    "display": "fullscreen",
+    "background_color": "#fff",
+    "theme_color": "#f4f4f4",
+    "description": "Read CBC news, sports, and more!",
+    "icons": [
+        {
+            "src": "/a/assets/logo_gem.svg",
+            "sizes": "any",
+            "type": "image/svg+xml"
+        }
+    ],
+    "prefer_related_applications": false,
+    "related_applications": [
+        {
+            "platform": "play",
+            "id": "ca.cbc.mobile.android.cbcnewsandroidwebview",
+            "url": "https://play.google.com/store/apps/details?id=ca.cbc.mobile.android.cbcnewsandroidwebview"
+        },
+        {
+            "platform": "play",
+            "id": "ca.cbc.android.sports",
+            "url": "https://play.google.com/store/apps/details?id=ca.cbc.android.sports"
+        },
+        {
+            "platform": "play",
+            "id": "com.nobexinc.cbcradio.rc",
+            "url": "https://play.google.com/store/apps/details?id=com.nobexinc.cbcradio.rc"
+        },
+        {
+            "platform": "play",
+            "id": "ca.cbc.android.cbctv",
+            "url": "https://play.google.com/store/apps/details?id=ca.cbc.android.cbctv"
+        },
+        {
+            "platform": "play",
+            "id": "ca.cbc",
+            "url": "https://play.google.com/store/apps/details?id=ca.cbc"
+        }
+    ]
+}
